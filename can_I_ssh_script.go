@@ -31,7 +31,7 @@ func main() {
 	// the remote side using the Run method.
 	var b bytes.Buffer
 	session.Stdout = &b
-	if err := session.Run("show run"); err != nil {
+	if err := session.Run("show ip int brief"); err != nil {
 		log.Fatal("Failed to run: " + err.Error())
 	}
 	fmt.Println(b.String())
