@@ -1,0 +1,21 @@
+Todds-MBP:go_code_folder toddriemenschneider$ go run can_I_ssh_script.go 
+
+Welcome to the DevNet Always On Sandbox for IOS XE
+
+This is a shared sandbox available for anyone to use to
+test APIs, explore features, and test scripts.  Please
+keep this in mind as you use it, and respect others use.
+
+The following programmability features are already enabled:
+  - NETCONF
+  - RESTCONF
+
+Thanks for stopping by.
+
+
+
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       10.10.20.48     YES NVRAM  up                    up      
+GigabitEthernet2       9.9.9.9         YES other  up                    up      
+GigabitEthernet3       100.100.100.100 YES other  up                    up      
+Todds-MBP:go_code_folder toddriemenschneider$ 
