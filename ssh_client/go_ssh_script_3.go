@@ -1,6 +1,6 @@
 // This is my attempt at building viable ssh script to capture data from show commands on Cisco Devnet devices.
 // I used a string array to create the command set to loop through.
-// (c) Todd Riemenschneider
+// (c) 2019 Todd Riemenschneider
 
 package main
 
