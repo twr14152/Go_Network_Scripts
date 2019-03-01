@@ -10,4 +10,4 @@ It works but its not a real useful script.
 Second script had some success getting multiple commands to run on the device.
 However it needs to reconnect after each command. Not a fan of that, especially for config mode.
 
-- go_ssh_script_2.go
+- ssh_client/go_ssh_script_2.go
