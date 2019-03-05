@@ -1,0 +1,32 @@
+pi@raspberrypi:~/Coding_Folder $ go run go_ssh_multi_cmd.go 
+
+Welcome to the DevNet Always On Sandbox for IOS XE
+
+This is a shared sandbox available for anyone to use to
+test APIs, explore features, and test scripts.  Please
+keep this in mind as you use it, and respect others use.
+
+The following programmability features are already enabled:
+  - NETCONF
+  - RESTCONF
+
+Thanks for stopping by.
+
+
+csr1000v#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+csr1000v(config)#interface loopback 71
+csr1000v(config-if)#description golang_test
+csr1000v(config-if)#exit
+csr1000v(config)#exit
+csr1000v#show run int loopback 71
+Building configuration...
+
+Current configuration : 68 bytes
+!
+interface Loopback71
+ description golang_test
+ no ip address
+end
+
+csr1000v#exit
