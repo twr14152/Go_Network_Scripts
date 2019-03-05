@@ -10,7 +10,7 @@ It works but its not a real useful script.
 Second script had some success getting multiple show commands to run on the device.
 I used a map which is analogous to a dictionary in python to create my command set. Then used a for loop to run through those commands. 
 
-However it needs to reconnect after each command. Not a fan of that, especially for config mode.
+However it needs to reconnect after each command. Not a fan of that, especially for config mode. 
 
 - ssh_client/go_ssh_script_2.go
 
@@ -18,3 +18,7 @@ Third script involed using string array to create the command set and then using
 Nothing earth shattering but it was an opportunity to create another iterable data set.
 
 - ssh_client/go_ssh_script_3.go
+
+SSH script that will allow multi-line commands show or config. Previous one command limit per session resolved by using shell().
+
+ - go_ssh_multi_cmd.go 
