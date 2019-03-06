@@ -1,0 +1,10 @@
+enable
+config t
+interface loopback 72
+description golang test script
+exit
+exit
+show run interface loopback72
+
+show ip int brief
+exit
