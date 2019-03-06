@@ -22,3 +22,9 @@ Nothing earth shattering but it was an opportunity to create another iterable da
 SSH script that will allow multi-line commands show or config. Previous one command limit per session resolved by using Shell() rather than Run(). 
 
  - ssh_client/ssh_multi_cmd.go 
+ 
+The next file is an ssh script that opens and reads the file to get the commands and then uses a for loop to execute the commands on the remote device.
+The benefit of this method is that to make changes to the target host you no longer need to update the script rather the cmd_file.txt 
+
+- ssh_client/ssh_use_cmd_file.go
+- ssh_client/cmd_file.txt
