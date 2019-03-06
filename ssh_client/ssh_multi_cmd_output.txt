@@ -1,4 +1,4 @@
-pi@raspberrypi:~/Coding_Folder $ go run go_ssh_multi_cmd.go 
+pi@raspberrypi:~/Coding_Folder $ go run ssh_multi_cmd.go 
 
 Welcome to the DevNet Always On Sandbox for IOS XE
 
@@ -11,6 +11,7 @@ The following programmability features are already enabled:
   - RESTCONF
 
 Thanks for stopping by.
+
 
 
 csr1000v#config t
@@ -30,3 +31,4 @@ interface Loopback71
 end
 
 csr1000v#exit
+pi@raspberrypi:~/Coding_Folder $ 
