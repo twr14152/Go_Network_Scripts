@@ -21,4 +21,4 @@ Nothing earth shattering but it was an opportunity to create another iterable da
 
 SSH script that will allow multi-line commands show or config. Previous one command limit per session resolved by using Shell() rather than Run(). 
 
- - go_ssh_multi_cmd.go 
+ - ssh_client/ssh_multi_cmd.go 
