@@ -1,4 +1,4 @@
-// This is ssh script that uses a command file to push commands/configs to remote routing device
+// This ssh script will use a command file to push commands/configs to a Cisco IOS device
 // (c) 2019 Todd Riemenschneider
 
 package main
