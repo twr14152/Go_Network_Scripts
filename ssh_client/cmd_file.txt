@@ -1,4 +1,5 @@
 enable
+term len 0
 config t
 interface loopback 72
 description golang test script
