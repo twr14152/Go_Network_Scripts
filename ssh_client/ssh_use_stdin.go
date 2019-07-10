@@ -36,6 +36,7 @@ func main() {
 	sess.Stdout = os.Stdout
 	sess.Stderr = os.Stderr
 	sess.Shell()
+	// This is the lines of code that will allow stdin
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Split(bufio.ScanLines)
 	var lines []string
@@ -45,6 +46,7 @@ func main() {
 	for _, line := range lines {
 		fmt.Fprintf(stdin, "%s\n", line)
 	}
+	// End of code for this functionality 
 	sess.Wait()
 	sess.Close()
 
