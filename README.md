@@ -29,3 +29,6 @@ The benefit of this method is that to make changes to the target host you no lon
 - ssh_client/ssh_use_cmd_file.go
 - ssh_client/cmd_file.txt
 ```
+The 6th Script uses standard input to put the commands into the script to issue commands on the remote device.
+The benefit of doing this is you do not need to overwrite a commands_file to make changes. You simply create a new file with what ever commands you want(naming it what ever you want) and pipe the output to the script. 
+How to use syntax example: cat cmds_file.txt | go run ssh_use_stdin.go
