@@ -30,7 +30,7 @@ The benefit of this method is that to make changes to the target host you no lon
 - ssh_client/cmd_file.txt
 ```
 The 6th Script uses standard input to put the commands into the script to issue commands on the remote device.
-The benefit of doing this is you do not need to overwrite a commands_file to make changes. You simply create a new file with what ever commands you want(naming it what ever you want) and pipe the output to the script. 
+The benefit of doing this is you do not need to overwrite a cmds_file to make changes. You simply create a new file with what ever commands you want(naming it what ever you want) and pipe the output to the script. 
 How to use script: cat cmd_file.txt | go run ssh_use_stdin.go
 ```
 - ssh_client/ssh_use_stdin.go
@@ -174,6 +174,62 @@ ip ssh client algorithm kex diffie-hellman-group-exchange-sha1 diffie-hellman-gr
  transport input ssh
 no transport type persistent ssh input 
 csr1000v#exit
+
+pi@raspberrypi:~/Coding_Folder $ cat cmd_file2.txt 
+enable
+show ip route
+show version | inc IOS
+exit
+
+pi@raspberrypi:~/Coding_Folder $ 
+pi@raspberrypi:~/Coding_Folder $ cat cmd_file2.txt | go run ssh_use_stdin.go 
+
+Welcome to the DevNet Always On Sandbox for IOS XE
+
+This is a shared sandbox available for anyone to use to
+test APIs, explore features, and test scripts.  Please
+keep this in mind as you use it, and respect others use.
+
+The following programmability features are already enabled:
+  - NETCONF
+  - RESTCONF
+
+Thanks for stopping by.
+
+
+
+csr1000v#enable
+csr1000v#show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+
+Gateway of last resort is 10.10.20.254 to network 0.0.0.0
+
+S*    0.0.0.0/0 [1/0] via 10.10.20.254, GigabitEthernet1
+      10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+C        10.10.20.0/24 is directly connected, GigabitEthernet1
+L        10.10.20.48/32 is directly connected, GigabitEthernet1
+      172.16.0.0/16 is variably subnetted, 2 subnets, 2 masks
+C        172.16.100.0/24 is directly connected, Loopback100
+L        172.16.100.1/32 is directly connected, Loopback100
+csr1000v#show version | inc IOS
+Cisco IOS XE Software, Version 16.08.01
+Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.8.1, RELEASE SOFTWARE (fc3)
+Cisco IOS-XE software, Copyright (c) 2005-2018 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+ROM: IOS-XE ROMMON
+csr1000v#exit
+pi@raspberrypi:~/Coding_Folder $
+
 
 ```
 
