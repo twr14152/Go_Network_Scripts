@@ -175,6 +175,7 @@ ip ssh client algorithm kex diffie-hellman-group-exchange-sha1 diffie-hellman-gr
 no transport type persistent ssh input 
 csr1000v#exit
 
+Try another commands file.
 pi@raspberrypi:~/Coding_Folder $ cat cmd_file2.txt 
 enable
 show ip route
