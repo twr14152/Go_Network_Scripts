@@ -14,7 +14,7 @@ However it needs to reconnect after each command. Not a fan of that, especially 
 ```
 - ssh_client/go_ssh_script_2.go
 ```
-Third script involed using a slice to create the command set and then using a for loop to run through the commands.
+Third script involved using a slice to create the command set and then using a for loop to run through the commands.
 Nothing earth shattering but it was an opportunity to create another iterable data set.
 ```
 - ssh_client/go_ssh_script_3.go
