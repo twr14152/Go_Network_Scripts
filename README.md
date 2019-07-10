@@ -36,6 +36,23 @@ How to use script: cat cmd_file.txt | go run ssh_use_stdin.go
 - ssh_client/ssh_use_stdin.go
 - ssh_client/cmd_file.txt
 
+
+pi@raspberrypi:~/Coding_Folder $ cat cmd_file.txt 
+enable
+terminal length 0
+config t
+interface loopback 71
+ description golang_script_test
+interface loopback 72
+ description golang_script_test
+ exit
+ exit
+show ip int brief
+show version
+show run all | inc ssh
+exit
+pi@raspberrypi:~/Coding_Folder $
+
 pi@raspberrypi:~/Coding_Folder $ cat cmd_file.txt| go run ssh_use_stdin.go 
 
 Welcome to the DevNet Always On Sandbox for IOS XE
