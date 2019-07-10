@@ -31,4 +31,132 @@ The benefit of this method is that to make changes to the target host you no lon
 ```
 The 6th Script uses standard input to put the commands into the script to issue commands on the remote device.
 The benefit of doing this is you do not need to overwrite a commands_file to make changes. You simply create a new file with what ever commands you want(naming it what ever you want) and pipe the output to the script. 
-How to use syntax example: cat cmds_file.txt | go run ssh_use_stdin.go
+How to use script: cat cmd_file.txt | go run ssh_use_stdin.go
+```
+- ssh_client/ssh_use_stdin.go
+- ssh_client/cmd_file.txt
+
+pi@raspberrypi:~/Coding_Folder $ cat cmd_file.txt| go run ssh_use_stdin.go 
+
+Welcome to the DevNet Always On Sandbox for IOS XE
+
+This is a shared sandbox available for anyone to use to
+test APIs, explore features, and test scripts.  Please
+keep this in mind as you use it, and respect others use.
+
+The following programmability features are already enabled:
+  - NETCONF
+  - RESTCONF
+
+Thanks for stopping by.
+
+
+
+csr1000v#enable
+csr1000v#terminal length 0
+csr1000v#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+csr1000v(config)#interface loopback 71
+csr1000v(config-if)# description golang_script_test
+csr1000v(config-if)#interface loopback 72
+csr1000v(config-if)# description golang_script_test
+csr1000v(config-if)# exit
+csr1000v(config)# exit
+csr1000v#show ip int brief
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       10.10.20.48     YES NVRAM  up                    up      
+GigabitEthernet2       unassigned      YES NVRAM  up                    up      
+GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
+Loopback71             unassigned      YES unset  up                    up      
+Loopback72             unassigned      YES unset  up                    up      
+Loopback100            172.16.100.1    YES other  up                    up      
+Loopback103            unassigned      YES unset  up                    up      
+csr1000v#show version
+Cisco IOS XE Software, Version 16.08.01
+Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.8.1, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Tue 27-Mar-18 13:32 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2018 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+csr1000v uptime is 16 hours, 20 minutes
+Uptime for this control processor is 16 hours, 21 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: reload
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: ax
+License Type: Default. No valid license found.
+Next reload license Level: ax
+
+cisco CSR1000V (VXE) processor (revision VXE) with 2396264K/3075K bytes of memory.
+Processor board ID 9JGOSIUGQVN
+3 Gigabit Ethernet interfaces
+32768K bytes of non-volatile configuration memory.
+16370384K bytes of physical memory.
+7774207K bytes of virtual hard disk at bootflash:.
+0K bytes of WebUI ODM Files at webui:.
+
+Configuration register is 0x2102
+
+csr1000v#show run all | inc ssh
+netconf-yang ssh port 830
+ip ssh time-out 120
+ip ssh authentication-retries 3
+ip ssh window-size 8192
+ip ssh rsa keypair-name ssh-key
+ip ssh break-string ~break
+ip ssh version 2
+ip ssh dh min size 2048
+no ip ssh rekey time
+no ip ssh rekey volume
+ip ssh server authenticate user publickey
+ip ssh server authenticate user keyboard
+ip ssh server authenticate user password
+no ip ssh server peruser session limit
+ip ssh server certificate profile
+ip ssh server algorithm mac hmac-sha2-256 hmac-sha2-512 hmac-sha1 hmac-sha1-96
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh server algorithm kex diffie-hellman-group-exchange-sha1 diffie-hellman-group14-sha1
+ip ssh server algorithm hostkey x509v3-ssh-rsa ssh-rsa
+ip ssh server algorithm authentication publickey keyboard password
+ip ssh server algorithm publickey x509v3-ssh-rsa ssh-rsa
+ip ssh client algorithm mac hmac-sha2-256 hmac-sha2-512 hmac-sha1 hmac-sha1-96
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm kex diffie-hellman-group-exchange-sha1 diffie-hellman-group14-sha1
+ transport input ssh
+no transport type persistent ssh input 
+csr1000v#exit
+
+```
+
