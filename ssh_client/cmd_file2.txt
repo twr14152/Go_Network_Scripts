@@ -1,0 +1,4 @@
+enable
+show ip route
+show version | inc IOS
+exit
