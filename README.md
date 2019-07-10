@@ -1,5 +1,5 @@
 # Go_Network_Scripts
-This is an attempt to try and learn Golang by creating some useful network scripts. 
+This is an attempt to try and learn Golang by creating some useful network scripts.
 
 
 First script was to ssh to Cisco Devnet device and print the output.
@@ -19,9 +19,10 @@ Nothing earth shattering but it was an opportunity to create another iterable da
 ```
 - ssh_client/go_ssh_script_3.go
 ```
-The fourth SSH script will allow multi-line commands show or config. Previous script used Run() command which has a one command limit per session. THis was resolved by using Shell() rather than Run(). 
+The fourth SSH script will allow multi-line commands show or config. Previous script used Run() command which has a one command limit per session. This was resolved by using Shell() rather than Run(). 
 ```
  - ssh_client/ssh_multi_cmd.go 
+ 
 ```
 The fifth script opens and reads another file to get the commands and then uses a for loop to execute the commands on the remote device.
 The benefit of this method is that to make changes to the target host you no longer need to update the script rather the cmd_file.txt 
