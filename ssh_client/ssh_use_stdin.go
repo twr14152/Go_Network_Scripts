@@ -36,7 +36,7 @@ func main() {
 	sess.Stdout = os.Stdout
 	sess.Stderr = os.Stderr
 	sess.Shell()
-	// This is the lines of code that will allow stdin
+	// Below are the lines of code that will allow stdin to push cmds
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Split(bufio.ScanLines)
 	var lines []string
