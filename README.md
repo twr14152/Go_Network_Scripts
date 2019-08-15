@@ -37,5 +37,6 @@ How to use script: cat cmd_file.txt | go run ssh_use_stdin.go
 ```
 - ssh_client/ssh_use_stdin.go
 - ssh_client/cmd_file.txt
+- ssh_client/cmd_file2.txt
 
 ```
