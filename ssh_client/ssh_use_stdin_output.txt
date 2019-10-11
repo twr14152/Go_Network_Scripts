@@ -1,10 +1,6 @@
-pi@raspberrypi:~/Coding_Folder $ cat cmd_file.txt| go run ssh_use_stdin.go 
+pi@raspberrypi:~/Coding_Folder $ go run ssh_use_stdin.go < cmd_file.txt 
 
-Welcome to the DevNet Always On Sandbox for IOS XE
-
-This is a shared sandbox available for anyone to use to
-test APIs, explore features, and test scripts.  Please
-keep this in mind as you use it, and respect others use.
+Welcome to the DevNet Sandbox for CSR1000v and IOS XE
 
 The following programmability features are already enabled:
   - NETCONF
@@ -27,21 +23,19 @@ csr1000v(config)# exit
 csr1000v#show ip int brief
 Interface              IP-Address      OK? Method Status                Protocol
 GigabitEthernet1       10.10.20.48     YES NVRAM  up                    up      
-GigabitEthernet2       unassigned      YES NVRAM  up                    up      
+GigabitEthernet2       172.16.255.1    YES other  up                    up      
 GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
 Loopback71             unassigned      YES unset  up                    up      
 Loopback72             unassigned      YES unset  up                    up      
-Loopback100            172.16.100.1    YES other  up                    up      
-Loopback103            unassigned      YES unset  up                    up      
 csr1000v#show version
-Cisco IOS XE Software, Version 16.08.01
-Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.8.1, RELEASE SOFTWARE (fc3)
+Cisco IOS XE Software, Version 16.09.03
+Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.3, RELEASE SOFTWARE (fc2)
 Technical Support: http://www.cisco.com/techsupport
-Copyright (c) 1986-2018 by Cisco Systems, Inc.
-Compiled Tue 27-Mar-18 13:32 by mcpre
+Copyright (c) 1986-2019 by Cisco Systems, Inc.
+Compiled Wed 20-Mar-19 07:56 by mcpre
 
 
-Cisco IOS-XE software, Copyright (c) 2005-2018 by cisco Systems, Inc.
+Cisco IOS-XE software, Copyright (c) 2005-2019 by cisco Systems, Inc.
 All rights reserved.  Certain components of Cisco IOS-XE software are
 licensed under the GNU General Public License ("GPL") Version 2.0.  The
 software code licensed under GPL Version 2.0 is free software that comes
@@ -54,8 +48,8 @@ software.
 
 ROM: IOS-XE ROMMON
 
-csr1000v uptime is 16 hours, 20 minutes
-Uptime for this control processor is 16 hours, 21 minutes
+csr1000v uptime is 10 hours, 0 minutes
+Uptime for this control processor is 10 hours, 2 minutes
 System returned to ROM by reload
 System image file is "bootflash:packages.conf"
 Last reload reason: reload
@@ -81,11 +75,14 @@ License Level: ax
 License Type: Default. No valid license found.
 Next reload license Level: ax
 
-cisco CSR1000V (VXE) processor (revision VXE) with 2396264K/3075K bytes of memory.
-Processor board ID 9JGOSIUGQVN
+
+Smart Licensing Status: Smart Licensing is DISABLED
+
+cisco CSR1000V (VXE) processor (revision VXE) with 2392579K/3075K bytes of memory.
+Processor board ID 9G44U15Y0XH
 3 Gigabit Ethernet interfaces
 32768K bytes of non-volatile configuration memory.
-16370384K bytes of physical memory.
+8113280K bytes of physical memory.
 7774207K bytes of virtual hard disk at bootflash:.
 0K bytes of WebUI ODM Files at webui:.
 
@@ -118,4 +115,6 @@ ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
 ip ssh client algorithm kex diffie-hellman-group-exchange-sha1 diffie-hellman-group14-sha1
  transport input ssh
 no transport type persistent ssh input 
-csr1000v#exitpi@raspberrypi:~/Coding_Folder $ 
+csr1000v#exit
+pi@raspberrypi:~/Coding_Folder $ 
+
