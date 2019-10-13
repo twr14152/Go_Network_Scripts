@@ -1,5 +1,5 @@
 // This ssh script will use standard input to push commands/configs to a Cisco IOS device
-// To run 'cat cmds_file.txt | go run ssh_use_stdin.go'
+// To run 'go run ssh_use_stdin.go < cmd_file.txt'
 // This functionality would allow you to use any commands file without having to rewrite commands file or script. 
 // (c) 2019 Todd Riemenschneider
 
