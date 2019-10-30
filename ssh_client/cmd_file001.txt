@@ -1,0 +1,21 @@
+enable 
+term len 0
+config t
+interface loopback 72
+description testing go_ssh
+exit
+exit
+show run int loopback 72
+config t
+interface loopback71
+description testing go_ssh
+exit
+exit
+sh run int loopback 71
+
+show ip int brief
+show ip route summ
+show cdp neighbor
+show arp
+show version
+exit
