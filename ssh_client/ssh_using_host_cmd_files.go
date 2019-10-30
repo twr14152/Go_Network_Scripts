@@ -1,5 +1,5 @@
-// This ssh script will use host_file.txt to determine who to 
-// login to, and the cmd_file1.txt to determine which commands
+// This ssh script will use host_file001.txt to determine who to 
+// login to, and the cmd_file001.txt to determine which commands
 // to run.
 // (c) 2019 Todd Riemenschneider
 
