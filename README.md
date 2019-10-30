@@ -40,3 +40,9 @@ How to use script: go run ssh_use_stdin.go < cmd_file.txt
 - ssh_client/cmd_file2.txt
 
 ```
+The 7th script uses host_file to login to target hosts and a cmd_file to issue commands on them. At this point this script would be useful for running a common set of commands on multiple devices. The script will simply loop through the hosts and the commands.
+```
+- ssh_client/ssh_using_host_cmd_files.go
+- ssh_client/host_file001.txt
+- ssh_client/cmd_file001.txt
+- ssh_using_host_cmd_files_output.txt - shows output of script
