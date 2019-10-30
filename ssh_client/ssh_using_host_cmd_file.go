@@ -16,7 +16,7 @@ import (
 var hostList []string
 
 func loginHosts() {
-	hf, _ := os.Open("host_file.txt")
+	hf, _ := os.Open("host_file001.txt")
 	scanner := bufio.NewScanner(hf)
 	scanner.Split(bufio.ScanLines)
 	for scanner.Scan() {
@@ -56,7 +56,7 @@ func main() {
 		sess.Stdout = os.Stdout
 		sess.Stderr = os.Stderr
 		sess.Shell()
-		fh, _ := os.Open("cmd_file1.txt")
+		fh, _ := os.Open("cmd_file001.txt")
 		scanner := bufio.NewScanner(fh)
 		scanner.Split(bufio.ScanLines)
 		var lines []string
