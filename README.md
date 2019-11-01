@@ -1,8 +1,6 @@
 # Go_Network_Scripts
 This is an attempt to try and learn Go by creating some useful network scripts.
 
-The process is try and fail, then fail some more, and when I'm done failing, do it some more. Eventually achieve the desired result. I will post the successful solutions. Best practices and security minded solutions are pretty much out the window. I try but lets be real, there is no expert typing on this keyboard.
-
 
 # SSH Client Scripts
 First script was to ssh to Cisco Devnet device and print the output.
