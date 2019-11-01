@@ -49,7 +49,7 @@ The 7th script uses host_file to login to target hosts and a cmd_file to issue c
 ```
 
 # HTTP Client Scripts
-The first script uses the https transport protocol to connect to Cisco Devnet router and GET some information off it. As it stands its more of a learning tool than a useful production script. 
+The first script uses the https transport protocol to connect to Cisco Devnet router and GET some information off it. As it stands its more of a learning tool than a useful production script. More research needed into understanding xml/yang.
 ```
 - http_client/httpGet_ex1.go
 - http_client/httpGet_ex1_output.txt
