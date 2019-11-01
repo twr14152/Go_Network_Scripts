@@ -1,7 +1,7 @@
 # Go_Network_Scripts
 This is an attempt to try and learn Golang by creating some useful network scripts.
 
-# SSH CLIENT SCRIPTS
+# SSH Client Scripts
 First script was to ssh to Cisco Devnet device and print the output.
 It works but its not a real useful script.
 ```
@@ -48,7 +48,7 @@ The 7th script uses host_file to login to target hosts and a cmd_file to issue c
 - ssh_using_host_cmd_files_output.txt - shows output of script
 ```
 
-# HTTP CLIENT SCRIPTS
+# HTTP Client Scripts
 The first script uses the https transport protocol to connect to Cisco Devnet router and GET some information off it. As it stands its more of a learning tool than a useful production script. 
 ```
 - http_client/httpGet_ex1.go
