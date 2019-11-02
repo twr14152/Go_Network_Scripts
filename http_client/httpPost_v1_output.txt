@@ -1,0 +1,65 @@
+pi@raspberrypi:~/Code_folder/go_folder/netOps/http_client $ go run  httpGet_v2.go 
+[ios-xe-mgmt-latest.cisco.com:9443 ios-xe-mgmt-latest.cisco.com:9443 ios-xe-mgmt-latest.cisco.com:9443]
+connected to host:  0
+
+connected to host:  1
+
+connected to host:  2
+
+pi@raspberrypi:~/Code_folder/go_folder/netOps/http_client $ go run httpPost_v1.go 
+&{201 Created 201 HTTP/1.1 1 1 map[Cache-Control:[private, no-cache, must-revalidate, proxy-revalidate] Connection:[keep-alive] Content-Length:[0] Content-Type:[text/html] Date:[Sat, 02 Nov 2019 18:23:57 GMT] Etag:[1572-719037-469264] Last-Modified:[Sat, 02 Nov 2019 18:23:57 GMT] Location:[https://ios-xe-mgmt-latest.cisco.com/restconf/data/ietf-interfaces:interfaces/interface=Loopback72] Pragma:[no-cache] Server:[nginx]] {} 0 [] false false map[] 0x1496180 0x151a0c0}
+
+pi@raspberrypi:~/Code_folder/go_folder/netOps/http_client $ go run  httpGet_v2.go 
+[ios-xe-mgmt-latest.cisco.com:9443 ios-xe-mgmt-latest.cisco.com:9443 ios-xe-mgmt-latest.cisco.com:9443]
+connected to host:  0
+
+<interface xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces"  xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+  <name>Loopback72</name>
+  <description>Testing Golang RestConf</description>
+  <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">ianaift:softwareLoopback</type>
+  <enabled>true</enabled>
+  <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+    <address>
+      <ip>72.72.72.1</ip>
+      <netmask>255.255.255.255</netmask>
+    </address>
+  </ipv4>
+  <ipv6 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+  </ipv6>
+</interface>
+
+connected to host:  1
+
+<interface xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces"  xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+  <name>Loopback72</name>
+  <description>Testing Golang RestConf</description>
+  <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">ianaift:softwareLoopback</type>
+  <enabled>true</enabled>
+  <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+    <address>
+      <ip>72.72.72.1</ip>
+      <netmask>255.255.255.255</netmask>
+    </address>
+  </ipv4>
+  <ipv6 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+  </ipv6>
+</interface>
+
+connected to host:  2
+
+<interface xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces"  xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+  <name>Loopback72</name>
+  <description>Testing Golang RestConf</description>
+  <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">ianaift:softwareLoopback</type>
+  <enabled>true</enabled>
+  <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+    <address>
+      <ip>72.72.72.1</ip>
+      <netmask>255.255.255.255</netmask>
+    </address>
+  </ipv4>
+  <ipv6 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+  </ipv6>
+</interface>
+
+pi@raspberrypi:~/Code_folder/go_folder/netOps/http_client $
