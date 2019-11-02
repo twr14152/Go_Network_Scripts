@@ -1,4 +1,4 @@
-// This script will use https to pull router config info off the devices in the host_file001.txt
+// This script will use restconf to pull router interface info off the devices in the host_file001.txt
 // (c) 2019 Todd Riemenschneider
 
 package main
@@ -36,8 +36,8 @@ func main() {
 	for i, host := range hostList {
 		// i is being used to identify which host is being connected to
 		fmt.Println("connected to host: ", i)
-		// create variable that includes the host and the restconf command to pull the configs off the device
-		url := ("https://"+host+"/restconf/data/Cisco-IOS-XE-native:native?content=config&depth=65535")
+		// create variable that includes the host and the restconf command to pull interface info off the device
+		url := ("https://"+host+"/restconf/data/ietf-interfaces:interfaces")
 		// Issues the GET Request with the variable created above
 		req, err := http.NewRequest("GET", url, nil)
 		req.SetBasicAuth(username, passwd)
@@ -50,4 +50,3 @@ func main() {
 		fmt.Println(string(deviceOutput))
 	}
 }
-
