@@ -33,7 +33,7 @@ func main() {
 	}`)
 
 	client := &http.Client{Transport: certInfo}
-	url := "https://ios-xe-mgmt.cisco.com:9443/restconf/data/ietf-interfaces:interfaces"
+	url := "https://ios-xe-mgmt-latest.cisco.com:9443/restconf/data/ietf-interfaces:interfaces"
 
 	req, _ := http.NewRequest("POST", url, bytes.NewBuffer(config))
 	req.SetBasicAuth("developer", "C1sco12345")
