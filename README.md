@@ -55,7 +55,7 @@ The first script uses the https transport protocol to connect to Cisco Devnet ro
 - http_client/httpGet_v1.go
 - http_client/httpGet_v1_output.txt
 ```
-The second script offers the same functionality as the first only it opens hostfile to get its target hosts. It then places those hosts in a slice. Then uses a for loop to iterate through the slice and issues the command to run on the device. 
+The second script offers the same functionality as the first only it opens hostfile to get its target hosts. It then places those hosts in a slice, then uses a for loop to iterate through the slice and issues the command to run on the device. 
 ```
 - http_client/httpGet_v2.go
 - http_client/host_file001.txt
