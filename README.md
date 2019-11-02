@@ -59,5 +59,6 @@ The second script offers the same functionality as the first only it opens hostf
 ```
 - http_client/httpGet_v2.go
 - http_client/host_file001.txt
+- http_client/httpGet_v2_output.txt
 ```
 
