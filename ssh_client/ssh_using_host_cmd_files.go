@@ -1,5 +1,5 @@
-// This ssh script will use host_file001.txt to determine who to 
-// login to, and the cmd_file001.txt to determine which commands
+// This ssh script will use host_file.txt to determine who to 
+// login to, and the cmd_file1.txt to determine which commands
 // to run.
 // (c) 2019 Todd Riemenschneider
 
@@ -56,14 +56,14 @@ func main() {
 		sess.Stdout = os.Stdout
 		sess.Stderr = os.Stderr
 		sess.Shell()
-		fh, _ := os.Open("cmd_file001.txt")
-		scanner := bufio.NewScanner(fh)
+		cmds, _ := os.Open("cmd_file001.txt")
+		scanner := bufio.NewScanner(cmds)
 		scanner.Split(bufio.ScanLines)
 		var lines []string
 		for scanner.Scan() {
 			lines = append(lines, scanner.Text())
 		}
-		fh.Close()
+		cmds.Close()
 		for _, line := range lines {
 			fmt.Fprintf(stdin, "%s\n", line)
 		}
@@ -71,26 +71,6 @@ func main() {
 		sess.Close()
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
