@@ -47,9 +47,9 @@ func connXinfo() {
 		// i is being used to identify which host is being connected to
 		fmt.Println("connected to host: ", i)
 		// create variable that includes the host and the restconf command to pull the configs off the device
-		addr := ("https://"+host+"/restconf/data/Cisco-IOS-XE-native:native?content=config&depth=65535")
+		url := ("https://"+host+"/restconf/data/Cisco-IOS-XE-native:native?content=config&depth=65535")
 		// Issues the GET Request with the variable created above
-		req, err := http.NewRequest("GET", addr, nil)
+		req, err := http.NewRequest("GET", url, nil)
 		req.SetBasicAuth(username, passwd)
 		resp, err := client.Do(req)
 		fmt.Println(resp)
