@@ -50,12 +50,12 @@ The 7th script uses host_file to login to target hosts and a cmd_file to issue c
 ```
 
 # HTTP Client Scripts
-The first script uses the https transport protocol to connect to Cisco Devnet router and GET some information off it. As it stands its more of a learning tool than a useful production script. More research needed into understanding xml/yang.
+The first script uses the https transport protocol to connect to Cisco Devnet router and GET router config off it. As it stands its more of a learning tool than a useful production script. More research needed into understanding restconf and yang.
 ```
-- http_client/httpGet_ex1.go
-- http_client/httpGet_ex1_output.txt
+- http_client/httpGet_v1.go
+- http_client/httpGet_v1_output.txt
 ```
-The second script offers the same functionality as the first only it opens hostfile to get its target hosts. It then places those hosts in a slice. Then uses a for loop to iterate through the slice and issues the command to run on the device. Restconf is new to me in that I am still trying to understand the value of using yang etc when it comes to network management. My goal was to test connectivity and running commands on multiple devices. I do like the speed at which the http transport works relative to ssh.
+The second script offers the same functionality as the first only it opens hostfile to get its target hosts. It then places those hosts in a slice. Then uses a for loop to iterate through the slice and issues the command to run on the device. 
 ```
 - http_client/httpGet_v2.go
 - http_client/host_file001.txt
