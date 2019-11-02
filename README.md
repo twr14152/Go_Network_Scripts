@@ -61,4 +61,9 @@ The second script offers the same functionality as the first only it opens hostf
 - http_client/host_file001.txt
 - http_client/httpGet_v2_output.txt
 ```
+The third script is a simple config script using restconf. 
+```
+- http_client/httpPost_v1.go
+- http_client/httpPost_v1_output.txt
+```
 
