@@ -28,7 +28,7 @@ func main() {
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 	}
 	username := "developer"
-	passwd := "C1sco12345"
+	password := "C1sco12345"
 	fmt.Println(hostList)
 	// Apply cert bypass variable to https Transport process 
 	client := &http.Client{Transport: certInfo}
@@ -40,7 +40,7 @@ func main() {
 		url := ("https://"+host+"/restconf/data/ietf-interfaces:interfaces/interface=Loopback71")
 		// Issues the GET Request with the variable created above
 		req, err := http.NewRequest("GET", url, nil)
-		req.SetBasicAuth(username, passwd)
+		req.SetBasicAuth(username, password)
 		resp, err := client.Do(req)
 		if err != nil {
 			log.Fatal(err)
