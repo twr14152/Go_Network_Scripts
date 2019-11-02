@@ -1,0 +1,2725 @@
+
+pi@raspberrypi:~/Code_folder/go_folder/netOps/http_client $ go run httpGet_v2.go 
+[ios-xe-mgmt-latest.cisco.com:9443 ios-xe-mgmt-latest.cisco.com:9443 ios-xe-mgmt-latest.cisco.com:9443]
+connected to host:  0
+&{200 OK 200 HTTP/1.1 1 1 map[Cache-Control:[private, no-cache, must-revalidate, proxy-revalidate] Connection:[keep-alive] Content-Type:[application/yang-data+xml] Date:[Sat, 02 Nov 2019 00:09:15 GMT] Pragma:[no-cache] Server:[nginx]] 0x111a060 -1 [chunked] false false map[] 0x10ac180 0x11380c0}
+
+<native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native"  xmlns:ios="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+  <version>16.11</version>
+  <boot-start-marker/>
+  <boot-end-marker/>
+  <banner>
+  <motd>
+    <banner>^C</banner>
+  </motd>
+</banner>
+<memory>
+<free>
+<low-watermark>
+  <processor>80557</processor>
+</low-watermark>
+</free>
+</memory>
+<call-home>
+  <contact-email-addr xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-call-home">sch-smart-licensing@cisco.com</contact-email-addr>
+  <profile xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-call-home">
+    <profile-name>CiscoTAC-1</profile-name>
+    <active>true</active>
+  </profile>
+</call-home>
+<service>
+<timestamps>
+<debug>
+<datetime>
+<msec>
+</msec>
+</datetime>
+</debug>
+<log>
+<datetime>
+  <msec/>
+</datetime>
+</log>
+</timestamps>
+<call-home/>
+</service>
+<platform>
+<console xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-platform">
+  <output>virtual</output>
+</console>
+</platform>
+<hostname>csr1000v-1</hostname>
+<enable>
+<secret>
+  <type>9</type>
+  <secret>$9$PvdeTeuxxh0ygk$PSg0GTG2I7bluI51e.IvfEu2uxy56e/9/PgqzFUklso</secret>
+</secret>
+</enable>
+<username>
+  <name>cisco</name>
+  <privilege>15</privilege>
+  <secret>
+    <encryption>9</encryption>
+    <secret>$9$COf3Q4xfzT.JxE$L3hvSkDv874Qrh8Hzdv/rPQjLNOjreYG2ocffHG7rls</secret>
+  </secret>
+</username>
+<username>
+  <name>developer</name>
+  <privilege>15</privilege>
+  <secret>
+    <encryption>9</encryption>
+    <secret>$9$fhUXi6Xg438iAE$..VhXRCHiDQy3K2zmZUl9iZLbQJ9wpUtQZwQxSRESc2</secret>
+  </secret>
+</username>
+<username>
+  <name>newuser80</name>
+  <password>
+    <encryption>0</encryption>
+    <password>Yu76_87AF</password>
+  </password>
+</username>
+<username>
+  <name>root</name>
+  <privilege>15</privilege>
+  <secret>
+    <encryption>9</encryption>
+    <secret>$9$FfUDIPBFcs03AE$MyLIWEuiRle8p3yGflAGTcrJA6BUUh/oWtyyfoMQXSI</secret>
+  </secret>
+</username>
+<ip>
+<domain>
+  <lookup>false</lookup>
+  <name>cisco.com</name>
+</domain>
+<forward-protocol>
+  <protocol>nd</protocol>
+</forward-protocol>
+<route>
+  <ip-route-interface-forwarding-list>
+    <prefix>0.0.0.0</prefix>
+    <mask>0.0.0.0</mask>
+    <fwd-list>
+      <fwd>GigabitEthernet1</fwd>
+      <interface-next-hop>
+        <ip-address>10.10.20.254</ip-address>
+      </interface-next-hop>
+    </fwd-list>
+  </ip-route-interface-forwarding-list>
+</route>
+<scp>
+<server>
+  <enable/>
+</server>
+</scp>
+<ssh>
+<rsa>
+  <keypair-name>ssh-key</keypair-name>
+</rsa>
+<version>2</version>
+</ssh>
+<access-list>
+  <extended xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-acl">
+    <name>meraki-fqdn-dns</name>
+  </extended>
+</access-list>
+<http xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-http">
+<authentication>
+  <local/>
+</authentication>
+<server>true</server>
+<secure-server>true</secure-server>
+</http>
+<nbar xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-nbar">
+  <http-services/>
+</nbar>
+</ip>
+<cdp>
+  <run xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-cdp"/>
+</cdp>
+<policy>
+  <class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+    <name>WEBUI-BROADCAST_VIDEO-DSCP</name>
+    <prematch>match-all</prematch>
+    <match>
+      <dscp>cs5</dscp>
+    </match>
+  </class-map>
+  <class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+    <name>WEBUI-BROADCAST_VIDEO-NBAR</name>
+    <prematch>match-all</prematch>
+    <match>
+    <protocol>
+    <attribute>
+      <business-relevance>
+        <name>business-relevant</name>
+      </business-relevance>
+      <traffic-class>
+        <name>broadcast-video</name>
+      </traffic-class>
+    </attribute>
+  </protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-BULK_DATA-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>af11</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-BULK_DATA-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>bulk-data</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MULTIMEDIA_CONFERENCING-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>af41</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MULTIMEDIA_CONFERENCING-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>multimedia-conferencing</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MULTIMEDIA_STREAMING-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>af31</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MULTIMEDIA_STREAMING-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>multimedia-streaming</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-NETWORK_CONTROL-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs6</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-NETWORK_CONTROL-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>network-control</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-NETWORK_MANAGEMENT-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs2</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-NETWORK_MANAGEMENT-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>ops-admin-mgmt</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-REALTIME_INTERACTIVE-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs4</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-REALTIME_INTERACTIVE-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>real-time-interactive</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-SCAVENGER-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs1</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-SCAVENGER-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-irrelevant</name>
+    </business-relevance>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-SIGNALING-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs3</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-SIGNALING-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>signaling</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-TRANSACTIONAL_DATA-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>af21</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-TRANSACTIONAL_DATA-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>transactional-data</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-VOICE-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>ef</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-VOICE-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>voip-telephony</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<policy-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MARKING-IN</name>
+  <class>
+    <name>WEBUI-VOICE-NBAR</name>
+    <action-list>
+      <action-type>set</action-type>
+      <set>
+      <dscp>
+        <dscp-val>ef</dscp-val>
+      </dscp>
+    </set>
+  </action-list>
+</class>
+<class>
+  <name>WEBUI-BROADCAST_VIDEO-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs5</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-REALTIME_INTERACTIVE-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs4</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-MULTIMEDIA_CONFERENCING-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>af41</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-MULTIMEDIA_STREAMING-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>af31</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-SIGNALING-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs3</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-NETWORK_CONTROL-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs6</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-NETWORK_MANAGEMENT-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs2</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-TRANSACTIONAL_DATA-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>af21</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-BULK_DATA-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>af11</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-SCAVENGER-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs1</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>class-default</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>default</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+</policy-map>
+<policy-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-QUEUING-OUT</name>
+  <class>
+    <name>WEBUI-VOICE-DSCP</name>
+    <action-list>
+      <action-type>priority</action-type>
+      <priority>
+        <percent>10</percent>
+      </priority>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-BROADCAST_VIDEO-DSCP</name>
+    <action-list>
+      <action-type>priority</action-type>
+      <priority>
+        <percent>10</percent>
+      </priority>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-REALTIME_INTERACTIVE-DSCP</name>
+    <action-list>
+      <action-type>priority</action-type>
+      <priority>
+        <percent>13</percent>
+      </priority>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-NETWORK_CONTROL-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>2</percent>
+      </bandwidth>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-SIGNALING-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>2</percent>
+      </bandwidth>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-NETWORK_MANAGEMENT-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>3</percent>
+      </bandwidth>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-MULTIMEDIA_CONFERENCING-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>10</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-MULTIMEDIA_STREAMING-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>10</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-TRANSACTIONAL_DATA-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>10</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-BULK_DATA-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>4</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-SCAVENGER-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>1</percent>
+      </bandwidth>
+    </action-list>
+  </class>
+  <class>
+    <name>class-default</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>25</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+</policy-map>
+</policy>
+<interface>
+  <GigabitEthernet>
+    <name>1</name>
+    <description>MANAGEMENT INTERFACE - DON'T TOUCH ME</description>
+    <ip>
+    <address>
+    <primary>
+      <address>10.10.20.48</address>
+      <mask>255.255.255.0</mask>
+    </primary>
+  </address>
+  <nbar xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-nbar">
+  <protocol-discovery>
+  </protocol-discovery>
+</nbar>
+</ip>
+<mop>
+  <enabled>false</enabled>
+  <sysid>false</sysid>
+</mop>
+<negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+  <auto>true</auto>
+</negotiation>
+<service-policy xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <input>WEBUI-MARKING-IN</input>
+  <output>WEBUI-QUEUING-OUT</output>
+</service-policy>
+</GigabitEthernet>
+<GigabitEthernet>
+  <name>2</name>
+  <description>Network Interface</description>
+  <shutdown/>
+  <ip>
+  <nbar xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-nbar">
+  <protocol-discovery>
+  </protocol-discovery>
+</nbar>
+</ip>
+<mop>
+  <enabled>false</enabled>
+  <sysid>false</sysid>
+</mop>
+<negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+  <auto>true</auto>
+</negotiation>
+<service-policy xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <input>WEBUI-MARKING-IN</input>
+  <output>WEBUI-QUEUING-OUT</output>
+</service-policy>
+</GigabitEthernet>
+<GigabitEthernet>
+  <name>3</name>
+  <description>Network Interface</description>
+  <shutdown/>
+  <ip>
+  <nbar xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-nbar">
+  <protocol-discovery>
+  </protocol-discovery>
+</nbar>
+</ip>
+<mop>
+  <enabled>false</enabled>
+  <sysid>false</sysid>
+</mop>
+<channel-group xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+  <number>1</number>
+  <mode>active</mode>
+</channel-group>
+<negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+  <auto>true</auto>
+</negotiation>
+<service-policy xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <input>WEBUI-MARKING-IN</input>
+  <output>WEBUI-QUEUING-OUT</output>
+</service-policy>
+</GigabitEthernet>
+<Loopback>
+  <name>22</name>
+  <description>hr test</description>
+</Loopback>
+<Loopback>
+  <name>71</name>
+  <description>testing go_ssh</description>
+</Loopback>
+<Loopback>
+  <name>72</name>
+  <description>testing go_ssh</description>
+</Loopback>
+<Loopback>
+  <name>100</name>
+  <description>Testing ncclient</description>
+  <ip>
+  <address>
+  <primary>
+    <address>10.20.20.20</address>
+    <mask>255.255.255.255</mask>
+  </primary>
+</address>
+</ip>
+</Loopback>
+<Loopback>
+  <name>101</name>
+  <ip>
+  <address>
+  <primary>
+    <address>101.1.1.1</address>
+    <mask>255.255.255.255</mask>
+  </primary>
+</address>
+</ip>
+</Loopback>
+<Loopback>
+  <name>803</name>
+  <description>New Interface Created with Genie change</description>
+</Loopback>
+<Port-channel>
+  <name>1</name>
+  <mop>
+    <enabled>false</enabled>
+    <sysid>false</sysid>
+  </mop>
+  <negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+    <auto>false</auto>
+  </negotiation>
+</Port-channel>
+</interface>
+<control-plane>
+</control-plane>
+<login>
+<on-success>
+<log>
+</log>
+</on-success>
+</login>
+<multilink>
+  <bundle-name xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ppp">authenticated</bundle-name>
+</multilink>
+<redundancy>
+</redundancy>
+<spanning-tree>
+<extend xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-spanning-tree">
+  <system-id/>
+</extend>
+</spanning-tree>
+<subscriber>
+  <templating/>
+</subscriber>
+<crypto>
+<ipsec xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-crypto">
+  <profile>
+    <name>TEST_TEST</name>
+  </profile>
+</ipsec>
+<pki xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-crypto">
+<certificate>
+  <chain>
+    <name>SLA-TrustPoint</name>
+    <certificate>
+      <serial>01</serial>
+      <certtype>ca</certtype>
+    </certificate>
+  </chain>
+  <chain>
+    <name>TP-self-signed-1059130051</name>
+    <certificate>
+      <serial>01</serial>
+      <certtype>self-signed</certtype>
+    </certificate>
+  </chain>
+</certificate>
+<trustpoint>
+  <id>SLA-TrustPoint</id>
+  <enrollment>
+    <pkcs12/>
+  </enrollment>
+  <revocation-check>crl</revocation-check>
+</trustpoint>
+<trustpoint>
+  <id>TP-self-signed-1059130051</id>
+  <enrollment>
+    <selfsigned/>
+  </enrollment>
+  <revocation-check>none</revocation-check>
+  <subject-name>cn=IOS-Self-Signed-Certificate-1059130051</subject-name>
+</trustpoint>
+</pki>
+</crypto>
+<license>
+<udi>
+  <pid>CSR1000V</pid>
+  <sn>989DIA2RYVT</sn>
+</udi>
+<boot>
+<level>
+  <ax/>
+</level>
+</boot>
+</license>
+<line>
+  <console>
+    <first>0</first>
+    <exec-timeout>
+      <minutes>0</minutes>
+      <seconds>0</seconds>
+    </exec-timeout>
+    <stopbits>1</stopbits>
+  </console>
+  <vty>
+    <first>0</first>
+    <last>4</last>
+    <login>
+      <local/>
+    </login>
+    <transport>
+    <input>
+      <input>ssh</input>
+    </input>
+  </transport>
+</vty>
+</line>
+<iox>
+</iox>
+<diagnostic xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-diagnostics">
+<bootup>
+  <level>minimal</level>
+</bootup>
+</diagnostic>
+</native>
+
+connected to host:  1
+&{200 OK 200 HTTP/1.1 1 1 map[Cache-Control:[private, no-cache, must-revalidate, proxy-revalidate] Connection:[keep-alive] Content-Type:[application/yang-data+xml] Date:[Sat, 02 Nov 2019 00:09:19 GMT] Pragma:[no-cache] Server:[nginx]] 0x113c750 -1 [chunked] false false map[] 0x11a8000 0x11380c0}
+
+<native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native"  xmlns:ios="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+  <version>16.11</version>
+  <boot-start-marker/>
+  <boot-end-marker/>
+  <banner>
+  <motd>
+    <banner>^C</banner>
+  </motd>
+</banner>
+<memory>
+<free>
+<low-watermark>
+  <processor>80557</processor>
+</low-watermark>
+</free>
+</memory>
+<call-home>
+  <contact-email-addr xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-call-home">sch-smart-licensing@cisco.com</contact-email-addr>
+  <profile xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-call-home">
+    <profile-name>CiscoTAC-1</profile-name>
+    <active>true</active>
+  </profile>
+</call-home>
+<service>
+<timestamps>
+<debug>
+<datetime>
+<msec>
+</msec>
+</datetime>
+</debug>
+<log>
+<datetime>
+  <msec/>
+</datetime>
+</log>
+</timestamps>
+<call-home/>
+</service>
+<platform>
+<console xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-platform">
+  <output>virtual</output>
+</console>
+</platform>
+<hostname>csr1000v-1</hostname>
+<enable>
+<secret>
+  <type>9</type>
+  <secret>$9$PvdeTeuxxh0ygk$PSg0GTG2I7bluI51e.IvfEu2uxy56e/9/PgqzFUklso</secret>
+</secret>
+</enable>
+<username>
+  <name>cisco</name>
+  <privilege>15</privilege>
+  <secret>
+    <encryption>9</encryption>
+    <secret>$9$COf3Q4xfzT.JxE$L3hvSkDv874Qrh8Hzdv/rPQjLNOjreYG2ocffHG7rls</secret>
+  </secret>
+</username>
+<username>
+  <name>developer</name>
+  <privilege>15</privilege>
+  <secret>
+    <encryption>9</encryption>
+    <secret>$9$fhUXi6Xg438iAE$..VhXRCHiDQy3K2zmZUl9iZLbQJ9wpUtQZwQxSRESc2</secret>
+  </secret>
+</username>
+<username>
+  <name>newuser80</name>
+  <password>
+    <encryption>0</encryption>
+    <password>Yu76_87AF</password>
+  </password>
+</username>
+<username>
+  <name>root</name>
+  <privilege>15</privilege>
+  <secret>
+    <encryption>9</encryption>
+    <secret>$9$FfUDIPBFcs03AE$MyLIWEuiRle8p3yGflAGTcrJA6BUUh/oWtyyfoMQXSI</secret>
+  </secret>
+</username>
+<ip>
+<domain>
+  <lookup>false</lookup>
+  <name>cisco.com</name>
+</domain>
+<forward-protocol>
+  <protocol>nd</protocol>
+</forward-protocol>
+<route>
+  <ip-route-interface-forwarding-list>
+    <prefix>0.0.0.0</prefix>
+    <mask>0.0.0.0</mask>
+    <fwd-list>
+      <fwd>GigabitEthernet1</fwd>
+      <interface-next-hop>
+        <ip-address>10.10.20.254</ip-address>
+      </interface-next-hop>
+    </fwd-list>
+  </ip-route-interface-forwarding-list>
+</route>
+<scp>
+<server>
+  <enable/>
+</server>
+</scp>
+<ssh>
+<rsa>
+  <keypair-name>ssh-key</keypair-name>
+</rsa>
+<version>2</version>
+</ssh>
+<access-list>
+  <extended xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-acl">
+    <name>meraki-fqdn-dns</name>
+  </extended>
+</access-list>
+<http xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-http">
+<authentication>
+  <local/>
+</authentication>
+<server>true</server>
+<secure-server>true</secure-server>
+</http>
+<nbar xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-nbar">
+  <http-services/>
+</nbar>
+</ip>
+<cdp>
+  <run xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-cdp"/>
+</cdp>
+<policy>
+  <class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+    <name>WEBUI-BROADCAST_VIDEO-DSCP</name>
+    <prematch>match-all</prematch>
+    <match>
+      <dscp>cs5</dscp>
+    </match>
+  </class-map>
+  <class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+    <name>WEBUI-BROADCAST_VIDEO-NBAR</name>
+    <prematch>match-all</prematch>
+    <match>
+    <protocol>
+    <attribute>
+      <business-relevance>
+        <name>business-relevant</name>
+      </business-relevance>
+      <traffic-class>
+        <name>broadcast-video</name>
+      </traffic-class>
+    </attribute>
+  </protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-BULK_DATA-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>af11</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-BULK_DATA-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>bulk-data</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MULTIMEDIA_CONFERENCING-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>af41</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MULTIMEDIA_CONFERENCING-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>multimedia-conferencing</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MULTIMEDIA_STREAMING-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>af31</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MULTIMEDIA_STREAMING-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>multimedia-streaming</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-NETWORK_CONTROL-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs6</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-NETWORK_CONTROL-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>network-control</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-NETWORK_MANAGEMENT-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs2</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-NETWORK_MANAGEMENT-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>ops-admin-mgmt</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-REALTIME_INTERACTIVE-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs4</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-REALTIME_INTERACTIVE-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>real-time-interactive</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-SCAVENGER-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs1</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-SCAVENGER-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-irrelevant</name>
+    </business-relevance>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-SIGNALING-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs3</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-SIGNALING-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>signaling</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-TRANSACTIONAL_DATA-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>af21</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-TRANSACTIONAL_DATA-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>transactional-data</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-VOICE-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>ef</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-VOICE-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>voip-telephony</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<policy-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MARKING-IN</name>
+  <class>
+    <name>WEBUI-VOICE-NBAR</name>
+    <action-list>
+      <action-type>set</action-type>
+      <set>
+      <dscp>
+        <dscp-val>ef</dscp-val>
+      </dscp>
+    </set>
+  </action-list>
+</class>
+<class>
+  <name>WEBUI-BROADCAST_VIDEO-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs5</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-REALTIME_INTERACTIVE-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs4</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-MULTIMEDIA_CONFERENCING-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>af41</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-MULTIMEDIA_STREAMING-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>af31</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-SIGNALING-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs3</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-NETWORK_CONTROL-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs6</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-NETWORK_MANAGEMENT-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs2</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-TRANSACTIONAL_DATA-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>af21</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-BULK_DATA-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>af11</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-SCAVENGER-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs1</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>class-default</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>default</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+</policy-map>
+<policy-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-QUEUING-OUT</name>
+  <class>
+    <name>WEBUI-VOICE-DSCP</name>
+    <action-list>
+      <action-type>priority</action-type>
+      <priority>
+        <percent>10</percent>
+      </priority>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-BROADCAST_VIDEO-DSCP</name>
+    <action-list>
+      <action-type>priority</action-type>
+      <priority>
+        <percent>10</percent>
+      </priority>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-REALTIME_INTERACTIVE-DSCP</name>
+    <action-list>
+      <action-type>priority</action-type>
+      <priority>
+        <percent>13</percent>
+      </priority>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-NETWORK_CONTROL-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>2</percent>
+      </bandwidth>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-SIGNALING-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>2</percent>
+      </bandwidth>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-NETWORK_MANAGEMENT-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>3</percent>
+      </bandwidth>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-MULTIMEDIA_CONFERENCING-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>10</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-MULTIMEDIA_STREAMING-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>10</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-TRANSACTIONAL_DATA-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>10</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-BULK_DATA-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>4</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-SCAVENGER-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>1</percent>
+      </bandwidth>
+    </action-list>
+  </class>
+  <class>
+    <name>class-default</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>25</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+</policy-map>
+</policy>
+<interface>
+  <GigabitEthernet>
+    <name>1</name>
+    <description>MANAGEMENT INTERFACE - DON'T TOUCH ME</description>
+    <ip>
+    <address>
+    <primary>
+      <address>10.10.20.48</address>
+      <mask>255.255.255.0</mask>
+    </primary>
+  </address>
+  <nbar xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-nbar">
+  <protocol-discovery>
+  </protocol-discovery>
+</nbar>
+</ip>
+<mop>
+  <enabled>false</enabled>
+  <sysid>false</sysid>
+</mop>
+<negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+  <auto>true</auto>
+</negotiation>
+<service-policy xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <input>WEBUI-MARKING-IN</input>
+  <output>WEBUI-QUEUING-OUT</output>
+</service-policy>
+</GigabitEthernet>
+<GigabitEthernet>
+  <name>2</name>
+  <description>Network Interface</description>
+  <shutdown/>
+  <ip>
+  <nbar xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-nbar">
+  <protocol-discovery>
+  </protocol-discovery>
+</nbar>
+</ip>
+<mop>
+  <enabled>false</enabled>
+  <sysid>false</sysid>
+</mop>
+<negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+  <auto>true</auto>
+</negotiation>
+<service-policy xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <input>WEBUI-MARKING-IN</input>
+  <output>WEBUI-QUEUING-OUT</output>
+</service-policy>
+</GigabitEthernet>
+<GigabitEthernet>
+  <name>3</name>
+  <description>Network Interface</description>
+  <shutdown/>
+  <ip>
+  <nbar xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-nbar">
+  <protocol-discovery>
+  </protocol-discovery>
+</nbar>
+</ip>
+<mop>
+  <enabled>false</enabled>
+  <sysid>false</sysid>
+</mop>
+<channel-group xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+  <number>1</number>
+  <mode>active</mode>
+</channel-group>
+<negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+  <auto>true</auto>
+</negotiation>
+<service-policy xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <input>WEBUI-MARKING-IN</input>
+  <output>WEBUI-QUEUING-OUT</output>
+</service-policy>
+</GigabitEthernet>
+<Loopback>
+  <name>22</name>
+  <description>hr test</description>
+</Loopback>
+<Loopback>
+  <name>71</name>
+  <description>testing go_ssh</description>
+</Loopback>
+<Loopback>
+  <name>72</name>
+  <description>testing go_ssh</description>
+</Loopback>
+<Loopback>
+  <name>100</name>
+  <description>Testing ncclient</description>
+  <ip>
+  <address>
+  <primary>
+    <address>10.20.20.20</address>
+    <mask>255.255.255.255</mask>
+  </primary>
+</address>
+</ip>
+</Loopback>
+<Loopback>
+  <name>101</name>
+  <ip>
+  <address>
+  <primary>
+    <address>101.1.1.1</address>
+    <mask>255.255.255.255</mask>
+  </primary>
+</address>
+</ip>
+</Loopback>
+<Loopback>
+  <name>803</name>
+  <description>New Interface Created with Genie change</description>
+</Loopback>
+<Port-channel>
+  <name>1</name>
+  <mop>
+    <enabled>false</enabled>
+    <sysid>false</sysid>
+  </mop>
+  <negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+    <auto>false</auto>
+  </negotiation>
+</Port-channel>
+</interface>
+<control-plane>
+</control-plane>
+<login>
+<on-success>
+<log>
+</log>
+</on-success>
+</login>
+<multilink>
+  <bundle-name xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ppp">authenticated</bundle-name>
+</multilink>
+<redundancy>
+</redundancy>
+<spanning-tree>
+<extend xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-spanning-tree">
+  <system-id/>
+</extend>
+</spanning-tree>
+<subscriber>
+  <templating/>
+</subscriber>
+<crypto>
+<ipsec xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-crypto">
+  <profile>
+    <name>TEST_TEST</name>
+  </profile>
+</ipsec>
+<pki xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-crypto">
+<certificate>
+  <chain>
+    <name>SLA-TrustPoint</name>
+    <certificate>
+      <serial>01</serial>
+      <certtype>ca</certtype>
+    </certificate>
+  </chain>
+  <chain>
+    <name>TP-self-signed-1059130051</name>
+    <certificate>
+      <serial>01</serial>
+      <certtype>self-signed</certtype>
+    </certificate>
+  </chain>
+</certificate>
+<trustpoint>
+  <id>SLA-TrustPoint</id>
+  <enrollment>
+    <pkcs12/>
+  </enrollment>
+  <revocation-check>crl</revocation-check>
+</trustpoint>
+<trustpoint>
+  <id>TP-self-signed-1059130051</id>
+  <enrollment>
+    <selfsigned/>
+  </enrollment>
+  <revocation-check>none</revocation-check>
+  <subject-name>cn=IOS-Self-Signed-Certificate-1059130051</subject-name>
+</trustpoint>
+</pki>
+</crypto>
+<license>
+<udi>
+  <pid>CSR1000V</pid>
+  <sn>989DIA2RYVT</sn>
+</udi>
+<boot>
+<level>
+  <ax/>
+</level>
+</boot>
+</license>
+<line>
+  <console>
+    <first>0</first>
+    <exec-timeout>
+      <minutes>0</minutes>
+      <seconds>0</seconds>
+    </exec-timeout>
+    <stopbits>1</stopbits>
+  </console>
+  <vty>
+    <first>0</first>
+    <last>4</last>
+    <login>
+      <local/>
+    </login>
+    <transport>
+    <input>
+      <input>ssh</input>
+    </input>
+  </transport>
+</vty>
+</line>
+<iox>
+</iox>
+<diagnostic xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-diagnostics">
+<bootup>
+  <level>minimal</level>
+</bootup>
+</diagnostic>
+</native>
+
+connected to host:  2
+&{200 OK 200 HTTP/1.1 1 1 map[Cache-Control:[private, no-cache, must-revalidate, proxy-revalidate] Connection:[keep-alive] Content-Type:[application/yang-data+xml] Date:[Sat, 02 Nov 2019 00:09:23 GMT] Pragma:[no-cache] Server:[nginx]] 0x11d4030 -1 [chunked] false false map[] 0x11a8080 0x11380c0}
+
+<native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native"  xmlns:ios="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+  <version>16.11</version>
+  <boot-start-marker/>
+  <boot-end-marker/>
+  <banner>
+  <motd>
+    <banner>^C</banner>
+  </motd>
+</banner>
+<memory>
+<free>
+<low-watermark>
+  <processor>80557</processor>
+</low-watermark>
+</free>
+</memory>
+<call-home>
+  <contact-email-addr xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-call-home">sch-smart-licensing@cisco.com</contact-email-addr>
+  <profile xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-call-home">
+    <profile-name>CiscoTAC-1</profile-name>
+    <active>true</active>
+  </profile>
+</call-home>
+<service>
+<timestamps>
+<debug>
+<datetime>
+<msec>
+</msec>
+</datetime>
+</debug>
+<log>
+<datetime>
+  <msec/>
+</datetime>
+</log>
+</timestamps>
+<call-home/>
+</service>
+<platform>
+<console xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-platform">
+  <output>virtual</output>
+</console>
+</platform>
+<hostname>csr1000v-1</hostname>
+<enable>
+<secret>
+  <type>9</type>
+  <secret>$9$PvdeTeuxxh0ygk$PSg0GTG2I7bluI51e.IvfEu2uxy56e/9/PgqzFUklso</secret>
+</secret>
+</enable>
+<username>
+  <name>cisco</name>
+  <privilege>15</privilege>
+  <secret>
+    <encryption>9</encryption>
+    <secret>$9$COf3Q4xfzT.JxE$L3hvSkDv874Qrh8Hzdv/rPQjLNOjreYG2ocffHG7rls</secret>
+  </secret>
+</username>
+<username>
+  <name>developer</name>
+  <privilege>15</privilege>
+  <secret>
+    <encryption>9</encryption>
+    <secret>$9$fhUXi6Xg438iAE$..VhXRCHiDQy3K2zmZUl9iZLbQJ9wpUtQZwQxSRESc2</secret>
+  </secret>
+</username>
+<username>
+  <name>newuser80</name>
+  <password>
+    <encryption>0</encryption>
+    <password>Yu76_87AF</password>
+  </password>
+</username>
+<username>
+  <name>root</name>
+  <privilege>15</privilege>
+  <secret>
+    <encryption>9</encryption>
+    <secret>$9$FfUDIPBFcs03AE$MyLIWEuiRle8p3yGflAGTcrJA6BUUh/oWtyyfoMQXSI</secret>
+  </secret>
+</username>
+<ip>
+<domain>
+  <lookup>false</lookup>
+  <name>cisco.com</name>
+</domain>
+<forward-protocol>
+  <protocol>nd</protocol>
+</forward-protocol>
+<route>
+  <ip-route-interface-forwarding-list>
+    <prefix>0.0.0.0</prefix>
+    <mask>0.0.0.0</mask>
+    <fwd-list>
+      <fwd>GigabitEthernet1</fwd>
+      <interface-next-hop>
+        <ip-address>10.10.20.254</ip-address>
+      </interface-next-hop>
+    </fwd-list>
+  </ip-route-interface-forwarding-list>
+</route>
+<scp>
+<server>
+  <enable/>
+</server>
+</scp>
+<ssh>
+<rsa>
+  <keypair-name>ssh-key</keypair-name>
+</rsa>
+<version>2</version>
+</ssh>
+<access-list>
+  <extended xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-acl">
+    <name>meraki-fqdn-dns</name>
+  </extended>
+</access-list>
+<http xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-http">
+<authentication>
+  <local/>
+</authentication>
+<server>true</server>
+<secure-server>true</secure-server>
+</http>
+<nbar xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-nbar">
+  <http-services/>
+</nbar>
+</ip>
+<cdp>
+  <run xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-cdp"/>
+</cdp>
+<policy>
+  <class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+    <name>WEBUI-BROADCAST_VIDEO-DSCP</name>
+    <prematch>match-all</prematch>
+    <match>
+      <dscp>cs5</dscp>
+    </match>
+  </class-map>
+  <class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+    <name>WEBUI-BROADCAST_VIDEO-NBAR</name>
+    <prematch>match-all</prematch>
+    <match>
+    <protocol>
+    <attribute>
+      <business-relevance>
+        <name>business-relevant</name>
+      </business-relevance>
+      <traffic-class>
+        <name>broadcast-video</name>
+      </traffic-class>
+    </attribute>
+  </protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-BULK_DATA-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>af11</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-BULK_DATA-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>bulk-data</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MULTIMEDIA_CONFERENCING-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>af41</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MULTIMEDIA_CONFERENCING-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>multimedia-conferencing</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MULTIMEDIA_STREAMING-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>af31</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MULTIMEDIA_STREAMING-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>multimedia-streaming</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-NETWORK_CONTROL-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs6</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-NETWORK_CONTROL-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>network-control</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-NETWORK_MANAGEMENT-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs2</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-NETWORK_MANAGEMENT-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>ops-admin-mgmt</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-REALTIME_INTERACTIVE-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs4</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-REALTIME_INTERACTIVE-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>real-time-interactive</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-SCAVENGER-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs1</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-SCAVENGER-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-irrelevant</name>
+    </business-relevance>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-SIGNALING-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>cs3</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-SIGNALING-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>signaling</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-TRANSACTIONAL_DATA-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>af21</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-TRANSACTIONAL_DATA-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>transactional-data</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-VOICE-DSCP</name>
+  <prematch>match-all</prematch>
+  <match>
+    <dscp>ef</dscp>
+  </match>
+</class-map>
+<class-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-VOICE-NBAR</name>
+  <prematch>match-all</prematch>
+  <match>
+  <protocol>
+  <attribute>
+    <business-relevance>
+      <name>business-relevant</name>
+    </business-relevance>
+    <traffic-class>
+      <name>voip-telephony</name>
+    </traffic-class>
+  </attribute>
+</protocol>
+</match>
+</class-map>
+<policy-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-MARKING-IN</name>
+  <class>
+    <name>WEBUI-VOICE-NBAR</name>
+    <action-list>
+      <action-type>set</action-type>
+      <set>
+      <dscp>
+        <dscp-val>ef</dscp-val>
+      </dscp>
+    </set>
+  </action-list>
+</class>
+<class>
+  <name>WEBUI-BROADCAST_VIDEO-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs5</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-REALTIME_INTERACTIVE-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs4</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-MULTIMEDIA_CONFERENCING-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>af41</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-MULTIMEDIA_STREAMING-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>af31</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-SIGNALING-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs3</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-NETWORK_CONTROL-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs6</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-NETWORK_MANAGEMENT-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs2</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-TRANSACTIONAL_DATA-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>af21</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-BULK_DATA-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>af11</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>WEBUI-SCAVENGER-NBAR</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>cs1</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+<class>
+  <name>class-default</name>
+  <action-list>
+    <action-type>set</action-type>
+    <set>
+    <dscp>
+      <dscp-val>default</dscp-val>
+    </dscp>
+  </set>
+</action-list>
+</class>
+</policy-map>
+<policy-map xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <name>WEBUI-QUEUING-OUT</name>
+  <class>
+    <name>WEBUI-VOICE-DSCP</name>
+    <action-list>
+      <action-type>priority</action-type>
+      <priority>
+        <percent>10</percent>
+      </priority>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-BROADCAST_VIDEO-DSCP</name>
+    <action-list>
+      <action-type>priority</action-type>
+      <priority>
+        <percent>10</percent>
+      </priority>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-REALTIME_INTERACTIVE-DSCP</name>
+    <action-list>
+      <action-type>priority</action-type>
+      <priority>
+        <percent>13</percent>
+      </priority>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-NETWORK_CONTROL-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>2</percent>
+      </bandwidth>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-SIGNALING-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>2</percent>
+      </bandwidth>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-NETWORK_MANAGEMENT-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>3</percent>
+      </bandwidth>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-MULTIMEDIA_CONFERENCING-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>10</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-MULTIMEDIA_STREAMING-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>10</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-TRANSACTIONAL_DATA-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>10</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-BULK_DATA-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>4</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+  <class>
+    <name>WEBUI-SCAVENGER-DSCP</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>1</percent>
+      </bandwidth>
+    </action-list>
+  </class>
+  <class>
+    <name>class-default</name>
+    <action-list>
+      <action-type>bandwidth</action-type>
+      <bandwidth>
+        <percent>25</percent>
+      </bandwidth>
+    </action-list>
+    <action-list>
+      <action-type>fair-queue</action-type>
+    </action-list>
+    <action-list>
+      <action-type>random-detect</action-type>
+      <random-detect>
+        <dscp-based/>
+      </random-detect>
+    </action-list>
+  </class>
+</policy-map>
+</policy>
+<interface>
+  <GigabitEthernet>
+    <name>1</name>
+    <description>MANAGEMENT INTERFACE - DON'T TOUCH ME</description>
+    <ip>
+    <address>
+    <primary>
+      <address>10.10.20.48</address>
+      <mask>255.255.255.0</mask>
+    </primary>
+  </address>
+  <nbar xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-nbar">
+  <protocol-discovery>
+  </protocol-discovery>
+</nbar>
+</ip>
+<mop>
+  <enabled>false</enabled>
+  <sysid>false</sysid>
+</mop>
+<negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+  <auto>true</auto>
+</negotiation>
+<service-policy xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <input>WEBUI-MARKING-IN</input>
+  <output>WEBUI-QUEUING-OUT</output>
+</service-policy>
+</GigabitEthernet>
+<GigabitEthernet>
+  <name>2</name>
+  <description>Network Interface</description>
+  <shutdown/>
+  <ip>
+  <nbar xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-nbar">
+  <protocol-discovery>
+  </protocol-discovery>
+</nbar>
+</ip>
+<mop>
+  <enabled>false</enabled>
+  <sysid>false</sysid>
+</mop>
+<negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+  <auto>true</auto>
+</negotiation>
+<service-policy xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <input>WEBUI-MARKING-IN</input>
+  <output>WEBUI-QUEUING-OUT</output>
+</service-policy>
+</GigabitEthernet>
+<GigabitEthernet>
+  <name>3</name>
+  <description>Network Interface</description>
+  <shutdown/>
+  <ip>
+  <nbar xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-nbar">
+  <protocol-discovery>
+  </protocol-discovery>
+</nbar>
+</ip>
+<mop>
+  <enabled>false</enabled>
+  <sysid>false</sysid>
+</mop>
+<channel-group xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+  <number>1</number>
+  <mode>active</mode>
+</channel-group>
+<negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+  <auto>true</auto>
+</negotiation>
+<service-policy xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-policy">
+  <input>WEBUI-MARKING-IN</input>
+  <output>WEBUI-QUEUING-OUT</output>
+</service-policy>
+</GigabitEthernet>
+<Loopback>
+  <name>22</name>
+  <description>hr test</description>
+</Loopback>
+<Loopback>
+  <name>71</name>
+  <description>testing go_ssh</description>
+</Loopback>
+<Loopback>
+  <name>72</name>
+  <description>testing go_ssh</description>
+</Loopback>
+<Loopback>
+  <name>100</name>
+  <description>Testing ncclient</description>
+  <ip>
+  <address>
+  <primary>
+    <address>10.20.20.20</address>
+    <mask>255.255.255.255</mask>
+  </primary>
+</address>
+</ip>
+</Loopback>
+<Loopback>
+  <name>101</name>
+  <ip>
+  <address>
+  <primary>
+    <address>101.1.1.1</address>
+    <mask>255.255.255.255</mask>
+  </primary>
+</address>
+</ip>
+</Loopback>
+<Loopback>
+  <name>803</name>
+  <description>New Interface Created with Genie change</description>
+</Loopback>
+<Port-channel>
+  <name>1</name>
+  <mop>
+    <enabled>false</enabled>
+    <sysid>false</sysid>
+  </mop>
+  <negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+    <auto>false</auto>
+  </negotiation>
+</Port-channel>
+</interface>
+<control-plane>
+</control-plane>
+<login>
+<on-success>
+<log>
+</log>
+</on-success>
+</login>
+<multilink>
+  <bundle-name xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ppp">authenticated</bundle-name>
+</multilink>
+<redundancy>
+</redundancy>
+<spanning-tree>
+<extend xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-spanning-tree">
+  <system-id/>
+</extend>
+</spanning-tree>
+<subscriber>
+  <templating/>
+</subscriber>
+<crypto>
+<ipsec xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-crypto">
+  <profile>
+    <name>TEST_TEST</name>
+  </profile>
+</ipsec>
+<pki xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-crypto">
+<certificate>
+  <chain>
+    <name>SLA-TrustPoint</name>
+    <certificate>
+      <serial>01</serial>
+      <certtype>ca</certtype>
+    </certificate>
+  </chain>
+  <chain>
+    <name>TP-self-signed-1059130051</name>
+    <certificate>
+      <serial>01</serial>
+      <certtype>self-signed</certtype>
+    </certificate>
+  </chain>
+</certificate>
+<trustpoint>
+  <id>SLA-TrustPoint</id>
+  <enrollment>
+    <pkcs12/>
+  </enrollment>
+  <revocation-check>crl</revocation-check>
+</trustpoint>
+<trustpoint>
+  <id>TP-self-signed-1059130051</id>
+  <enrollment>
+    <selfsigned/>
+  </enrollment>
+  <revocation-check>none</revocation-check>
+  <subject-name>cn=IOS-Self-Signed-Certificate-1059130051</subject-name>
+</trustpoint>
+</pki>
+</crypto>
+<license>
+<udi>
+  <pid>CSR1000V</pid>
+  <sn>989DIA2RYVT</sn>
+</udi>
+<boot>
+<level>
+  <ax/>
+</level>
+</boot>
+</license>
+<line>
+  <console>
+    <first>0</first>
+    <exec-timeout>
+      <minutes>0</minutes>
+      <seconds>0</seconds>
+    </exec-timeout>
+    <stopbits>1</stopbits>
+  </console>
+  <vty>
+    <first>0</first>
+    <last>4</last>
+    <login>
+      <local/>
+    </login>
+    <transport>
+    <input>
+      <input>ssh</input>
+    </input>
+  </transport>
+</vty>
+</line>
+<iox>
+</iox>
+<diagnostic xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-diagnostics">
+<bootup>
+  <level>minimal</level>
+</bootup>
+</diagnostic>
+</native>
+
+pi@raspberrypi:~/Code_folder/go_folder/netOps/http_client $ 
