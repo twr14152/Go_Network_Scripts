@@ -2,35 +2,31 @@
 // https://host:port/restconf/data/etc:etc will determine what info is gathered
 // (c) 2019 Todd Riemenschneider
 
+
 package main
 
 import (
-	"crypto/tls"
 	"fmt"
-	"io/ioutil"
-	"log"
 	"net/http"
+	"io/ioutil"
+	"crypto/tls"
 )
 
 func main() {
-	connXinfo()
-}
-
-func connXinfo() {
 	certInfo := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 	}
-
-	username := "developer"
-	passwd := "C1sco12345"
 	client := &http.Client{Transport: certInfo}
-	req, err := http.NewRequest("GET", "https://ios-xe-mgmt-latest.cisco.com:9443/restconf/data/ietf-interfaces:interfaces", nil)
-	req.SetBasicAuth(username, passwd)
-	resp, err := client.Do(req)
-	fmt.Println("Connection info:\n", resp)
-	if err != nil {
-		log.Fatal(err)
-	}
-	bodyText, err := ioutil.ReadAll(resp.Body)
-	fmt.Println("Interfaces:\n", string(bodyText))
+	url := "https://ios-xe-mgmt.cisco.com:9443/restconf//data/Cisco-IOS-XE-native:native?content=config&depth=65535"
+
+	req, _ := http.NewRequest("GET", url, nil)
+	req.SetBasicAuth("developer", "C1sco12345")
+	res, _ := client.Do(req)
+
+	defer res.Body.Close()
+	body, _ := ioutil.ReadAll(res.Body)
+
+	fmt.Println(res)
+	fmt.Println(string(body))
+
 }
