@@ -37,7 +37,7 @@ func main() {
 		// i is being used to identify which host is being connected to
 		fmt.Println("connected to host: ", i)
 		// create variable that includes the host and the restconf command to pull interface info off the device
-		url := ("https://"+host+"/restconf/data/ietf-interfaces:interfaces")
+		url := ("https://"+host+"/restconf/data/ietf-interfaces:interfaces/interface=Loopback71")
 		// Issues the GET Request with the variable created above
 		req, err := http.NewRequest("GET", url, nil)
 		req.SetBasicAuth(username, passwd)
@@ -50,3 +50,4 @@ func main() {
 		fmt.Println(string(deviceOutput))
 	}
 }
+
