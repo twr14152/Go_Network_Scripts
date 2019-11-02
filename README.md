@@ -49,7 +49,7 @@ The 7th script uses host_file to login to target hosts and a cmd_file to issue c
 - ssh_using_host_cmd_files_output.txt - shows output of script
 ```
 
-# HTTP Client Scripts
+# HTTP Client Scripts - (Restconf)
 The first script uses the https transport protocol to connect to Cisco Devnet router and GET router config off it. As it stands its more of a learning tool than a useful production script. More research needed into understanding restconf and yang.
 ```
 - http_client/httpGet_v1.go
