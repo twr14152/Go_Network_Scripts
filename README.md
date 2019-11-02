@@ -41,10 +41,10 @@ How to use script: go run ssh_use_stdin.go < cmd_file.txt
 - ssh_client/cmd_file2.txt
 
 ```
-The 7th script uses host_file to login to target hosts and a cmd_file to issue commands on them. At this point this script would be useful for running a common set of commands on multiple devices. The script will simply loop through the hosts and the commands.
+The 7th script uses host_file to login to target hosts and a cmd_file to issue commands on them. At this point this script would be useful for running a common set of commands on multiple devices. The script will simply loop through the hosts and the commands. I've listed the same router multiple times in the host file to emulate multiple hosts.
 ```
 - ssh_client/ssh_using_host_cmd_files.go
-- ssh_client/host_file001.txt
+- ssh_client/host_file001.txt 
 - ssh_client/cmd_file001.txt
 - ssh_using_host_cmd_files_output.txt - shows output of script
 ```
@@ -53,17 +53,17 @@ The 7th script uses host_file to login to target hosts and a cmd_file to issue c
 The first script uses the https transport protocol to connect to Cisco Devnet router and GET router config off it. As it stands its more of a learning tool than a useful production script. More research needed into understanding restconf and yang.
 ```
 - http_client/httpGet_v1.go
-- http_client/httpGet_v1_output.txt
+- http_client/httpGet_v1_output.txt - shows output of script
 ```
 The second script offers the same functionality as the first only it opens hostfile to get its target hosts. It then places those hosts in a slice, then uses a for loop to iterate through the slice and issues the command to run on the device. 
 ```
 - http_client/httpGet_v2.go
 - http_client/host_file001.txt
-- http_client/httpGet_v2_output.txt
+- http_client/httpGet_v2_output.txt - shows output of script
 ```
 The third script is a simple config script using restconf. 
 ```
 - http_client/httpPost_v1.go
-- http_client/httpPost_v1_output.txt
+- http_client/httpPost_v1_output.txt - shows output of script
 ```
 
