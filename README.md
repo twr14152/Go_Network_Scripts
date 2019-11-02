@@ -50,18 +50,18 @@ The 7th script uses host_file to login to target hosts and a cmd_file to issue c
 ```
 
 # HTTP Client Scripts - (Restconf)
-The first script uses the https transport protocol to connect to Cisco Devnet router and GET router config off it. As it stands its more of a learning tool than a useful production script. More research needed into understanding restconf and yang.
+The first script uses the https transport protocol to connect to a Cisco Devnet router and GET router configs off the device. As it stands the script is more of a learning tool for Go than a useful production script. More research is needed into Yang and Restconf to truly understand the capabilities. 
 ```
 - http_client/httpGet_v1.go
 - http_client/httpGet_v1_output.txt - shows output of script
 ```
-The second script offers the same functionality as the first only it opens hostfile to get its target hosts. It then places those hosts in a slice, then uses a for loop to iterate through the slice and issues the command to run on the device. 
+The second script offers the same functionality as the first only it opens hostfile to get its target hosts. It then places those hosts in a slice, then uses a for loop to iterate through the slice and issues the commands on the devices. 
 ```
 - http_client/httpGet_v2.go
 - http_client/host_file001.txt
 - http_client/httpGet_v2_output.txt - shows output of script
 ```
-The third script is a simple config script using restconf. 
+The third script is a simple config script using restconf. The example simply adds a loopback interface.
 ```
 - http_client/httpPost_v1.go
 - http_client/httpPost_v1_output.txt - shows output of script
