@@ -17,22 +17,12 @@ import (
 var hostList []string
 
 func main() {
-	// Initiate function to create slice that will contain the target hosts
-	loginHosts()
-	// Initiate function that will connect to target hosts
-	connXinfo()
-}
-// This func will open host_file001 and read contents into hostList slice
-func loginHosts() {
 	hf, _ := os.Open("host_file001.txt")
 	scanner := bufio.NewScanner(hf)
 	scanner.Split(bufio.ScanLines)
 	for scanner.Scan() {
 		hostList = append(hostList, scanner.Text())
 	}
-}
-// This func contains info to connect to target hosts and run restconf command
-func connXinfo() {
 	// certInfo is the variable used to bypass cert validation process 
 	certInfo := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
@@ -52,12 +42,12 @@ func connXinfo() {
 		req, err := http.NewRequest("GET", url, nil)
 		req.SetBasicAuth(username, passwd)
 		resp, err := client.Do(req)
-		fmt.Println(resp)
 		if err != nil {
 			log.Fatal(err)
 		}
-		bodyText, err := ioutil.ReadAll(resp.Body)
+		deviceOutput, err := ioutil.ReadAll(resp.Body)
 		// Print output of commands to screen
-		fmt.Println(string(bodyText))
+		fmt.Println(string(deviceOutput))
 	}
 }
+
