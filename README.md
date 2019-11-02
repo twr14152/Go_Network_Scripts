@@ -66,4 +66,3 @@ The third script is a simple config script using restconf.
 - http_client/httpPost_v1.go
 - http_client/httpPost_v1_output.txt - shows output of script
 ```
-
