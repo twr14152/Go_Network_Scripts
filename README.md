@@ -62,7 +62,7 @@ The second script offers the same functionality as the first only it opens hostf
 - http_client/host_file001.txt
 - http_client/httpGet_v2_output.txt - shows output of script
 ```
-The third script is a simple config script using restconf. The example simply adds a loopback interface.
+The third script is a simple config script using restconf and the POST method. The example simply adds a loopback interface.
 ```
 - http_client/httpPost_v1.go
 - http_client/httpPost_v1_output.txt - shows output of script
