@@ -50,7 +50,7 @@ func main() {
 	defer res.Body.Close()
 	body, _ := ioutil.ReadAll(res.Body)
         
-	fmt.Println("res)
+	fmt.Println(res)
 	// Print the body of the response as a string
 	fmt.Println(string(body))
 
