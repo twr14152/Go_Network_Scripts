@@ -1,3 +1,4 @@
+
 // Restconf configuring an interface
 // (c) 2019 Todd Riemenschneider 
 
@@ -19,14 +20,14 @@ func main() {
 	//creates the config variable
 	config := []byte(`{
 		"ietf-interfaces:interface": {
-			"name": "Loopback72",
+			"name": "Loopback74",
 			"description": "Testing Golang RestConf",
 			"type": "iana-if-type:softwareLoopback",
 			"enabled": true,
 			"ietf-ip:ipv4": {
 				"address": [
 					{
-						"ip": "72.72.72.1",
+						"ip": "74.74.74.1",
 						"netmask": "255.255.255.255"
 					}
 				]
@@ -49,9 +50,8 @@ func main() {
         // client must close response body when finished
 	defer res.Body.Close()
 	body, _ := ioutil.ReadAll(res.Body)
-        
-	fmt.Println(res)
-	// Print the body of the response as a string
-	fmt.Println(string(body))
-
+	// This will print either created (success 201) or conflict (failure 409)       
+	fmt.Println("Device Response:\n ",(res))
+	// Print the body of the response if there is a conflict with the config
+	fmt.Println("This is the output of body: ", string(body))
 }
