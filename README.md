@@ -67,7 +67,7 @@ The third script is a simple config script using restconf and the POST method. T
 - http_client/httpPost_v1.go
 - http_client/httpPost_v1_output.txt - shows output of script
 ```
-The fourth script is a config script that pull hosts from a host_file add then to a slice then loop through them to POST the configuration. The configuration file is located in PostCmds.go. Its in the same folder as the main script httpPost_v2.go. So it calls the variable thats in PostCmds.go and applies the config to each device.
+The fourth script is a config script that pull hosts from a host_file add then loop through them to POST the configurations on each device. The configuration file is located in PostCmds.go. Its in the same folder as the main script httpPost_v2.go. So it can call the variable thats in PostCmds.go. This would be useful if you want to apply some common configuration on multiple device. The interface config was simply used to demonstrate the capability. 
 ```
 - httpPost_v2.go - The main script
 - PostCmds.go - holds the actual configs for the device 
