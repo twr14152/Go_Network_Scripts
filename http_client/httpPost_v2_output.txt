@@ -1,0 +1,44 @@
+go run httpPost_v2.go PostCmds.go | tee httpPost_v2_output.txt
+The config being loaded:
+ {
+		"ietf-interfaces:interface": {
+			"name": "Loopback69",
+			"description": "Testing Golang RestConf",
+			"type": "iana-if-type:softwareLoopback",
+			"enabled": true,
+			"ietf-ip:ipv4": {
+				"address": [
+					{
+						"ip": "69.69.69.1",
+						"netmask": "255.255.255.255"
+					}
+				]
+			}
+		}
+	}
+Connecting to host:  ios-xe-mgmt-latest.cisco.com:9443
+Device Response:
+  &{201 Created 201 HTTP/1.1 1 1 map[Cache-Control:[private, no-cache, must-revalidate, proxy-revalidate] Connection:[keep-alive] Content-Length:[0] Content-Type:[text/html] Date:[Mon, 04 Nov 2019 22:26:56 GMT] Etag:[1572-906416-412968] Last-Modified:[Mon, 04 Nov 2019 22:26:56 GMT] Location:[https://ios-xe-mgmt-latest.cisco.com/restconf/data/ietf-interfaces:interfaces/interface=Loopback69] Pragma:[no-cache] Server:[nginx]] {} 0 [] false false map[] 0x1cac180 0x1d380c0}
+This is the output of body:  
+The config being loaded:
+ {
+		"ietf-interfaces:interface": {
+			"name": "Loopback69",
+			"description": "Testing Golang RestConf",
+			"type": "iana-if-type:softwareLoopback",
+			"enabled": true,
+			"ietf-ip:ipv4": {
+				"address": [
+					{
+						"ip": "69.69.69.1",
+						"netmask": "255.255.255.255"
+					}
+				]
+			}
+		}
+	}
+Connecting to host:  ios-xe-mgmt.cisco.com:9443
+Device Response:
+  &{201 Created 201 HTTP/1.1 1 1 map[Cache-Control:[private, no-cache, must-revalidate, proxy-revalidate] Connection:[keep-alive] Content-Length:[0] Content-Type:[text/html] Date:[Mon, 04 Nov 2019 22:28:28 GMT] Etag:[1572-906508-73187] Last-Modified:[Mon, 04 Nov 2019 22:28:28 GMT] Location:[https://ios-xe-mgmt.cisco.com/restconf/data/ietf-interfaces:interfaces/interface=Loopback69] Pragma:[no-cache] Server:[nginx]] {} 0 [] false false map[] 0x1d8e100 0x1ca4720}
+This is the output of body:  
+pi@raspberrypi:~/Code_folder/go_folder/netOps/http_client $
