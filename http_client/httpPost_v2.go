@@ -24,10 +24,10 @@ func main() {
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 	}
 	//Just some code to see what the configs look like in byte code and str fmt
-	fmt.Println("config in bytes then in str fmt:\n ", config,"\n", string(config))
+	//fmt.Println("config in bytes then in str fmt:\n ", config,"\n", string(config))
 	//Apply the tls cert bypass to the client variable
 	client := &http.Client{Transport: certInfo}
-	for i, host := range hostList {
+	for _, host := range hostList {
 		// creating variable URL make the http.NewRequest statement easier to read
 		url := "https://"+host+"/restconf/data/ietf-interfaces:interfaces"
 		// The POST method is used to apply the (config) variable
@@ -39,7 +39,7 @@ func main() {
 		req.Header.Add("Accept", "application/yang-data+json")
 		// client.Do actually kicks off the process by sending http request 
 		res, _ := client.Do(req)
-		fmt.Println("Connecting to host: ", i)
+		fmt.Println("Connecting to host: ", host)
         	// client must close response body when finished
 		defer res.Body.Close()
 		body, _ := ioutil.ReadAll(res.Body)
