@@ -67,3 +67,10 @@ The third script is a simple config script using restconf and the POST method. T
 - http_client/httpPost_v1.go
 - http_client/httpPost_v1_output.txt - shows output of script
 ```
+The fourth script is a config script that pull hosts from a host_file add then to a slice then loop through them to POST the configuration. The configuration file is located in PostCmds.go. Its in the same folder as the main script httpPost_v2.go. So it calls the variable thats in PostCmds.go and applies the config to each device.
+```
+- httpPost_v2.go - The main script
+- PostCmds.go - holds the actual configs for the device 
+- host_file002.txt - holds the hosts
+- httpPost_v2.output.txt - displays how to run the script and the output.
+```
