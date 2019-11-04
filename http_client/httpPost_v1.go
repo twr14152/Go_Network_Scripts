@@ -1,5 +1,4 @@
-
-// Restconf configuring an interface
+// Connecting to Restconf API on Cisco router and configuring an interface
 // (c) 2019 Todd Riemenschneider 
 
 package main
@@ -34,6 +33,8 @@ func main() {
 			}
 		}
 	}`)
+	//Just some code to see what the configs look like in byte code and str fmt
+	fmt.Println("config in bytes then in str fmt:\n ", config,"\n", string(config))
 	//Apply the tls cert bypass to the client variable
 	client := &http.Client{Transport: certInfo}
 	// creating variable URL make the http.NewRequest statement easier to read
@@ -50,8 +51,8 @@ func main() {
         // client must close response body when finished
 	defer res.Body.Close()
 	body, _ := ioutil.ReadAll(res.Body)
-	// This will print either created (success 201) or conflict (failure 409)       
+        // This will print either created (success 201) or conflict (failure 409)  
 	fmt.Println("Device Response:\n ",(res))
-	// Print the body of the response if there is a conflict with the config
+	// Print the body of the response as a string
 	fmt.Println("This is the output of body: ", string(body))
 }
