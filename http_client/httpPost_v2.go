@@ -27,7 +27,7 @@ func main() {
 	client := &http.Client{Transport: certInfo}
 	for _, host := range hostList {
 		//Just some code to see what the configs look like in byte code and str fmt
-		fmt.Println("The config being loaded:\n", string(config))
+		fmt.Println("The config being loaded:\n", /*config, "\n",*/ string(config))
 		// creating variable URL make the http.NewRequest statement easier to read
 		url := "https://"+host+"/restconf/data/ietf-interfaces:interfaces"
 		// The POST method is used to apply the (config) variable
