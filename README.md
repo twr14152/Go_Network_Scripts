@@ -74,3 +74,5 @@ The fourth script is a config script that pull hosts from a host_file add then l
 - host_file002.txt - holds the hosts
 - httpPost_v2.output.txt - displays how to run the script and the output.
 ```
+# Misc Folder
+Simply a folder to test Go concepts/features out in a way that could relate to networking. 
