@@ -1,0 +1,15 @@
+pi@raspberrypi:~/Code_folder/go_folder/Introd_Go/ch7 $ go run methodsTest.go 
+hostname CORE_SW1
+ interface loopback0
+ management interface CORE_SW1
+ 65.90.100.1 255.255.255.255
+router bgp 65001
+ network 10.0.0.0 255.255.255.0
++++++++++++++++++++
+hostname CORE_SW2
+ interface loopback0
+ management interface CORE_SW2
+ 65.90.100.2 255.255.255.255
+router bgp 65001
+ network 10.0.0.0 255.255.255.0
+pi@raspberrypi:~/Code_folder/go_folder/Introd_Go/ch7 $ 
