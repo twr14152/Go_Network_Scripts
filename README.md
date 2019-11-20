@@ -78,5 +78,6 @@ The fourth script is a config script that pull hosts from a host_file add then l
 Simply a folder to test Go concepts and features as it could pertain to networking. More about testing features in Go than it is about testing a network concept. 
 ``` 
 - methodsTest.go - create a struct and method to print switch config details to screen
+- methodsTest_output.txt 
 
 ```
