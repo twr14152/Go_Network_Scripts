@@ -75,7 +75,7 @@ The fourth script is a config script that pull hosts from a host_file add then l
 - httpPost_v2_output.txt - displays how to run the script and the output.
 ```
 # Misc Folder
-Simply a folder to test Go concepts and features out as it could relate to networking. More about testing the Go feature than it is proving a network concept. 
+Simply a folder to test Go concepts and features as it could pertain to networking. More about testing features in Go than it is about testing a network concept. 
 ``` 
 - methodsTest.go - create a struct and method to print switch config details to screen
 
