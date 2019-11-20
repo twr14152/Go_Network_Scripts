@@ -72,7 +72,7 @@ The fourth script is a config script that pull hosts from a host_file add then l
 - httpPost_v2.go - The main script
 - PostCmds.go - holds the actual configs for the device 
 - host_file002.txt - holds the hosts
-- httpPost_v2.output.txt - displays how to run the script and the output.
+- httpPost_v2_output.txt - displays how to run the script and the output.
 ```
 # Misc Folder
 Simply a folder to test Go concepts and features out as it could relate to networking. More about testing the Go feature than it is proving a network concept. 
