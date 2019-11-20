@@ -10,7 +10,7 @@ type Switch struct {
 	RoutingProt string
 	Network     string
 }
-
+// Testing Method
 func (sw *Switch) confInfo() {
 	fmt.Println("hostname", sw.Name)
 	fmt.Println(" interface", sw.Interface)
