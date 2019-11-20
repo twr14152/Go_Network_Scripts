@@ -10,8 +10,8 @@ type Switch struct {
 	RoutingProt string
 	Network     string
 }
-// Testing method concept
-func (sw *Switch) Details() {
+
+func (sw *Switch) confInfo() {
 	fmt.Println("hostname", sw.Name)
 	fmt.Println(" interface", sw.Interface)
 	fmt.Println(sw.IntDescr)
@@ -23,7 +23,7 @@ func (sw *Switch) Details() {
 func main() {
 	core1 := Switch{Name: "CORE_SW1", Interface: "loopback0", IntDescr: " management interface CORE_SW1", Ip: "65.90.100.1", RoutingProt: "bgp 65001", Network: "10.0.0.0"}
 	core2 := Switch{Name: "CORE_SW2", Interface: "loopback0", IntDescr: " management interface CORE_SW2", Ip: "65.90.100.2", RoutingProt: "bgp 65001", Network: "10.0.0.0"}
-	core1.Details()
+	core1.confInfo()
 	fmt.Println("+++++++++++++++++++")
-	core2.Details()
+	core2.confInfo()
 }
