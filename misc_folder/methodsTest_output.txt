@@ -1,4 +1,4 @@
-pi@raspberrypi:~/Code_folder/go_folder/Introd_Go/ch7 $ go run methodsTest.go 
+pi@RaspPi4:~/Coding/Go_folder/netOps $ go run methodsTest.go 
 hostname CORE_SW1
  interface loopback0
  management interface CORE_SW1
@@ -12,4 +12,11 @@ hostname CORE_SW2
  65.90.100.2 255.255.255.255
 router bgp 65001
  network 10.0.0.0 255.255.255.0
-pi@raspberrypi:~/Code_folder/go_folder/Introd_Go/ch7 $ 
++++++++++++++++++++
+hostname CORE_SW3
+ interface Loopback1
+Test Loopback on CORE_SW3
+ 10.10.10.2 255.255.255.255
+router ospf 100
+ network 10.10.10.0 255.255.255.0
+pi@RaspPi4:~/Coding/Go_folder/netOps $ 
