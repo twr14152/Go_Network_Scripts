@@ -15,7 +15,7 @@ router bgp 65001
 +++++++++++++++++++
 hostname CORE_SW3
  interface Loopback1
-Test Loopback on CORE_SW3
+ Test Loopback on CORE_SW3
  10.10.10.2 255.255.255.255
 router ospf 100
  network 10.10.10.0 255.255.255.0
