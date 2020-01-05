@@ -1,0 +1,6 @@
+hello, this is a file for testing scp
+
+blah 
+blah 
+blah
+
