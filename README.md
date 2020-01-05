@@ -81,3 +81,6 @@ Simply a folder to test Go concepts and features as it could pertain to networki
 - methodsTest_output.txt - script output
 
 ```
+# SCP Client
+This is a simple scp client built from the scp - GoDoc file. 
+- scp_client_ex1.go
