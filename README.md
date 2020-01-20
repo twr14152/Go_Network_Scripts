@@ -50,7 +50,8 @@ The 7th script uses host_file to login to target hosts and a cmd_file to issue c
 - ssh_using_host_cmd_files_output.txt - shows output of script
 ```
 The 8th script uses os.Args to allow you to enter the commands you want to run at the time your run the script.
-For example you could issue go run interactive_ssh.go show run interface loopback 0, show ip int brief, show version 
+For example you could issue "go run interactive_ssh.go show run interface loopback 0, show ip int brief, show version"
+This script will split the the commands up by the commas.
 ```
 - ssh_client/interactive_ssh.go
 - ssh_client/interactive_ssh_output.txt
