@@ -1,0 +1,99 @@
+pi@RaspPi4:~/Coding/Go_folder/netOps $ go run interactive_ssh.go show run interface loopback 0, show ip int brief, show version 
+[show run interface loopback 0  show ip int brief  show version]
+
+Welcome to the DevNet Sandbox for CSR1000v and IOS XE
+
+The following programmability features are already enabled:
+  - NETCONF
+  - RESTCONF
+
+Thanks for stopping by.
+
+
+
+csr1000v-1#term len 0
+csr1000v-1#show run interface loopback 0
+Building configuration...
+
+Current configuration : 130 bytes
+!
+interface Loopback0
+ ip address 192.0.2.1 255.255.255.255
+ ip ospf authentication key-chain KC_OSPF_AUTH
+ ip ospf 1 area 0
+end
+
+csr1000v-1# show ip int brief
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       10.10.20.48     YES other  up                    up      
+GigabitEthernet2       192.168.1.149   YES other  up                    up      
+GigabitEthernet3       1.43.40.3       YES other  up                    up      
+Loopback0              192.0.2.1       YES manual up                    up      
+Loopback1              1.1.1.1         YES manual up                    up      
+Loopback2              unassigned      YES unset  up                    up      
+Loopback3              111.1.1.1       YES other  up                    up      
+Loopback199            172.16.199.1    YES other  up                    up      
+Tunnel100              192.168.0.66    YES manual up                    up      
+csr1000v-1# show version
+Cisco IOS XE Software, Version 16.11.01a
+Cisco IOS Software [Gibraltar], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.11.1a, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2019 by Cisco Systems, Inc.
+Compiled Thu 11-Apr-19 23:59 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2019 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+csr1000v-1 uptime is 1 week, 13 hours, 46 minutes
+Uptime for this control processor is 1 week, 13 hours, 47 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: reload
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: ax
+License Type: N/A(Smart License Enabled)
+Next reload license Level: ax
+
+
+Smart Licensing Status: UNREGISTERED/No Licenses in Use
+
+cisco CSR1000V (VXE) processor (revision VXE) with 2378575K/3075K bytes of memory.
+Processor board ID 9YD4LHWG8FZ
+3 Gigabit Ethernet interfaces
+32768K bytes of non-volatile configuration memory.
+8112832K bytes of physical memory.
+7774207K bytes of virtual hard disk at bootflash:.
+0K bytes of WebUI ODM Files at webui:.
+
+Configuration register is 0x2102
+
+csr1000v-1#exit
+pi@RaspPi4:~/Coding/Go_folder/netOps $ 
