@@ -1,4 +1,4 @@
-pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ go run show_cmds.go hostlist.go "show running-config|json", "show ip ospf neighbor|json", "show ip route|json"
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ go run show_cmds.go "show running-config|json", "show ip ospf neighbor|json", "show ip route|json"
 [show running-config|json  show ip ospf neighbor|json  show ip route|json]
 #############################
 Connected to ceos1
@@ -70,7 +70,7 @@ Connected to ceos1
                             "drState": "DR",
                             "interfaceName": "Ethernet1",
                             "adjacencyState": "full",
-                            "inactivity": 1580676946.123836,
+                            "inactivity": 1580677704.963319,
                             "interfaceAddress": "10.0.0.3",
                             "options": {
                                 "multitopologyCapability": false,
@@ -86,7 +86,7 @@ Connected to ceos1
                                 "areaId": "0.0.0.0",
                                 "bfdState": "adminDown",
                                 "backupDesignatedRouter": "10.0.0.2",
-                                "stateTime": 1580664335.124067,
+                                "stateTime": 1580664333.963416,
                                 "retransmissionCount": 2,
                                 "grLastRestartTime": null,
                                 "designatedRouter": "10.0.0.3",
@@ -103,7 +103,7 @@ Connected to ceos1
                             "drState": "BDR",
                             "interfaceName": "Ethernet1",
                             "adjacencyState": "full",
-                            "inactivity": 1580676951.124458,
+                            "inactivity": 1580677700.963796,
                             "interfaceAddress": "10.0.0.2",
                             "options": {
                                 "multitopologyCapability": false,
@@ -119,7 +119,7 @@ Connected to ceos1
                                 "areaId": "0.0.0.0",
                                 "bfdState": "adminDown",
                                 "backupDesignatedRouter": "10.0.0.2",
-                                "stateTime": 1580664342.124541,
+                                "stateTime": 1580664340.963878,
                                 "retransmissionCount": 0,
                                 "grLastRestartTime": null,
                                 "designatedRouter": "10.0.0.3",
@@ -272,7 +272,7 @@ Connected to ceos2
                             "drState": "DR",
                             "interfaceName": "Ethernet1",
                             "adjacencyState": "full",
-                            "inactivity": 1580676945.787411,
+                            "inactivity": 1580677705.675324,
                             "interfaceAddress": "10.0.0.3",
                             "options": {
                                 "multitopologyCapability": false,
@@ -288,7 +288,7 @@ Connected to ceos2
                                 "areaId": "0.0.0.0",
                                 "bfdState": "adminDown",
                                 "backupDesignatedRouter": "10.0.0.2",
-                                "stateTime": 1580664334.787507,
+                                "stateTime": 1580664333.67542,
                                 "retransmissionCount": 1,
                                 "grLastRestartTime": null,
                                 "designatedRouter": "10.0.0.3",
@@ -305,7 +305,7 @@ Connected to ceos2
                             "drState": "DROTHER",
                             "interfaceName": "Ethernet1",
                             "adjacencyState": "full",
-                            "inactivity": 1580676943.788063,
+                            "inactivity": 1580677702.6758,
                             "interfaceAddress": "10.0.0.1",
                             "options": {
                                 "multitopologyCapability": false,
@@ -321,7 +321,7 @@ Connected to ceos2
                                 "areaId": "0.0.0.0",
                                 "bfdState": "adminDown",
                                 "backupDesignatedRouter": "10.0.0.2",
-                                "stateTime": 1580664341.788145,
+                                "stateTime": 1580664341.675882,
                                 "retransmissionCount": 0,
                                 "grLastRestartTime": null,
                                 "designatedRouter": "10.0.0.3",
@@ -474,7 +474,7 @@ Connected to ceos3
                             "drState": "DROTHER",
                             "interfaceName": "Ethernet1",
                             "adjacencyState": "full",
-                            "inactivity": 1580676953.528312,
+                            "inactivity": 1580677702.892638,
                             "interfaceAddress": "10.0.0.1",
                             "options": {
                                 "multitopologyCapability": false,
@@ -490,7 +490,7 @@ Connected to ceos3
                                 "areaId": "0.0.0.0",
                                 "bfdState": "adminDown",
                                 "backupDesignatedRouter": "10.0.0.2",
-                                "stateTime": 1580664334.528405,
+                                "stateTime": 1580664333.892735,
                                 "retransmissionCount": 3,
                                 "grLastRestartTime": null,
                                 "designatedRouter": "10.0.0.3",
@@ -507,7 +507,7 @@ Connected to ceos3
                             "drState": "BDR",
                             "interfaceName": "Ethernet1",
                             "adjacencyState": "full",
-                            "inactivity": 1580676951.528763,
+                            "inactivity": 1580677700.893223,
                             "interfaceAddress": "10.0.0.2",
                             "options": {
                                 "multitopologyCapability": false,
@@ -523,7 +523,7 @@ Connected to ceos3
                                 "areaId": "0.0.0.0",
                                 "bfdState": "adminDown",
                                 "backupDesignatedRouter": "10.0.0.2",
-                                "stateTime": 1580664335.528843,
+                                "stateTime": 1580664333.893306,
                                 "retransmissionCount": 2,
                                 "grLastRestartTime": null,
                                 "designatedRouter": "10.0.0.3",
