@@ -98,10 +98,11 @@ This is a simple scp client built from the scp - GoDoc file.
 
 ```
 # GOEAPI
-This script will use aristas goeapi to issue show commands on 3 CEOS devices
+This script will use Aristas goeapi to issue show commands on 3 CEOS devices
 ```
-- PH
-- PH
+- goeapi_stuff/show_cmds.go
+- goeapi_stuff/hostlist.go
+- goeapi_stuff/show_cmds_output.txt
 ```
 
 
