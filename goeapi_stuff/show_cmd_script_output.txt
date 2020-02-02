@@ -1,0 +1,204 @@
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ go run show_cmds.go hostlist.go show running-config, show version, dir
+[]string [show running-config  show version  dir]
+#############################
+Connected to ceos1
+[map[command:show running-config result:! Command: show running-config
+! device: ceos1 (cEOSSim, EOS-4.20.5F)
+!
+transceiver qsfp default-mode 4x10G
+!
+hostname ceos1
+ip domain lookup source-interface Loopback1
+ip name-server vrf default 8.8.8.8
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username arista privilege 15 secret sha512 $6$s/zsPG3v9LhN2SPO$QfehiEL7kuFzut0KZ8nG2OjipoRL7HvdOu23QPw7X.A9CZWVY.gKUayVykc83ObYdzY2By/1KAayo154Je/Bm.
+!
+interface Ethernet1
+   no switchport
+   ip address 10.0.0.1/24
+!
+interface Ethernet2
+!
+interface Ethernet3
+!
+interface Loopback1
+   description router-id
+   ip address 1.1.1.1/32
+!
+interface Loopback2
+!
+ip routing
+!
+router ospf 1
+   router-id 1.1.1.1
+   network 1.1.1.1/32 area 0.0.0.0
+   network 10.0.0.0/24 area 0.0.0.0
+   max-lsa 12000
+!
+management api http-commands
+   no shutdown
+!
+end] map[command: show version result:Arista cEOSSim
+Hardware version:    
+Serial number:       N/A
+System MAC address:  0242.ac2a.8f7d
+
+Software image version: 4.20.5F
+Architecture:           i386
+Internal build version: 4.20.5F-8127914.4205F
+Internal build ID:      4d6b4859-39b5-4581-993b-f84ac0736664
+
+cEOS tools version: 1.0
+
+Uptime:                 1 day, 2 hours and 53 minutes
+Total memory:           2037620 kB
+Free memory:            474100 kB] map[command: dir result:Directory of flash:/
+
+       -rw-          77            Feb 2 15:41  SsuRestore.log
+       drwx        4096            Feb 2 15:41  debug
+       drwx        4096            Feb 2 15:45  persist
+       drwx        4096            Feb 2 15:45  schedule
+       -rw-         806            Feb 2 16:01  startup-config
+       -rw-          13           Apr 16  2018  zerotouch-config
+
+62725623808 bytes total (54911664128 bytes free)]] <nil>
+############################
+#############################
+Connected to ceos2
+[map[command:show running-config result:! Command: show running-config
+! device: ceos2 (cEOSSim, EOS-4.20.5F)
+!
+transceiver qsfp default-mode 4x10G
+!
+hostname ceos2
+ip domain lookup source-interface Loopback1
+ip name-server vrf default 8.8.8.8
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username arista privilege 15 secret sha512 $6$TRQ598fliEOez7f0$Z83fBpOhtq/yNMPYLCDUi057bO2/Bj6upB/mKrYe6WXZbUG3q3iHOv/BPP/V/U15kRoMfdgsKUWzTz2UxDdBE1
+!
+interface Ethernet1
+   no switchport
+   ip address 10.0.0.2/24
+!
+interface Ethernet2
+!
+interface Ethernet3
+!
+interface Loopback1
+   description router-id
+   ip address 2.2.2.2/32
+!
+interface Loopback2
+!
+ip routing
+!
+router ospf 1
+   router-id 2.2.2.2
+   network 2.2.2.2/32 area 0.0.0.0
+   network 10.0.0.0/24 area 0.0.0.0
+   max-lsa 12000
+!
+management api http-commands
+   no shutdown
+!
+end] map[command: show version result:Arista cEOSSim
+Hardware version:    
+Serial number:       N/A
+System MAC address:  0242.ac85.99c8
+
+Software image version: 4.20.5F
+Architecture:           i386
+Internal build version: 4.20.5F-8127914.4205F
+Internal build ID:      4d6b4859-39b5-4581-993b-f84ac0736664
+
+cEOS tools version: 1.0
+
+Uptime:                 1 day, 2 hours and 53 minutes
+Total memory:           2037620 kB
+Free memory:            473296 kB] map[command: dir result:Directory of flash:/
+
+       -rw-          77            Feb 2 15:41  SsuRestore.log
+       drwx        4096            Feb 2 15:41  debug
+       drwx        4096            Feb 2 15:44  persist
+       drwx        4096            Feb 2 15:44  schedule
+       -rw-         806            Feb 2 16:01  startup-config
+       -rw-          13           Apr 16  2018  zerotouch-config
+
+62725623808 bytes total (54911664128 bytes free)]] <nil>
+############################
+#############################
+Connected to ceos3
+[map[command:show running-config result:! Command: show running-config
+! device: ceos3 (cEOSSim, EOS-4.20.5F)
+!
+transceiver qsfp default-mode 4x10G
+!
+hostname ceos3
+ip domain lookup source-interface Loopback1
+ip name-server vrf default 8.8.8.8
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username arista privilege 15 secret sha512 $6$67F9M7DdHVJiqeDw$amdvAF1spLH4HLyAQp0nd9ygY4rA.rwPJXtbj18s5pRDaEYi1ORv4Bo1b3vyyMLGyxYQkAOtzZkQ3jsniUtaH0
+!
+interface Ethernet1
+   no switchport
+   ip address 10.0.0.3/24
+!
+interface Ethernet2
+!
+interface Ethernet3
+!
+interface Loopback1
+   description router-id
+   ip address 3.3.3.3/32
+!
+interface Loopback2
+!
+ip routing
+!
+router ospf 1
+   router-id 3.3.3.3
+   network 3.3.3.3/32 area 0.0.0.0
+   network 10.0.0.0/24 area 0.0.0.0
+   max-lsa 12000
+!
+management api http-commands
+   no shutdown
+!
+end] map[command: show version result:Arista cEOSSim
+Hardware version:    
+Serial number:       N/A
+System MAC address:  0242.ac02.34c4
+
+Software image version: 4.20.5F
+Architecture:           i386
+Internal build version: 4.20.5F-8127914.4205F
+Internal build ID:      4d6b4859-39b5-4581-993b-f84ac0736664
+
+cEOS tools version: 1.0
+
+Uptime:                 1 day, 2 hours and 53 minutes
+Total memory:           2037620 kB
+Free memory:            473768 kB] map[command: dir result:Directory of flash:/
+
+       -rw-          77            Feb 2 15:41  SsuRestore.log
+       drwx        4096            Feb 2 15:41  debug
+       drwx        4096            Feb 2 15:44  persist
+       drwx        4096            Feb 2 15:44  schedule
+       -rw-         806            Feb 2 16:01  startup-config
+       -rw-          13           Apr 16  2018  zerotouch-config
+
+62725623808 bytes total (54911664128 bytes free)]] <nil>
+############################
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ 
