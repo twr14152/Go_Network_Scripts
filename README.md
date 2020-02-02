@@ -3,6 +3,8 @@ This is an attempt to try and learn Go by creating some potentially useful netwo
 
 While I know that there are some 3rd party packages out there for network automation such as Gomiko. My goal is to try and learn by building stuff from the ground up. Now the ground I'm standing on may actually be the shoulders of those who built the standard libraries and potentially some third party packages, but you have to start from somewhere.
 
+Update... I am going to start testing against my own lab to add some variety to the learning/testing process.
+
 # SSH Client Scripts
 First script was to ssh to Cisco Devnet device and print the output.
 It works but its not a real useful script.
@@ -95,3 +97,12 @@ This is a simple scp client built from the scp - GoDoc file.
 - scp_client/hello.txt
 
 ```
+# GOEAPI
+This script will use aristas goeapi to issue show commands on 3 CEOS devices
+```
+- PH
+- PH
+```
+
+
+
