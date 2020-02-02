@@ -8,7 +8,6 @@ import (
 )
 
 func main() {
-	// This will run the commands after your program
 	var s, sep string
 	for i := 1; i < len(os.Args); i++ {
 		s += sep + os.Args[i]
