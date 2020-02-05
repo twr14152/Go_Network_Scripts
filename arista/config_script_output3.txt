@@ -1,0 +1,60 @@
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ go run config_script.go enable, configure, interface loopback 70, description eapi_test, ip address 70.70.70.70/32
+[enable  configure  interface loopback 70  description eapi_test  ip address 70.70.70.70/32]
+&{200 OK 200 HTTP/1.1 1 1 map[Cache-Control:[no-store no-cache must-revalidate max-age=0 pre-check=0 post-check=0] Connection:[keep-alive] Content-Type:[application/json] Date:[Wed, 05 Feb 2020 14:25:53 GMT] Pragma:[no-cache] Server:[nginx]] 0xd0c050 -1 [chunked] false true map[] 0xc92200 0xc126c0}
+{"jsonrpc": "2.0", "id": "1", "result": [{}, {}, {}, {}, {}]}
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ go run show_cmds.go show running-config
+[show running-config]
+#############################
+Connected to ceos2
+[map[command:show running-config result:! Command: show running-config
+! device: ceos2 (cEOSSim, EOS-4.20.5F)
+!
+transceiver qsfp default-mode 4x10G
+!
+hostname ceos2
+ip domain lookup source-interface Loopback1
+ip name-server vrf default 8.8.8.8
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username arista privilege 15 secret sha512 $6$TRQ598fliEOez7f0$Z83fBpOhtq/yNMPYLCDUi057bO2/Bj6upB/mKrYe6WXZbUG3q3iHOv/BPP/V/U15kRoMfdgsKUWzTz2UxDdBE1
+!
+interface Ethernet1
+   no switchport
+   ip address 10.0.0.2/24
+!
+interface Ethernet2
+!
+interface Ethernet3
+!
+interface Loopback1
+   description router-id
+   ip address 2.2.2.2/32
+!
+interface Loopback2
+!
+interface Loopback3
+!
+interface Loopback70
+   description eapi_test
+   ip address 70.70.70.70/32
+!
+ip access-list eapiExample
+   10 permit ip any any
+!
+ip routing
+!
+router ospf 1
+   router-id 2.2.2.2
+   network 2.2.2.2/32 area 0.0.0.0
+   network 10.0.0.0/24 area 0.0.0.0
+   max-lsa 12000
+!
+management api http-commands
+   no shutdown
+!
+end]] <nil>
+############################
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ 
