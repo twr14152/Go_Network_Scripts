@@ -106,7 +106,7 @@ The syntax to run the script is as follows:
 - goeapi_stuff/show_cmds_output.txt
 ```
 The configuration script is a work in progress. It does work, but needs more work. 
-Will post more as I get time to work on it.
+Will post more as I get time to work on it. 
 ```
 - goeapi_stuff/config_script.go
 
