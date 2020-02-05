@@ -23,7 +23,7 @@ type Request struct {
 	Id      string     `json:"id"`
 }
 
-func call(url string, cmds []string, format string) *http.Response {
+func connect(url string, cmds []string, format string) *http.Response {
 	p := Parameters{1, cmds, format}
 	req := Request{"2.0", "runCmds", p, "1"}
 	buf, err := json.Marshal(req)
@@ -55,8 +55,8 @@ func main() {
 	}
 	cmds := strings.Split(s, ",")
 	fmt.Println(cmds)
-	host := "https://arista:arista@192.168.1.117:8443/command-api/"
-	resp := call(host, cmds, "json")
+	url := "https://arista:arista@192.168.1.117:8443/command-api/"
+	resp := connect(url, cmds, "json")
 	fmt.Println(resp)
 
 }
