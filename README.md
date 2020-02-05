@@ -110,6 +110,7 @@ The configuration script is a work in progress. The documentation surrounding th
 The script does work but not quite were I would like it to be. Work in progress.
 ```
 - arista/config_script.go
+- arista/config_script_output.txt
 ```
 
 
