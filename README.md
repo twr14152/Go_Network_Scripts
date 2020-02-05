@@ -112,6 +112,7 @@ The script does work but not quite were I would like it to be. Work in progress.
 ```
 - arista/config_script.go
 - arista/config_script_output.txt
+- arista/config_script_output2.txt
 ```
 
 
