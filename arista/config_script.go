@@ -1,7 +1,3 @@
-/*This is a work in progress!!
-
-*/
-
 package main
 
 import (
@@ -52,7 +48,6 @@ func call(url string, cmds []string, format string) *http.Response {
 }
 
 func main() {
-	// Use this set up because its easy for testing in lab
 	var s, sep string
 	for i := 1; i < len(os.Args); i++ {
 		s += sep + os.Args[i]
@@ -60,7 +55,8 @@ func main() {
 	}
 	cmds := strings.Split(s, ",")
 	fmt.Println(cmds)
-	target := "https://arista:arista@192.168.1.117:8443/command-api/"
-	resp := call(target, cmds, "json")
+	host := "https://arista:arista@192.168.1.117:8443/command-api/"
+	resp := call(host, cmds, "json")
 	fmt.Println(resp)
 
+}
