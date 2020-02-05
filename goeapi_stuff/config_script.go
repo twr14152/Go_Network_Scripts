@@ -52,6 +52,7 @@ func call(url string, cmds []string, format string) *http.Response {
 }
 
 func main() {
+	// Use this set up because its easy for testing in lab
 	var s, sep string
 	for i := 1; i < len(os.Args); i++ {
 		s += sep + os.Args[i]
