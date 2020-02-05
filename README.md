@@ -98,7 +98,7 @@ This is a simple scp client built from the scp - GoDoc file.
 
 ```
 # ARISTA CEOS
-This is a show commands script will use arista's goeapi to issue commands on 3 arista CEOS devices.
+This is a show commands script will use arista's eapi to issue commands on 3 arista CEOS devices.
 The syntax to run the script is as follows:
 >>go run show_cmds.go "show running-config|json", "show ip ospf neighbor|json", "show ip route|json"
 ```
