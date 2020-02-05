@@ -1,0 +1,7 @@
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ go run config_script.go enable, configure, interface loopback70, ip address 70.70.70.70/32, description testAPI
+[enable  configure  interface loopback70  ip address 70.70.70.70/32  description testAPI]
+&{200 OK 200 HTTP/1.1 1 1 map[Cache-Control:[no-store no-cache must-revalidate max-age=0 pre-check=0 post-check=0] Connection:[keep-alive] Content-Type:[application/json] Date:[Wed, 05 Feb 2020 13:24:08 GMT] Pragma:[no-cache] Server:[nginx]] 0x140e230 -1 [chunked] false true map[] 0x1492200 0x150c000}
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ go run config_script.go enable, configure, interface loopback71, ip address 71.71.71.71/32, description testAPI
+[enable  configure  interface loopback71  ip address 71.71.71.71/32  description testAPI]
+&{200 OK 200 HTTP/1.1 1 1 map[Cache-Control:[no-store no-cache must-revalidate max-age=0 pre-check=0 post-check=0] Connection:[keep-alive] Content-Type:[application/json] Date:[Wed, 05 Feb 2020 13:24:31 GMT] Pragma:[no-cache] Server:[nginx]] 0x2088470 -1 [chunked] false true map[] 0x20ac200 0x20a6660}
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $
