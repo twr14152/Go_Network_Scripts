@@ -107,10 +107,10 @@ The syntax to run the script is as follows:
 - arista/show_cmds_output2.txt
 ```
 The configuration script is a work in progress. The documentation surrounding this functionality using Go is limited.
-The script does work but not quite were I would like it to be
+The script does work but not quite were I would like it to be. Work in progress.
 ```
 - arista/config_script.go
-
+```
 
 
 
