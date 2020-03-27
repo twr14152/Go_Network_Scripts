@@ -58,6 +58,13 @@ This script will split the the commands up by the commas.
 - ssh_client/interactive_ssh.go
 - ssh_client/interactive_ssh_output.txt
 ```
+The 9th script was an improvement on the 7th script. I really wish I would have labeled the scripts in such away but I didnt...Basically I wanted a script that could go out to multiple devices and apply unique configs on them. This is accomplished by this script by having the main script loop through the devices then use the hostnames of the devices  +.cfg (it could be .txt) suffix to open the config file you want to apply. That way you uniquely identify the device the scripts being applied to it.
+```
+- ssh_use_host_cmd_files_V2.go
+- ios-xe-mgmt-latest.cisco.com\:8181.cfg <-- the \ got added when I created the file by the operating system
+- ios-xe-mgmt.cisco.com\:8181.cfg <-- the \ got added when I created the file by the operating system
+- ssh_using_host_cmd_files_output.txt - shows output of script
+```
 
 # HTTP Client Scripts - (Restconf)
 The first script uses the https transport protocol to connect to a Cisco Devnet router and GET router configs off the device. As it stands the script is more of a learning tool for Go than a useful production script. More research is needed into Yang and Restconf to truly understand the capabilities. 
