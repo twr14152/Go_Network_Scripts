@@ -58,7 +58,7 @@ This script will split the the commands up by the commas.
 - ssh_client/interactive_ssh.go
 - ssh_client/interactive_ssh_output.txt
 ```
-The 9th script was an improvement on the 7th script. I really wish I would have labeled the scripts in such away but I didnt...Basically I wanted a script that could go out to multiple devices and apply unique configs on them. This is accomplished by this script by having the main script loop through the devices then use the hostnames of the devices  +.cfg (it could be .txt) suffix to open the config file you want to apply. That way you uniquely identify the device the scripts being applied to it.
+The 9th script was an improvement on the 7th script. I really wish I would have labeled the scripts this way but I didnt...Basically I wanted a script that could go out to multiple devices and apply unique configs on them in one go around. This is accomplished by this script by having the main script loop through the devices then use the device hostname +.cfg (it's arbitrary could be .txt suffix) as a target for the file the script opens per device. That way you can uniquely mark and identify the device and the configs the script needs to apply.
 ```
 - ssh_use_host_cmd_files_V2.go
 - ios-xe-mgmt-latest.cisco.com\:8181.cfg <-- the \ got added when I created the file by the operating system
