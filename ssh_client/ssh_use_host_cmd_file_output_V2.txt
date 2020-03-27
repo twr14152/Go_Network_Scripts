@@ -1,0 +1,95 @@
+pi@RaspPi4:~/Coding/Go_folder/netOps/ssh_folder $ go run ssh_use_host_cmd_files.go 
+[ios-xe-mgmt-latest.cisco.com:8181 ios-xe-mgmt.cisco.com:8181]
+This is the config file named:ios-xe-mgmt-latest.cisco.com:8181.cfg
+
+
+
+
+
+Welcome to the DevNet Sandbox for CSR1000v and IOS XE
+
+The following programmability features are already enabled:
+  - NETCONF
+  - RESTCONF
+
+Thanks for stopping by.
+
+
+csr1000v-1#show interface description
+Interface                      Status         Protocol Description
+Gi1                            up             up       MANAGEMENT INTERFACE - DON'T TOUCH ME
+Gi2                            admin down     down     Network Interface
+Gi3                            admin down     down     Description set with Nornir
+Lo33                           up             up       Created using RESTCONF from POSTMAN by HB
+Lo34                           up             up       Configured using RESTCONF from postman
+Lo35                           up             up       Created using RESTCONF from python by HB
+Lo37                           up             up       Created using Netconf by python
+Lo39                           up             up       Created using Netconf by python
+Lo77                           up             up       MANAGEMENT INTERFACE - DON'T TOUCH ME
+Lo99                           up             up       WHATEVER99
+Lo100                          up             up       Network Interface
+csr1000v-1#
+csr1000v-1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+csr1000v-1(config)#
+csr1000v-1(config)#interface loopback 71
+csr1000v-1(config-if)# description Unique_configuration1
+csr1000v-1(config-if)# no shut
+csr1000v-1(config-if)#exit
+csr1000v-1(config)#exit
+csr1000v-1#!
+csr1000v-1#show interface description
+Interface                      Status         Protocol Description
+Gi1                            up             up       MANAGEMENT INTERFACE - DON'T TOUCH ME
+Gi2                            admin down     down     Network Interface
+Gi3                            admin down     down     Description set with Nornir
+Lo33                           up             up       Created using RESTCONF from POSTMAN by HB
+Lo34                           up             up       Configured using RESTCONF from postman
+Lo35                           up             up       Created using RESTCONF from python by HB
+Lo37                           up             up       Created using Netconf by python
+Lo39                           up             up       Created using Netconf by python
+Lo71                           up             up       Unique_configuration1
+Lo77                           up             up       MANAGEMENT INTERFACE - DON'T TOUCH ME
+Lo99                           up             up       WHATEVER99
+Lo100                          up             up       Network Interface
+csr1000v-1#exit
+This is the config file named:ios-xe-mgmt.cisco.com:8181.cfg
+
+
+
+
+
+Welcome to the DevNet Sandbox for CSR1000v and IOS XE
+
+The following programmability features are already enabled:
+  - NETCONF
+  - RESTCONF
+
+Thanks for stopping by.
+
+
+csr1000v#show interface description
+Interface                      Status         Protocol Description
+Gi1                            up             up       MANAGEMENT INTERFACE - DON'T TOUCH ME
+Gi2                            up             up       Configured by RESTCONF
+Gi3                            admin down     down     Description set with Nornir
+Vi0                            up             up       
+csr1000v#
+csr1000v#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+csr1000v(config)#interface loopback 72
+csr1000v(config-if)# description Unique_config_number_2
+csr1000v(config-if)# no shut
+csr1000v(config-if)#exit
+csr1000v(config)#exit
+csr1000v#!
+csr1000v#show interface description
+Interface                      Status         Protocol Description
+Gi1                            up             up       MANAGEMENT INTERFACE - DON'T TOUCH ME
+Gi2                            up             up       Configured by RESTCONF
+Gi3                            admin down     down     Description set with Nornir
+Lo72                           up             up       Unique_config_number_2
+Vi0                            up             up       
+csr1000v#
+csr1000v#
+csr1000v#
