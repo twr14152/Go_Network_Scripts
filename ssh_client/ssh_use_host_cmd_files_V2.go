@@ -1,6 +1,6 @@
 // This ssh script will use host_file.txt to determine who to
-// login to, and the cmd_file1.txt to determine which commands
-// to run.
+// login to, and the <hostname>.cfg file to determine which commands
+// to run on each device
 // (c) 2020 Todd Riemenschneider
 
 package main
