@@ -1,5 +1,5 @@
 // This ssh script will use host_file.txt to determine who to
-// login to, and the <hostname>.cfg file to determine which commands
+// login to, and the host.cfg file to determine which commands
 // to run on each device
 // (c) 2020 Todd Riemenschneider
 
@@ -56,8 +56,8 @@ func main() {
 		sess.Stdout = os.Stdout
 		sess.Stderr = os.Stderr
 		sess.Shell()
-		// cmds file should use targethost.cfg name standard
-		fmt.Println("This is the config file named:" + targethost + ".cfg")
+		// cmds file should use host.cfg name standard
+		fmt.Println("This is the config file named:" + host + ".cfg")
 		fmt.Printf("\n\n\n\n")
 		cmds, _ := os.Open(host + ".cfg")
 		scanner := bufio.NewScanner(cmds)
