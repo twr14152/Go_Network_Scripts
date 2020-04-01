@@ -1,0 +1,8 @@
+pi@RaspPi4:~/Coding/Go_folder/netOps/misc_stuff $ go run struct_switch_loop_break.go 
+Switch target is: cmh1.r2
+Times through loop: 0
+Target is:  cmh1.r2
+config t
+router ospf 1
+network 10.0.1.0/24
+R2 done
