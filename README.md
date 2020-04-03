@@ -95,6 +95,8 @@ Simply a folder to test Go concepts and features as it could pertain to networki
 ``` 
 - methodsTest.go - create a struct and method to print switch config details to screen
 - methodsTest_output.txt - script output
+— struct_switch_break_loop,go - playing with features for possible future inspiration
+— struct_switch_break_loop_output.txt - script output
 
 ```
 # SCP Client
