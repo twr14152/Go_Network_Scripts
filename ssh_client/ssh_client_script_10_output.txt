@@ -1,0 +1,309 @@
+pi@RaspPi4:~/Coding/Go_folder/netOps/ssh_folder $ go run ssh_client_script_10.go 
+[sbx-nxos-mgmt.cisco.com:8181 ios-xe-mgmt-latest.cisco.com:8181 ios-xe-mgmt.cisco.com:8181]
+This is the config file named:sbx-nxos-mgmt.cisco.com:8181.cfg
+
+
+
+
+
+stty: standard input: Inappropriate ioctl for device
+
+!Command: show running-config interface Ethernet1/24
+!Running configuration last done at: Mon Apr  6 22:35:03 2020
+!Time: Mon Apr  6 22:39:13 2020
+
+version 9.2(1) Bios:version  
+
+interface Ethernet1/24
+
+
+!Command: show running-config
+!Running configuration last done at: Mon Apr  6 22:39:13 2020
+!Time: Mon Apr  6 22:39:13 2020
+
+version 9.2(1) Bios:version  
+hostname sbx-n9kv-ao
+vdc sbx-n9kv-ao id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 248 maximum 248
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+feature nxapi
+feature bash-shell
+feature scp-server
+feature ospf
+feature bgp
+feature netconf
+feature restconf
+feature grpc
+feature interface-vlan
+
+username admin password 5 $5$XTwcELLF$8Ybmi8D344YTimHFvg02mxS/KeLE8klvBgTqgYjvfL7  role network-admin
+
+banner motd ^
+Welcome to the DevNet Always On Sandbox for Open NX-OS
+
+This is a shared sandbox available for anyone to use to
+test APIs, explore features, and test scripts.  Please
+keep this in mind as you use it, and respect others use.
+
+The following programmability features are already enabled:
+  - NX-API
+  - NETCONF, RESTCONF, gRPC
+  - Native NX-OS and OpenConfig YANG Models
+
+Thanks for stopping by.
+^
+
+ip domain-lookup
+radius-server host 172.16.1.12 key 7 "VwritosWsgsziGio" authentication accounting 
+radius-server host 172.16.1.13 key 7 "VwritosWsgsziGio" authentication accounting 
+aaa group server radius AAA-Radius-Group 
+    server 172.16.1.12 
+    server 172.16.1.13 
+    use-vrf management
+    source-interface mgmt0
+copp profile strict
+snmp-server contact DevNet-Sandbox
+snmp-server location Always-On-Sandbox
+snmp-server source-interface traps mgmt0
+snmp-server user admin network-admin auth md5 0x16279c7eca7d5524934154dd17520e0c priv 0x16279c7eca7d5524934154dd17520e0c localizedkey
+rmon event 1 description FATAL(1) owner PMON@FATAL
+rmon event 2 description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 description ERROR(3) owner PMON@ERROR
+rmon event 4 description WARNING(4) owner PMON@WARNING
+rmon event 5 description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps callhome event-notify
+snmp-server enable traps callhome smtp-send-fail
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps aaa server-state-change
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps snmp authentication
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+snmp-server enable traps vtp notifs
+snmp-server enable traps vtp vlancreate
+snmp-server enable traps vtp vlandelete
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps stpx inconsistency
+snmp-server enable traps stpx root-inconsistency
+snmp-server enable traps stpx loop-inconsistency
+snmp-server enable traps system Clock-change-notification
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server enable traps mmode cseNormalModeChangeNotify
+snmp-server enable traps mmode cseMaintModeChangeNotify
+snmp-server community DevNetSandboxWriteSNMP group network-admin
+snmp-server community DevNetSandboxReadSNMP group network-operator
+ntp peer 172.16.1.11 use-vrf management key 1
+ntp source-interface  mgmt0
+ntp authenticate
+ntp authentication-key 1 md5 QPTFmtc 7
+
+ip route 1.1.1.1/32 Null0
+ip route 1.2.3.4/32 Null0
+ip route 6.7.8.9/32 Null0
+ip route 8.8.8.8/32 Null0
+ip route 10.10.20.2/32 Null0
+vlan 1,100-105
+vlan 100
+  name mgmt
+vlan 101
+  name prod
+vlan 102
+  name dev
+vlan 103
+  name test
+vlan 104
+  name security
+vlan 105
+  name iot
+
+vrf context management
+  ip route 0.0.0.0/0 10.10.20.254
+
+interface Vlan1
+
+interface Vlan100
+  description mgmt svi - DEMO PLEASE DON'T TOUCH
+  no shutdown
+  ip address 172.16.100.1/24
+  ip router ospf 1 area 0.0.0.0
+
+interface Vlan101
+  description prod svi - DEMO PLEASE DON'T TOUCH
+  no shutdown
+  ip address 172.16.101.1/24
+  ip router ospf 1 area 0.0.0.0
+
+interface Vlan102
+  description dev svi - DEMO PLEASE DON'T TOUCH
+  no shutdown
+  ip address 172.16.102.1/24
+  ip router ospf 1 area 0.0.0.0
+
+interface Vlan103
+  description test svi - DEMO PLEASE DON'T TOUCH
+  no shutdown
+  ip address 172.16.103.1/24
+  ip router ospf 1 area 0.0.0.0
+
+interface Vlan104
+  description security svi - DEMO PLEASE DON'T TOUCH
+  no shutdown
+  ip address 172.16.104.1/24
+  ip router ospf 1 area 0.0.0.0
+
+interface Vlan105
+  description iot svi - DEMO PLEASE DON'T TOUCH
+  no shutdown
+  ip address 172.16.105.1/24
+  ip router ospf 1 area 0.0.0.0
+
+interface port-channel11
+  switchport mode trunk
+  switchport trunk allowed vlan 100-110
+
+interface Ethernet1/1
+  switchport mode trunk
+  switchport trunk allowed vlan 100-110
+  channel-group 11
+
+interface Ethernet1/2
+  switchport mode trunk
+  switchport trunk allowed vlan 100-110
+  channel-group 11
+
+interface Ethernet1/3
+
+interface Ethernet1/4
+
+interface Ethernet1/5
+  description L3 Link
+  no switchport
+  ip address 172.16.1.1/30
+  ip ospf network broadcast
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+<cropped>
+
+interface Ethernet1/124
+  description scripted interface - Go Rules...
+
+interface Ethernet1/125
+
+interface Ethernet1/126
+
+interface Ethernet1/127
+
+interface Ethernet1/128
+
+interface mgmt0
+  description DO NOT TOUCH CONFIG ON THIS INTERFACE
+  vrf member management
+  ip address 10.10.20.95/24
+
+interface loopback1
+  ip address 172.16.0.1/32
+line console
+line vty
+boot nxos bootflash:/nxos.9.2.1.bin 
+router ospf 1
+  router-id 172.16.0.1
+  passive-interface default
+router bgp 65535
+  address-family ipv4 unicast
+    network 172.16.0.0/16
+  neighbor 172.16.0.2
+    remote-as 65535
+
+
+This is the config file named:ios-xe-mgmt-latest.cisco.com:8181.cfg
+
+
+
+
+
+Welcome to the DevNet Sandbox for CSR1000v and IOS XE
+
+The following programmability features are already enabled:
+  - NETCONF
+  - RESTCONF
+
+Thanks for stopping by.
+
+
+csr1000v-1#show run int loopback 76
+                                 ^
+% Invalid input detected at '^' marker.
+
+csr1000v-1#
+csr1000v-1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+csr1000v-1(config)#
+csr1000v-1(config)#interface Loopback76
+csr1000v-1(config-if)# description scripted with Go
+csr1000v-1(config-if)#exit
+csr1000v-1(config)#exit
+csr1000v-1#!
+csr1000v-1#show run int loopback 76
+Building configuration...
+
+Current configuration : 73 bytes
+!
+interface Loopback76
+ description scripted with Go
+ no ip address
+end
+
+csr1000v-1#
+csr1000v-1#
+csr1000v-1#
+csr1000v-1#
+csr1000v-1#
+csr1000v-1#
+csr1000v-1#
+csr1000v-1#
+csr1000v-1#
+csr1000v-1#
+csr1000v-1#
+csr1000v-1#exit
+This is the config file named:ios-xe-mgmt.cisco.com:8181.cfg
+
+
+
+
+
+
+csr1000v#show run int loopback 77
+                               ^
+% Invalid input detected at '^' marker.
+
+csr1000v#
+csr1000v#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+csr1000v(config)#interface loopback 77
+csr1000v(config-if)# description Kickin it with Gophy Style
+csr1000v(config-if)# no shut
+csr1000v(config-if)#exit
+csr1000v(config)#exit
+csr1000v#!
+csr1000v#show run int loopback 77
+Building configuration...
+
+Current configuration : 83 bytes
+!
+interface Loopback77
+ description Kickin it with Gophy Style
+ no ip address
+end
+
+csr1000v#
