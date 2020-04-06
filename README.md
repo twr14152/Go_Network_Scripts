@@ -69,7 +69,7 @@ The 10th script is another update to the ssh_use_host_cmd_file_V2.go script.  I 
 ```
 - ssh_client_script_10.go
 - config files used
-   - sbx-nxos-mgmt.cisco.com:8181.cfg
+   - sbx-nxos-mgmt.cisco.com\:8181.cfg
    - ios-xe-mgmt-latest.cisco.com\:8181.cfg
    - ios-xe-mgmt.cisco.com\:8181.cfg
 - hostfile001.txt <-- updated to include sbx-nxos-mgmt.cisco.com:8181
