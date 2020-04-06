@@ -65,6 +65,16 @@ The 9th script was an improvement on the 7th script. I really wish I would have 
 - ios-xe-mgmt.cisco.com\:8181.cfg <-- the \ got added when I created the file by the operating system
 - ssh_using_host_cmd_files_output.txt - shows output of script
 ```
+The 10th script is another update to the ssh_use_host_cmd_file_V2.go script.  I simply added conditional authentication variables based off the hostname to allow the script to be run against devices with different login creditionals. The test examples were run against two csr's and a nexus.
+```
+- ssh_client_script_10.go
+- config files used
+   - sbx-nxos-mgmt.cisco.com:8181.cfg
+   - ios-xe-mgmt-latest.cisco.com\:8181.cfg
+   - ios-xe-mgmt.cisco.com\:8181.cfg
+- hostfile001.txt <-- updated to include sbx-nxos-mgmt.cisco.com:8181
+- ssh_client_script_10_output.txt
+```
 
 # HTTP Client Scripts - (Restconf)
 The first script uses the https transport protocol to connect to a Cisco Devnet router and GET router configs off the device. As it stands the script is more of a learning tool for Go than a useful production script. More research is needed into Yang and Restconf to truly understand the capabilities. 
