@@ -38,7 +38,6 @@ func main() {
 		fmt.Println("Connecting to host: ", host)
 		defer res.Body.Close()
 		body, _ := ioutil.ReadAll(res.Body)
-
         	// This will print either created (success 201) or conflict (failure 409)  
 		fmt.Println("Device Response:\n ",(res))
 		fmt.Println("This is the output of body: ", string(body))
