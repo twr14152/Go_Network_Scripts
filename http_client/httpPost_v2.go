@@ -34,6 +34,7 @@ func main() {
 		req.Header.Add("Content-Type", "application/yang-data+json")
 		req.Header.Add("Accept", "application/yang-data+json")
 		res, _ := client.Do(req)
+
 		fmt.Println("Connecting to host: ", host)
      
 		defer res.Body.Close()
