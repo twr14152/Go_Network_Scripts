@@ -28,6 +28,7 @@ func main() {
 		fmt.Println("The config being loaded:\n", /*config, "\n",*/ string(config))
 		url := "https://"+host+"/restconf/data/ietf-interfaces:interfaces"
 
+                // the config variable comes from PostCmd.go file
 		req, _ := http.NewRequest("POST", url, bytes.NewBuffer(config))
 		req.SetBasicAuth("developer", "C1sco12345")
 		req.Header.Add("Content-Type", "application/yang-data+json")
