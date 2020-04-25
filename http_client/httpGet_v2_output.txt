@@ -1,3 +1,199 @@
+pi@RaspPi4:~/Coding/Go_folder/netOps/http_folder $ go run httpGet_v2.go 
+[ios-xe-mgmt-latest.cisco.com:9443 ios-xe-mgmt.cisco.com:9443]
+connected to host:  0
+{
+  "ietf-interfaces:interfaces": {
+    "interface": [
+      {
+        "name": "GigabitEthernet1",
+        "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true,
+        "ietf-ip:ipv4": {
+          "address": [
+            {
+              "ip": "10.10.20.48",
+              "netmask": "255.255.255.0"
+            }
+          ]
+        },
+        "ietf-ip:ipv6": {
+        }
+      },
+      {
+        "name": "GigabitEthernet2",
+        "description": "Network Interface",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": false,
+        "ietf-ip:ipv4": {
+        },
+        "ietf-ip:ipv6": {
+        }
+      },
+      {
+        "name": "GigabitEthernet3",
+        "description": "Network Interface",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": false,
+        "ietf-ip:ipv4": {
+        },
+        "ietf-ip:ipv6": {
+        }
+      },
+      {
+        "name": "Loopback74",
+        "description": "Testing Golang RestConf",
+        "type": "iana-if-type:softwareLoopback",
+        "enabled": true,
+        "ietf-ip:ipv4": {
+          "address": [
+            {
+              "ip": "74.74.74.1",
+              "netmask": "255.255.255.255"
+            }
+          ]
+        },
+        "ietf-ip:ipv6": {
+        }
+      }
+    ]
+  }
+}
+
+connected to host:  1
+{
+  "ietf-interfaces:interfaces": {
+    "interface": [
+      {
+        "name": "GigabitEthernet1",
+        "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true,
+        "ietf-ip:ipv4": {
+          "address": [
+            {
+              "ip": "10.10.20.48",
+              "netmask": "255.255.255.0"
+            }
+          ]
+        },
+        "ietf-ip:ipv6": {
+        }
+      },
+      {
+        "name": "GigabitEthernet2",
+        "description": "Gruesse an die Deutschsprachigen",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true,
+        "ietf-ip:ipv4": {
+          "address": [
+            {
+              "ip": "10.255.255.1",
+              "netmask": "255.255.255.0"
+            }
+          ]
+        },
+        "ietf-ip:ipv6": {
+        }
+      },
+      {
+        "name": "GigabitEthernet3",
+        "description": "Network Interface",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true,
+        "ietf-ip:ipv4": {
+          "address": [
+            {
+              "ip": "30.0.0.1",
+              "netmask": "255.255.255.0"
+            }
+          ]
+        },
+        "ietf-ip:ipv6": {
+        }
+      },
+      {
+        "name": "GigabitEthernet3.1",
+        "description": "testSerge",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true,
+        "ietf-ip:ipv4": {
+          "address": [
+            {
+              "ip": "101.0.0.1",
+              "netmask": "255.255.255.0"
+            },
+            {
+              "ip": "101.0.1.1",
+              "netmask": "255.255.255.0"
+            },
+            {
+              "ip": "101.0.2.1",
+              "netmask": "255.255.255.0"
+            }
+          ]
+        },
+        "ietf-ip:ipv6": {
+        }
+      },
+      {
+        "name": "Loopback1",
+        "description": "Changed by me",
+        "type": "iana-if-type:softwareLoopback",
+        "enabled": true,
+        "ietf-ip:ipv4": {
+          "address": [
+            {
+              "ip": "1.2.3.4",
+              "netmask": "255.255.255.0"
+            }
+          ]
+        },
+        "ietf-ip:ipv6": {
+        }
+      },
+      {
+        "name": "Loopback101",
+        "description": "Pod Number 1410",
+        "type": "iana-if-type:softwareLoopback",
+        "enabled": true,
+        "ietf-ip:ipv4": {
+          "address": [
+            {
+              "ip": "10.10.10.1",
+              "netmask": "255.255.255.0"
+            }
+          ]
+        },
+        "ietf-ip:ipv6": {
+        }
+      },
+      {
+        "name": "Loopback200",
+        "description": "Configured by RESTCONF200",
+        "type": "iana-if-type:softwareLoopback",
+        "enabled": true,
+        "ietf-ip:ipv4": {
+          "address": [
+            {
+              "ip": "172.16.100.1",
+              "netmask": "255.255.255.0"
+            }
+          ]
+        },
+        "ietf-ip:ipv6": {
+        }
+      }
+    ]
+  }
+}
+
+pi@RaspPi4:~/Coding/Go_folder/netOps/http_folder $ 
+
+
+
+Previous version of script
+
 pi@raspberrypi:~/Code_folder/go_folder/netOps/http_client $ go run httpGet_v2.go
 [ios-xe-mgmt-latest.cisco.com:9443 ios-xe-mgmt-latest.cisco.com:9443 ios-xe-mgmt-latest.cisco.com:9443]
 connected to host:  0
