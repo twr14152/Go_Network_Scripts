@@ -77,12 +77,12 @@ The 10th script is another update to the ssh_use_host_cmd_file_V2.go script.  I 
 ```
 
 # HTTP Client Scripts - (Restconf)
-The first script uses the https transport protocol to connect to a Cisco Devnet router and GET router configs off the device. As it stands the script is more of a learning tool for Go than a useful production script. More research is needed into Yang and Restconf to truly understand the capabilities. Updated script to sens and receive using application/yang-data+json format.
+The first script uses the https transport protocol to connect to a Cisco Devnet router and GET router configs off the device. As it stands the script is more of a learning tool for Go than a useful production script. More research is needed into Yang and Restconf to truly understand the capabilities. Updated script to use application/yang-data+json format.
 ```
 - http_client/httpGet_v1.go
 - http_client/httpGet_v1_output.txt - shows output of script
 ```
-The second script offers the same functionality as the first only it opens hostfile to get its target hosts. It then places those hosts in a slice, then uses a for loop to iterate through the slice and issues the commands on the devices. Updated script to sens and receive using application/yang-data+json format.
+The second script offers the same functionality as the first only it opens hostfile to get its target hosts. It then places those hosts in a slice, then uses a for loop to iterate through the slice and issues the commands on the devices. Updated script to use application/yang-data+json format.
 ```
 - http_client/httpGet_v2.go
 - http_client/host_file001.txt
