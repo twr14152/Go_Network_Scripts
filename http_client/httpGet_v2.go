@@ -36,6 +36,8 @@ func main() {
 
 		req, err := http.NewRequest("GET", url, nil)
 		req.SetBasicAuth(UN, PW)
+		req.Header.Add("Content-Type", "application/yang-data+json")
+	        req.Header.Add("Accept", "application/yang-data+json")
 		resp, err := client.Do(req)
 		if err != nil {
 			log.Fatal(err)
