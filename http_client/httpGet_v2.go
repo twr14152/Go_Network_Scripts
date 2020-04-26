@@ -32,8 +32,8 @@ func main() {
 	
 	for i, host := range hostList {
 		fmt.Println("connected to host: ", i)
-		url := ("https://"+host+"/restconf/data/ietf-interfaces:interfaces/interface=Loopback71")
-
+		//url := ("https://"+host+"/restconf/data/ietf-interfaces:interfaces/interface=Loopback71")
+                url := ("https://" + host + "/restconf/data/ietf-interfaces:interfaces")
 		req, err := http.NewRequest("GET", url, nil)
 		req.SetBasicAuth(UN, PW)
 		req.Header.Add("Content-Type", "application/yang-data+json")
