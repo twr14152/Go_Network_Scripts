@@ -1,0 +1,666 @@
+pi@RaspPi4:~/Coding/Go_folder/netOps/http_folder $ go run httpGet_v1.go 
+&{200 OK 200 HTTP/1.1 1 1 map[Cache-Control:[private, no-cache, must-revalidate, proxy-revalidate] Connection:[keep-alive] Content-Type:[application/yang-data+json] Date:[Sun, 26 Apr 2020 15:22:19 GMT] Pragma:[no-cache] Server:[nginx]] 0x95a030 -1 [chunked] false false map[] 0x8aa180 0x8fc0c0}
+{
+  "Cisco-IOS-XE-native:native": {
+    "version": "16.11",
+    "boot-start-marker": [null],
+    "boot-end-marker": [null],
+    "banner": {
+      "motd": {
+        "banner": "^C"
+      }
+    },
+    "memory": {
+      "free": {
+        "low-watermark": {
+          "processor": 80557
+        }
+      }
+    },
+    "call-home": {
+      "Cisco-IOS-XE-call-home:contact-email-addr": "sch-smart-licensing@cisco.com",
+      "Cisco-IOS-XE-call-home:profile": [
+        {
+          "profile-name": "CiscoTAC-1",
+          "active": true
+        }
+      ]
+    },
+    "service": {
+      "timestamps": {
+        "debug": {
+          "datetime": {
+            "msec": {
+            }
+          }
+        },
+        "log": {
+          "datetime": {
+            "msec": [null]
+          }
+        }
+      },
+      "call-home": [null]
+    },
+    "platform": {
+      "Cisco-IOS-XE-platform:console": {
+        "output": "virtual"
+      }
+    },
+    "hostname": "csr1000v-1",
+    "enable": {
+      "secret": {
+        "type": "9",
+        "secret": "$9$PvdeTeuxxh0ygk$PSg0GTG2I7bluI51e.IvfEu2uxy56e/9/PgqzFUklso"
+      }
+    },
+    "username": [
+      {
+        "name": "cisco",
+        "privilege": 15,
+        "secret": {
+          "encryption": "9",
+          "secret": "$9$COf3Q4xfzT.JxE$L3hvSkDv874Qrh8Hzdv/rPQjLNOjreYG2ocffHG7rls"
+        }
+      },
+      {
+        "name": "developer",
+        "privilege": 15,
+        "secret": {
+          "encryption": "9",
+          "secret": "$9$fhUXi6Xg438iAE$..VhXRCHiDQy3K2zmZUl9iZLbQJ9wpUtQZwQxSRESc2"
+        }
+      },
+      {
+        "name": "root",
+        "privilege": 15,
+        "secret": {
+          "encryption": "9",
+          "secret": "$9$FfUDIPBFcs03AE$MyLIWEuiRle8p3yGflAGTcrJA6BUUh/oWtyyfoMQXSI"
+        }
+      }
+    ],
+    "ip": {
+      "domain": {
+        "name": "abc.inc"
+      },
+      "forward-protocol": {
+        "protocol": "nd"
+      },
+      "route": {
+        "ip-route-interface-forwarding-list": [
+          {
+            "prefix": "0.0.0.0",
+            "mask": "0.0.0.0",
+            "fwd-list": [
+              {
+                "fwd": "GigabitEthernet1",
+                "interface-next-hop": [
+                  {
+                    "ip-address": "10.10.20.254"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scp": {
+        "server": {
+          "enable": [null]
+        }
+      },
+      "ssh": {
+        "rsa": {
+          "keypair-name": "ssh-key"
+        },
+        "version": 2
+      },
+      "access-list": {
+        "Cisco-IOS-XE-acl:extended": [
+          {
+            "name": "meraki-fqdn-dns"
+          }
+        ]
+      },
+      "Cisco-IOS-XE-http:http": {
+        "authentication": {
+          "local": [null]
+        },
+        "server": true,
+        "secure-server": true
+      }
+    },
+    "interface": {
+      "GigabitEthernet": [
+        {
+          "name": "1",
+          "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+          "ip": {
+            "address": {
+              "primary": {
+                "address": "10.10.20.48",
+                "mask": "255.255.255.0"
+              }
+            }
+          },
+          "mop": {
+            "enabled": false,
+            "sysid": false
+          },
+          "Cisco-IOS-XE-ethernet:negotiation": {
+            "auto": true
+          }
+        },
+        {
+          "name": "2",
+          "description": "Network Interface",
+          "shutdown": [null],
+          "mop": {
+            "enabled": false,
+            "sysid": false
+          },
+          "Cisco-IOS-XE-ethernet:negotiation": {
+            "auto": true
+          }
+        },
+        {
+          "name": "3",
+          "description": "Network Interface",
+          "shutdown": [null],
+          "mop": {
+            "enabled": false,
+            "sysid": false
+          },
+          "Cisco-IOS-XE-ethernet:negotiation": {
+            "auto": true
+          }
+        }
+      ]
+    },
+    "control-plane": {
+    },
+    "login": {
+      "on-success": {
+        "log": {
+        }
+      }
+    },
+    "multilink": {
+      "Cisco-IOS-XE-ppp:bundle-name": "authenticated"
+    },
+    "redundancy": {
+    },
+    "spanning-tree": {
+      "Cisco-IOS-XE-spanning-tree:extend": {
+        "system-id": [null]
+      }
+    },
+    "subscriber": {
+      "templating": [null]
+    },
+    "crypto": {
+      "Cisco-IOS-XE-crypto:pki": {
+        "certificate": {
+          "chain": [
+            {
+              "name": "SLA-TrustPoint",
+              "certificate": [
+                {
+                  "serial": "01",
+                  "certtype": "ca"
+                }
+              ]
+            },
+            {
+              "name": "TP-self-signed-1059130051",
+              "certificate": [
+                {
+                  "serial": "01",
+                  "certtype": "self-signed"
+                }
+              ]
+            }
+          ]
+        },
+        "trustpoint": [
+          {
+            "id": "SLA-TrustPoint",
+            "enrollment": {
+              "pkcs12": [null]
+            },
+            "revocation-check": ["crl"]
+          },
+          {
+            "id": "TP-self-signed-1059130051",
+            "enrollment": {
+              "selfsigned": [null]
+            },
+            "revocation-check": ["none"],
+            "subject-name": "cn=IOS-Self-Signed-Certificate-1059130051"
+          }
+        ]
+      }
+    },
+    "license": {
+      "udi": {
+        "pid": "CSR1000V",
+        "sn": "97X7V6ANB2G"
+      },
+      "boot": {
+        "level": {
+          "ax": [null]
+        }
+      }
+    },
+    "line": {
+      "console": [
+        {
+          "first": "0",
+          "exec-timeout": {
+            "minutes": 0,
+            "seconds": 0
+          },
+          "stopbits": "1"
+        }
+      ],
+      "vty": [
+        {
+          "first": 0,
+          "last": 4,
+          "login": {
+            "local": [null]
+          },
+          "transport": {
+            "input": {
+              "input": ["ssh"]
+            }
+          }
+        }
+      ]
+    },
+    "ntp": {
+      "Cisco-IOS-XE-ntp:authenticate": [null],
+      "Cisco-IOS-XE-ntp:trusted-key": [
+        {
+          "number": 42
+        }
+      ]
+    },
+    "Cisco-IOS-XE-diagnostics:diagnostic": {
+      "bootup": {
+        "level": "minimal"
+      }
+    }
+  }
+}
+
+pi@RaspPi4:~/Coding/Go_folder/netOps/http_folder $ go run httpPost_v3.go 
+config being applied:
+  {
+		"ietf-interfaces:interface": {
+			"name": "Loopback74",
+			"description": "Testing Golang RestConf",
+			"type": "iana-if-type:softwareLoopback",
+			"enabled": true,
+			"ietf-ip:ipv4": {
+				"address": [
+					{
+						"ip": "74.74.74.1",
+						"netmask": "255.255.255.255"
+					}
+				]
+			}
+		}
+	}
+Device Response:
+  &{201 Created 201 HTTP/1.1 1 1 map[Cache-Control:[private, no-cache, must-revalidate, proxy-revalidate] Connection:[keep-alive] Content-Length:[0] Content-Type:[text/html] Date:[Sun, 26 Apr 2020 15:22:42 GMT] Etag:[1587-914562-247288] Last-Modified:[Sun, 26 Apr 2020 15:22:42 GMT] Location:[https://ios-xe-mgmt-latest.cisco.com/restconf/data/ietf-interfaces:interfaces/interface=Loopback74] Pragma:[no-cache] Server:[nginx]] {} 0 [] false false map[] 0x1892180 0x18fa120}
+This is the output of body:  
+config being applied: 
+ 
+	{
+		  "Cisco-IOS-XE-ospf:ospf": [
+    			{
+      			"id": 74,
+      			"router-id": "74.74.74.1",
+      			"network": [
+        			{
+          				"ip": "74.74.74.1",
+          				"mask": "0.0.0.0",
+          				"area": 74
+        			}
+      				]
+    			}
+ 			]
+			}
+	
+Device Response:
+  &{201 Created 201 HTTP/1.1 1 1 map[Cache-Control:[private, no-cache, must-revalidate, proxy-revalidate] Connection:[keep-alive] Content-Length:[0] Content-Type:[text/html] Date:[Sun, 26 Apr 2020 15:22:42 GMT] Etag:[1587-914562-662590] Last-Modified:[Sun, 26 Apr 2020 15:22:42 GMT] Location:[https://ios-xe-mgmt-latest.cisco.com/restconf/data/Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-ospf:ospf=74] Pragma:[no-cache] Server:[nginx]] {} 0 [] false false map[] 0x1960100 0x18fa120}
+This is the output of body:  
+pi@RaspPi4:~/Coding/Go_folder/netOps/http_folder $ go run httpGet_v1.go 
+&{200 OK 200 HTTP/1.1 1 1 map[Cache-Control:[private, no-cache, must-revalidate, proxy-revalidate] Connection:[keep-alive] Content-Type:[application/yang-data+json] Date:[Sun, 26 Apr 2020 15:22:49 GMT] Pragma:[no-cache] Server:[nginx]] 0x2068270 -1 [chunked] false false map[] 0x20aa180 0x2116120}
+{
+  "Cisco-IOS-XE-native:native": {
+    "version": "16.11",
+    "boot-start-marker": [null],
+    "boot-end-marker": [null],
+    "banner": {
+      "motd": {
+        "banner": "^C"
+      }
+    },
+    "memory": {
+      "free": {
+        "low-watermark": {
+          "processor": 80557
+        }
+      }
+    },
+    "call-home": {
+      "Cisco-IOS-XE-call-home:contact-email-addr": "sch-smart-licensing@cisco.com",
+      "Cisco-IOS-XE-call-home:profile": [
+        {
+          "profile-name": "CiscoTAC-1",
+          "active": true
+        }
+      ]
+    },
+    "service": {
+      "timestamps": {
+        "debug": {
+          "datetime": {
+            "msec": {
+            }
+          }
+        },
+        "log": {
+          "datetime": {
+            "msec": [null]
+          }
+        }
+      },
+      "call-home": [null]
+    },
+    "platform": {
+      "Cisco-IOS-XE-platform:console": {
+        "output": "virtual"
+      }
+    },
+    "hostname": "csr1000v-1",
+    "enable": {
+      "secret": {
+        "type": "9",
+        "secret": "$9$PvdeTeuxxh0ygk$PSg0GTG2I7bluI51e.IvfEu2uxy56e/9/PgqzFUklso"
+      }
+    },
+    "username": [
+      {
+        "name": "cisco",
+        "privilege": 15,
+        "secret": {
+          "encryption": "9",
+          "secret": "$9$COf3Q4xfzT.JxE$L3hvSkDv874Qrh8Hzdv/rPQjLNOjreYG2ocffHG7rls"
+        }
+      },
+      {
+        "name": "developer",
+        "privilege": 15,
+        "secret": {
+          "encryption": "9",
+          "secret": "$9$fhUXi6Xg438iAE$..VhXRCHiDQy3K2zmZUl9iZLbQJ9wpUtQZwQxSRESc2"
+        }
+      },
+      {
+        "name": "root",
+        "privilege": 15,
+        "secret": {
+          "encryption": "9",
+          "secret": "$9$FfUDIPBFcs03AE$MyLIWEuiRle8p3yGflAGTcrJA6BUUh/oWtyyfoMQXSI"
+        }
+      }
+    ],
+    "ip": {
+      "domain": {
+        "name": "abc.inc"
+      },
+      "forward-protocol": {
+        "protocol": "nd"
+      },
+      "route": {
+        "ip-route-interface-forwarding-list": [
+          {
+            "prefix": "0.0.0.0",
+            "mask": "0.0.0.0",
+            "fwd-list": [
+              {
+                "fwd": "GigabitEthernet1",
+                "interface-next-hop": [
+                  {
+                    "ip-address": "10.10.20.254"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scp": {
+        "server": {
+          "enable": [null]
+        }
+      },
+      "ssh": {
+        "rsa": {
+          "keypair-name": "ssh-key"
+        },
+        "version": 2
+      },
+      "access-list": {
+        "Cisco-IOS-XE-acl:extended": [
+          {
+            "name": "meraki-fqdn-dns"
+          }
+        ]
+      },
+      "Cisco-IOS-XE-http:http": {
+        "authentication": {
+          "local": [null]
+        },
+        "server": true,
+        "secure-server": true
+      }
+    },
+    "interface": {
+      "GigabitEthernet": [
+        {
+          "name": "1",
+          "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+          "ip": {
+            "address": {
+              "primary": {
+                "address": "10.10.20.48",
+                "mask": "255.255.255.0"
+              }
+            }
+          },
+          "mop": {
+            "enabled": false,
+            "sysid": false
+          },
+          "Cisco-IOS-XE-ethernet:negotiation": {
+            "auto": true
+          }
+        },
+        {
+          "name": "2",
+          "description": "Network Interface",
+          "shutdown": [null],
+          "mop": {
+            "enabled": false,
+            "sysid": false
+          },
+          "Cisco-IOS-XE-ethernet:negotiation": {
+            "auto": true
+          }
+        },
+        {
+          "name": "3",
+          "description": "Network Interface",
+          "shutdown": [null],
+          "mop": {
+            "enabled": false,
+            "sysid": false
+          },
+          "Cisco-IOS-XE-ethernet:negotiation": {
+            "auto": true
+          }
+        }
+      ],
+      "Loopback": [
+        {
+          "name": 74,
+          "description": "Testing Golang RestConf",
+          "ip": {
+            "address": {
+              "primary": {
+                "address": "74.74.74.1",
+                "mask": "255.255.255.255"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "control-plane": {
+    },
+    "login": {
+      "on-success": {
+        "log": {
+        }
+      }
+    },
+    "multilink": {
+      "Cisco-IOS-XE-ppp:bundle-name": "authenticated"
+    },
+    "redundancy": {
+    },
+    "spanning-tree": {
+      "Cisco-IOS-XE-spanning-tree:extend": {
+        "system-id": [null]
+      }
+    },
+    "subscriber": {
+      "templating": [null]
+    },
+    "crypto": {
+      "Cisco-IOS-XE-crypto:pki": {
+        "certificate": {
+          "chain": [
+            {
+              "name": "SLA-TrustPoint",
+              "certificate": [
+                {
+                  "serial": "01",
+                  "certtype": "ca"
+                }
+              ]
+            },
+            {
+              "name": "TP-self-signed-1059130051",
+              "certificate": [
+                {
+                  "serial": "01",
+                  "certtype": "self-signed"
+                }
+              ]
+            }
+          ]
+        },
+        "trustpoint": [
+          {
+            "id": "SLA-TrustPoint",
+            "enrollment": {
+              "pkcs12": [null]
+            },
+            "revocation-check": ["crl"]
+          },
+          {
+            "id": "TP-self-signed-1059130051",
+            "enrollment": {
+              "selfsigned": [null]
+            },
+            "revocation-check": ["none"],
+            "subject-name": "cn=IOS-Self-Signed-Certificate-1059130051"
+          }
+        ]
+      }
+    },
+    "router": {
+      "Cisco-IOS-XE-ospf:ospf": [
+        {
+          "id": 74,
+          "router-id": "74.74.74.1",
+          "network": [
+            {
+              "ip": "74.74.74.1",
+              "mask": "0.0.0.0",
+              "area": 74
+            }
+          ]
+        }
+      ]
+    },
+    "license": {
+      "udi": {
+        "pid": "CSR1000V",
+        "sn": "97X7V6ANB2G"
+      },
+      "boot": {
+        "level": {
+          "ax": [null]
+        }
+      }
+    },
+    "line": {
+      "console": [
+        {
+          "first": "0",
+          "exec-timeout": {
+            "minutes": 0,
+            "seconds": 0
+          },
+          "stopbits": "1"
+        }
+      ],
+      "vty": [
+        {
+          "first": 0,
+          "last": 4,
+          "login": {
+            "local": [null]
+          },
+          "transport": {
+            "input": {
+              "input": ["ssh"]
+            }
+          }
+        }
+      ]
+    },
+    "ntp": {
+      "Cisco-IOS-XE-ntp:authenticate": [null],
+      "Cisco-IOS-XE-ntp:trusted-key": [
+        {
+          "number": 42
+        }
+      ]
+    },
+    "Cisco-IOS-XE-diagnostics:diagnostic": {
+      "bootup": {
+        "level": "minimal"
+      }
+    }
+  }
+}
+
+pi@RaspPi4:~/Coding/Go_folder/netOps/http_folder $ 
