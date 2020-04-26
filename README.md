@@ -99,6 +99,12 @@ The fourth script is a config script that pull hosts from a host_file add then l
 - host_file002.txt - holds the hosts
 - httpPost_v2_output.txt - displays how to run the script and the output.
 ```
+The fifth script in this series is a http POST script that will create an interface and add an ospf routing instance to the router. Applying the interface to an ospf area. The script is using ietf-interface module and CISCO-IOS-XE-native modules. I am still fumbling around with finding the correct uri's to apply to get the scripts to do what I want. This script is not polished, it's more of a can I do this script.
+```
+- httpPost_v3.go
+- httpPost_v3_output.txt - shows pre and post state of device after running script.
+```
+
 # Misc Folder
 Simply a folder to test Go concepts and features as it could pertain to networking. More about testing features in Go than it is about testing a network concept. 
 ``` 
