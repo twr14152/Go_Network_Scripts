@@ -1,3 +1,6 @@
+// Configure the device listed in the url
+// Entering the commands you want when you run the script.
+
 package main
 
 import (
