@@ -1,0 +1,111 @@
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ go run config_script_v2.go 
+&{200 OK 200 HTTP/1.1 1 1 map[Cache-Control:[no-store no-cache must-revalidate max-age=0 pre-check=0 post-check=0] Connection:[keep-alive] Content-Type:[application/json] Date:[Mon, 11 May 2020 22:33:01 GMT] Pragma:[no-cache] Server:[nginx]] 0xcea050 -1 [chunked] false true map[] 0xc92200 0xc8c600}
+{"jsonrpc": "2.0", "id": "1", "result": [{}, {}, {}, {}, {}, {}, {}]}
+&{200 OK 200 HTTP/1.1 1 1 map[Cache-Control:[no-store no-cache must-revalidate max-age=0 pre-check=0 post-check=0] Connection:[keep-alive] Content-Type:[application/json] Date:[Mon, 11 May 2020 22:33:01 GMT] Pragma:[no-cache] Server:[nginx]] 0xcea3c0 -1 [chunked] false true map[] 0xd2c080 0xd20120}
+{"jsonrpc": "2.0", "id": "1", "result": [{}, {}, {}, {}, {}, {}, {}]}
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ 
+
+
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ go run show_cmds.go show running-config
+[show running-config]
+#############################
+Connected to ceos1
+[map[command:show running-config result:! Command: show running-config
+! device: ceos1 (cEOSLab, EOS-4.23.3M)
+!
+transceiver qsfp default-mode 4x10G
+!
+agent Bfd shutdown
+agent PowerManager shutdown
+agent LedPolicy shutdown
+agent Thermostat shutdown
+agent PowerFuse shutdown
+agent StandbyCpld shutdown
+agent LicenseManager shutdown
+!
+hostname ceos1
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username arista privilege 15 secret sha512 $6$7FWNPnRoPkXJgo2H$ssT3J3oBdwk/pYcaAKhwK08ogkXU7.oKjgmhM6vMZ2/VcGe.NuiB5bIzonFi4SJVA4ismhPwidUsoeFvvHezS1
+!
+interface Ethernet1
+   no switchport
+   ip address 10.0.0.1/24
+!
+interface Ethernet2
+!
+interface Loopback1
+   description router-id
+   ip address 1.1.1.1/32
+!
+interface Loopback3
+   description ceos1 Lo3
+   ip address 3.3.3.3/32
+!
+ip routing
+!
+router bgp 1
+   neighbor 10.0.0.2 remote-as 2
+   neighbor 10.0.0.2 maximum-routes 12000
+   network 1.1.1.1/32
+   network 3.3.3.3/32
+!
+management api http-commands
+   no shutdown
+!
+end]] <nil>
+############################
+#############################
+Connected to ceos2
+[map[command:show running-config result:! Command: show running-config
+! device: ceos2 (cEOSLab, EOS-4.23.3M)
+!
+transceiver qsfp default-mode 4x10G
+!
+agent Bfd shutdown
+agent PowerManager shutdown
+agent LedPolicy shutdown
+agent Thermostat shutdown
+agent PowerFuse shutdown
+agent StandbyCpld shutdown
+agent LicenseManager shutdown
+!
+hostname ceos2
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username arista privilege 15 secret sha512 $6$x60Ym99BaPBBW3Or$YxSI7vh3F4USDtdjdrE1d.CALbvjuTv9abWPX4TM4hrF41tBxiI.HNayhTP0HUTaI5Iv0ZYCOKl/dx7564o0b/
+!
+interface Ethernet1
+   no switchport
+   ip address 10.0.0.2/24
+!
+interface Ethernet2
+!
+interface Loopback1
+   description router-id
+   ip address 2.2.2.2/32
+!
+interface Loopback4
+   description ceos2 lo4
+   ip address 4.4.4.4/32
+!
+ip routing
+!
+router bgp 2
+   neighbor 10.0.0.1 remote-as 1
+   neighbor 10.0.0.1 maximum-routes 12000
+   network 2.2.2.2/32
+   network 4.4.4.4/32
+!
+management api http-commands
+   no shutdown
+!
+end]] <nil>
+############################
+pi@RaspPi4:~/Coding/Go_folder/netOps/goeapi_folder $ 
