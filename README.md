@@ -142,7 +142,7 @@ The script does work but not quite where I would like it to be. Work in progress
 - arista/config_script_output2.txt
 ```
 
-Minor update to eapi configuration script. It allows you to configure multiple devices with unique configurations. Created new device type struct to distinguish host and configurations. Still a work in progress. 
+Minor update to the configuration script. It allows you to configure multiple devices with unique configurations. Created new device type struct to distinguish host and configurations. Still a work in progress. 
 >>>go run config_script_v2.go
 ```
 - arista/config_script_v2.go
