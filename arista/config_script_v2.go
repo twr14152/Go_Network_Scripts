@@ -1,3 +1,7 @@
+// Using the device type struct you can configure mutiple device with unique configurations
+// This script is using ceos-lab platform and http Ports specify different hosts
+// (c) Todd Riemenschneider 2020
+
 package main
 
 import (
