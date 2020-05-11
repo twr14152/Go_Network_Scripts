@@ -142,5 +142,12 @@ The script does work but not quite where I would like it to be. Work in progress
 - arista/config_script_output2.txt
 ```
 
+Minor update to eapi configuration script. Still a work in progress. 
+>>>go run config_script_v2.go
+```
+- arista/config_script_v2.go
+- arista/config_script_v2_output.txt
+```
+
 
 
