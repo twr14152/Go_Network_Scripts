@@ -114,6 +114,7 @@ The fifth script in this series is a http POST script that will create an interf
 # Misc Folder
 Simply a folder to test Go concepts and features as it could pertain to networking. More about testing features in Go than it is about testing a network concept. 
 ``` 
+- cli_args.go - how to put basic command line arguments in an iterable data format
 - methodsTest.go - create a struct and method to print switch config details to screen
 - methodsTest_output.txt - script output
 - struct_switch_break_loop,go - playing with features for possible future inspiration
