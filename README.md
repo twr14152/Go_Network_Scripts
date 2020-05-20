@@ -52,10 +52,13 @@ The 7th script uses host_file to login to target hosts and a cmd_file to issue c
 ```
 The 8th script uses os.Args to allow you to enter the commands you want to run at the time you run the script.
 For example you could issue "go run interactive_ssh.go show run interface loopback 0, show ip int brief, show version"
-This script will split the the commands up by the commas.
+This script will split the the commands up by the commas. Refined the scripts code use of os.Args by using strings.method as opposed to using a for loop to build the cmds slice. Newer script is ssh_using_cli_args.go.
 ```
 - ssh_client/interactive_ssh.go
 - ssh_client/interactive_ssh_output.txt
+- 
+- ssh_client/ssh_using_cli_args.go
+- ssh_client/ssh_using_cli_args_output.txt
 ```
 The 9th script was an improvement on the 7th script. I really wish I would have labeled the scripts this way but I didnt...Basically I wanted a script that could go out to multiple devices and apply unique configs on them in one go around. This is accomplished by this script by having the main script loop through the devices then use the device hostname +.cfg (it's arbitrary could be .txt suffix) as a target for the file the script opens per device. That way you can uniquely mark and identify the device and the configs the script needs to apply.
 ```
