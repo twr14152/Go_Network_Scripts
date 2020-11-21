@@ -1,0 +1,50 @@
+This is a simple example of using go mod to keep dependencies updated. 
+There's probably a lot more you can do with it but lets keep it simple.
+
+Create directory using filename leaving off the ".go" suffix.
+
+  pi@RaspPi4:~/Coding/Go_folder/netOps/ssh_folder $ mkdir ssh_using_cli_args
+
+If you have a script already created move it into the folder otherwise create it within.
+
+  pi@RaspPi4:~/Coding/Go_folder/netOps/ssh_folder $ mv ssh_using_cli_args.go ssh_using_cli_args   
+
+  pi@RaspPi4:~/Coding/Go_folder/netOps/ssh_folder/ssh_using_cli_args $ go mod init ssh_using_cli_args    
+  go: creating new go.mod: module ssh_using_cli_args
+  pi@RaspPi4:~/Coding/Go_folder/netOps/ssh_folder/ssh_using_cli_args $ ls -l
+  total 8
+  -rw-r--r-- 1 pi pi   35 Nov 21 08:56 go.mod
+  -rw-r--r-- 1 pi pi 1109 Nov 21 08:37 ssh_using_cli_args.go
+
+  pi@RaspPi4:~/Coding/Go_folder/netOps/ssh_folder/ssh_using_cli_args $ go build                       
+  go: finding module for package golang.org/x/crypto/ssh
+  go: downloading golang.org/x/crypto v0.0.0-20201117144127-c1f2f97bffc9
+  go: found golang.org/x/crypto/ssh in golang.org/x/crypto v0.0.0-20201117144127-c1f2f97bffc9
+  pi@RaspPi4:~/Coding/Go_folder/netOps/ssh_folder/ssh_using_cli_args $ ls -l
+  total 3824
+  -rw-r--r-- 1 pi pi      99 Nov 21 08:57 go.mod
+  -rw-r--r-- 1 pi pi     832 Nov 21 08:57 go.sum
+  -rwxr-xr-x 1 pi pi 3903398 Nov 21 08:57 ssh_using_cli_args
+  -rw-r--r-- 1 pi pi    1109 Nov 21 08:37 ssh_using_cli_args.go
+  pi@RaspPi4:~/Coding/Go_folder/netOps/ssh_folder/ssh_using_cli_args $ cat go.mod 
+  module ssh_using_cli_args
+
+  go 1.15
+
+  require golang.org/x/crypto v0.0.0-20201117144127-c1f2f97bffc9
+
+  pi@RaspPi4:~/Coding/Go_folder/netOps/ssh_folder/ssh_using_cli_args $ cat go.sum 
+  golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
+  golang.org/x/crypto v0.0.0-20201117144127-c1f2f97bffc9 h1:phUcVbl53swtrUN8kQEXFhUxPlIlWyBfKmidCu7P95o=
+  golang.org/x/crypto v0.0.0-20201117144127-c1f2f97bffc9/go.mod h1:jdWPYTVW3xRLrWPugEBEK3UY2ZEsg3UU495nc5E+M+I=
+  golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3/go.mod h1:t9HGtf8HONx5eT2rtn7q6eTqICYqUVnKs3thJo3Qplg=
+  golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
+  golang.org/x/sys v0.0.0-20191026070338-33540a1f6037/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+  golang.org/x/term v0.0.0-20201117132131-f5c789dd3221/go.mod h1:Nr5EML6q2oocZ2LXRh80K7BxOlk5/8JxuGnuhpl+muw=
+  golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
+  pi@RaspPi4:~/Coding/Go_folder/netOps/ssh_folder/ssh_using_cli_args $
+
+To run the file
+
+  pi@RaspPi4:~/Coding/Go_folder/netOps/ssh_folder/ssh_using_cli_args $ ./ssh_using_cli_args show ip int brief
+
