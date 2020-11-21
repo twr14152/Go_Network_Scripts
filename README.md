@@ -153,7 +153,7 @@ Minor update to the configuration script. It allows you to configure multiple de
 - arista/config_script_v2_output.txt
 ```
 
-#Go modules 
+# Using Go modules 
 You can use go mod to keep scripts dependencies
 ```
 - using_go_mod_example.txt
