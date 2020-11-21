@@ -154,7 +154,7 @@ Minor update to the configuration script. It allows you to configure multiple de
 ```
 
 # Using Go modules 
-You can use go mod to keep scripts dependencies
+You can use go mod to keep scripts dependencies updated.
 ```
 - using_go_mod_example.txt
 ```
