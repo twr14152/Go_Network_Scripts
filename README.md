@@ -1,7 +1,7 @@
 # Go_Network_Scripts
 
 ```
-UPDATE - Rather than redo this repository with go modules. I've decided to start a new repository call go2run. It will hold the most usable scripts from this repo along with some new ones as they come to me. Its a work in progress but seeing as how Go modules are the way forward I just figured it would save me some time..
+#UPDATE - Rather than redo this repository with go modules. I've decided to start a new repository call go2run. It will hold the most usable scripts from this repo along with some new ones as they come to me. Its a work in progress but seeing as how Go modules are the way forward I just figured it would save me some time..
 
 ``` 
 
