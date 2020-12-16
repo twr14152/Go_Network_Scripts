@@ -16,8 +16,8 @@ Under the ssh_client/ I've added the following scripts.
 
 Will update as time permits.
 
-
-#  
+-------------
+#  Original Post
 
 This is an attempt to try and learn Go by creating some potentially useful network scripts. Rather than using space and memory on my mac to build a lab, I'll be using Cisco Devnet hosts for testing. At least initially. Why not? Its free and accessible over the Internet... For non-Cisco gear I will use other means.
 
