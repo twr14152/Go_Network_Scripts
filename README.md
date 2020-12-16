@@ -5,8 +5,8 @@ When I started this repository it was to help me learn Go by using it to do thin
 
 That said I'm going to try updating and revising these scripts as I get time.
 
-Starting with ssh scripts. I'm moving the original script to a folder called ssh_client/pre_go.mod_stuff/.
-Under the ssh_client/ I've added the following scripts.
+Starting with ssh scripts. I'm moving the original scripts to a folder called ssh_client/pre_go.mod_stuff/.
+I've added the following scripts in their place. 
 
 - ssh_client/runcli/ - (Work in Progress) This package will prompt you for hosts and commands (config/show) to run on your devices
 - ssh_client/ssh-cli-client - Easy to use script for connecting to multiple devices and issuing (config/show) commands.
