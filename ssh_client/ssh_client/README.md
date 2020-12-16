@@ -55,12 +55,20 @@ total 36
 # host_files
 ```
 $ cat group1.txt 
+```
 fastxe:22
+```
+```
+```
 $ cat group2.txt 
+```
 nxos:8181
-
+```
+```
 ```
 # cmds for host1
+```
+```
 ```
 $ cat file_fastxe\:22.cfg
 sh ip int brief
@@ -75,12 +83,13 @@ config t
 no interface loopback 74
 exit
 exit
-
-
+```
+```
 ```
 
 # cmds for host2
-
+```
+```
 ```
 $ cat file_nxos\:8181.cfg         
 show ip int brief
