@@ -1,9 +1,26 @@
 # Go_Network_Scripts
 
 
-# UPDATE - Rather than redo this repository with go modules. I've decided to start a new repository call go2run. It will hold the most usable scripts from this repo along with some new ones as they come to me. Its a work in progress but seeing as how Go modules are the way forward I just figured it would save me some time..
+When I started this repository it was to help me learn Go buy using it to do things I know are correct in another field. In that regard I feel the scripts I wrote would work for someone looking to get stuff done. Practical in one space does not mean elegant or correct in another. That being said in my effort to improve my skills in go I have tried to update some of the scripts to make them more polished while also adding the go modules to help with dependency management. I'm kinda having a love hate relationship with Go.mod but for the basic stuff like pulling more up-to-date packages from the time the code was written it seems to work pretty well.
 
- 
+That said I'm going to try updating and revising these scripts as I get time.
+
+Starting with ssh scripts I'm moving the original script to a folder called ssh_client/pre_go.mod_stuff/.
+Under the ssh_client/ I've added the following scripts.
+
+- ssh_client/runcli/ - (Work in Progress) This package will prompt you for hosts and commands (config/show) to run on your devices
+- ssh_client/ssh-cli-client - Easy to use script for connecting to multiple devices and issuing (config/show) commands.
+- ssh_client/ssh_client - Configuation / validation script uses a hostfile and seperate configuration files to configure hosts
+
+
+
+- scp_client - script for copying files to remote host
+
+
+Will update as time permits.
+
+
+#  
 
 This is an attempt to try and learn Go by creating some potentially useful network scripts. Rather than using space and memory on my mac to build a lab, I'll be using Cisco Devnet hosts for testing. At least initially. Why not? Its free and accessible over the Internet... For non-Cisco gear I will use other means.
 
