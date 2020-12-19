@@ -8,7 +8,7 @@ That said I'm going to try updating and revising the more relevant scripts as I 
 Starting with ssh scripts. I'm moving the original scripts to a folder called ssh_client/pre_go.mod_stuff/.
 I've added the following scripts in their place. I feel these are ready for practical use. However the testbed I'm still using is 95% Cisco Devnet.
 
-- ssh_client/runcli/ - (Work in Progress) This package will prompt you for hosts and commands (config/show) to run on your devices
+- ssh_client/runcli/ - You call this package from your main.go file and you can issue show/config commands on multiple remote devices. Using go get is the simplist way to get this package installed to run in your code.
 - ssh_client/ssh-cli-client - Easy to use script for connecting to multiple devices and issuing (config/show) commands.
 - ssh_client/ssh_client - Configuation / validation script uses a hostfile and seperate configuration files to configure hosts
 - scp_client - script for copying files to remote host
