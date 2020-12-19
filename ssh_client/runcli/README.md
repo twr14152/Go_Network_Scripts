@@ -6,9 +6,8 @@ The code will work with show commands as well as configuration commands. Good ga
 
 Once you've downloaded package you need to make sure your GOROOT knows where to find it.
 
-Using Go.Mods was a little buggy and not straight forward.
+I found using Go.Mods to load the file from a third party host (Repl.it) was giving me some grief in the form of and error stating "You declared mod as: x but was required as url/xyz/x". With that I decided to remove the go.mod file from the directory and simply issue a go get to install the package. The old school way and it worked. So what ever way works for you.
 
-So in practice I used go get when testing it from Repl.it.  It installed the file "runcli" into the proper location to run.
 ```
  go get github.com/twr14152/Go_Network_Scripts/ssh_client/runcli
  go run main.go 
@@ -19,7 +18,7 @@ Hostname: 131.226.217.143:22
 cmds: show version
 
 ```
-Alternatively you could go copy the directory over to go/src but thats not what I was intending to happen.
+Alternatively you could go copy the directory over to go/src but thats pretty manual and not what I was intending to have happen.
 
 ```
 cp -r runcli/ /home/pi/go/src/
@@ -34,7 +33,7 @@ package main
 
 import (
 	"fmt"
-	"runcli"
+	runcli "github.com/twr14152/Go_Network_Scripts/ssh_client/runcli"
 )
 
 func main() {
