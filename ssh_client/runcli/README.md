@@ -6,7 +6,7 @@ The code will work with show commands as well as configuration commands. Good ga
 
 Once you've downloaded package you need to make sure your GOROOT knows where to find it.
 
-I found using Go.Mods to load the file from a third party host (Repl.it) was giving me some grief in the form of and error stating "You declared mod as: x but was required as url/xyz/x". With that I decided to remove the go.mod file from the directory and simply issue a go get to install the package. The old school way and it worked. So what ever way works for you.
+I found installing the file from a third party system (Repl.it) was giving me some grief using go.mods. Go figure. It stated "You declared mod as: x but was required as url/xyz/x". After looking through some google searched I decided to remove the go.mod file from the directory and simply issue a go get to install the package. The old school way, and it worked. 
 
 ```
  go get github.com/twr14152/Go_Network_Scripts/ssh_client/runcli
@@ -23,6 +23,7 @@ Alternatively you could go copy the directory over to go/src but thats pretty ma
 ```
 cp -r runcli/ /home/pi/go/src/
 ```
+ 
 In this example we have 3 devices 2 ios-xe and 1 nx-os. The login parameters for the ios-xe are the same and the nxos is different. The app will then prompt you to enter the commands you want. In your code all you will need to do is import "runcli" and add your login credentials to runcli.RunCli() for each group. The app will then prompt you for the commands to run.
 
 Sample code:
