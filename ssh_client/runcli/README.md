@@ -6,9 +6,21 @@ The code will work with show commands as well as configuration commands. Good ga
 
 Once you've downloaded package you need to make sure your GOROOT knows where to find it.
 
-On my device I needed to copy the file over to /home/pi/go/src/ it may be something different for you.
-Any errors you may receive should point you in the right direction as far as where GOROOT is looking.
-I'm not all that familiar with creating packages so it could simply be a problem between the keyboard and my chair.:)
+Using Go.Mods was a little buggy and not straight forward.
+
+So in practice I used go get when testing it from Repl.it.  It installed the file "runcli" into the proper location to run.
+```
+ go get github.com/twr14152/Go_Network_Scripts/ssh_client/runcli
+ go run main.go 
+Connecting to device
+Number of hosts: 1
+Hostname: 131.226.217.143:22
+
+cmds: show version
+
+```
+Alternatively you could go copy the directory over to go/src but thats not what I was intending to happen.
+
 ```
 cp -r runcli/ /home/pi/go/src/
 ```
