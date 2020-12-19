@@ -59,7 +59,7 @@ host2:8181
 Remember when you give the host device to add the port your connecting on.
 
 ```
-pi@raspberrypi:~/Code_folder/go_folder/go2run $ go run testruncli.go 
+$ go run testruncli.go 
 Connecting to ios-xe devices:
 Number of hosts: 2
 Hostname: fastxe:22
@@ -136,7 +136,7 @@ Lo1                  172.16.0.1      protocol-up/link-up/admin-up
 Lo98                 10.98.98.1      protocol-up/link-up/admin-up       
 Lo99                 10.99.99.1      protocol-up/link-up/admin-up       
 Eth1/5               172.16.1.1      protocol-down/link-down/admin-down 
-pi@raspberrypi:~/Code_folder/go_folder/go2run $ $ 
+$ 
 ```
 
 
@@ -145,7 +145,7 @@ pi@raspberrypi:~/Code_folder/go_folder/go2run $ $
 Using the same testruncli.go file we will add loopback75 to fastxe csr and loopback76 to nxos device.
 
 ```
-pi@raspberrypi:~/Code_folder/go_folder/go2run $ go run testruncli.go 
+$ go run testruncli.go 
 Connecting to ios-xe devices:
 Number of hosts: 1
 Hostname: fastxe:22
@@ -230,7 +230,7 @@ interface loopback76
   description go script test
   ip address 76.0.0.1/32
 
-pi@raspberrypi:~/Code_folder/go_folder/go2run $ 
+$ 
  
 
 ```
