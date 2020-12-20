@@ -4,6 +4,12 @@ You will simply need to import runscript into your main.go file and call the run
 All you will need is the username password and the name of the hostfile you create with those common login parameters.
 If you have multiple login parameters create multiple hostfiles grouping those with common parameters.
 
+To install you need to go get github.com/twr14152/Go_Network_Scripts/ssh_client/runscript 
+Unfortunately I have had to delete go.mod file from the local repository to make the install work.
+There's either a bug with go.mod or I dont know what the hell I'm doing. Later is probably the case.
+
+Will update once resolved.
+
 sample code:
 main.go
 ```
