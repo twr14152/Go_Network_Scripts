@@ -1,16 +1,37 @@
 # runscript
-The goal of this SSH script is to use host and cmd files to change and validate device configuration.
+The goal of this package is to allow the user use host and cmd files to change and validate device configuration.
+You will simply need to import runscript into your main.go file and call the runscript.Connect() to connect to you devices.
+All you will need is the username password and the name of the hostfile you create with those common login parameters.
+If you have multiple login parameters create multiple hostfiles grouping those with common parameters.
 
-In the code you will add your login credentials and hostfile as parameters of the connect function in main.go.
- 
+sample code:
+main.go
+```
+package main
+
+import (
+    "fmt"
+    "github.com/twr14152/Go_Network_Scripts/ssh_client/runscript"
+)
+
+func main() {
+    fmt.Println("Connecting to Group1 hosts")
+    runscript.Connect("user1", "password1", "group1.txt")
+    fmt.Println("Connecting to Group2 hosts")
+    runscript.Connect("user2", "password2", "group2.txt")
+}
+
+```
+
 You can call the hostfile what ever you want. It is neccesary to include the connecting port in the file.
 
 hostfile.txt
 - hostname:port
 - ip_address:port
 
-Main.go calls unique cmd files for each device using the following naming standard to determine the commands to apply to each device.
+# This is key
 
+runscript.go calls unique cmd files for each device using the following naming standard to determine the commands to apply to each device.
 
 Commands files:
 
@@ -25,11 +46,12 @@ Eg.
  
 By using the "file_" in front of the name your able to use IP address as well has hostnames.
 
-In sum to use this package you will need to do the following:
+# In summary to use this package you will need to do the following:
 ```
-- Create commands files for each device using naming format provided.
-- Create hostfile and add it and your login parameters to the body of func main() in main.go
-- If you have multiple logins you can create groups to put the devices in and use those for host files.
+- Import runscript into main.go
+- Then use runscript.Connect("username", "password", "hostsfile.txt") to your devices 
+- Create commands files for each device USING THE FORMAT PROVIDED.
+- Create hostfile grouping those hosts that share common login parameters
 
 ```
 
@@ -39,42 +61,32 @@ Example provided:
 #Package files
 
 ```
-$ ls -l
-total 36
--rw-r--r-- 1 pi pi  185 Dec 15 18:15 file_fastxe:22.cfg
--rw-r--r-- 1 pi pi  176 Dec 15 18:15 file_nxos:8181.cfg
--rw-r--r-- 1 pi pi  103 Dec 15 18:24 go.mod
--rw-r--r-- 1 pi pi 1045 Dec 15 18:24 go.sum
--rw-r--r-- 1 pi pi   10 Dec 15 18:17 group1.txt
--rw-r--r-- 1 pi pi   10 Dec 15 18:25 group2.txt
--rw-r--r-- 1 pi pi 1891 Dec 15 18:27 main.go
--rw-r--r-- 1 pi pi 7211 Dec 15 18:39 README.md
- $ 
-
+ ls -l
+total 20
+-rw-r--r-- 1 runner runner 194 Dec 20 15:52 file_131.226.217.143:22.cfg
+-rw-r--r-- 1 runner runner 185 Dec 20 16:51 file_64.103.37.14:8181.cfg
+-rw-r--r-- 1 runner runner  18 Dec 20 15:53 group1.txt
+-rw-r--r-- 1 runner runner  18 Dec 20 16:44 group2.txt
+-rw-r--r-- 1 runner runner 318 Dec 20 16:55 main.go
+
+```
 
 # host_files
 ```
-$ cat group1.txt 
-```
-fastxe:22
-```
-```
-```
-$ cat group2.txt 
-```
-nxos:8181
-```
-```
+ cat group1.txt 
+131.226.217.143:22
+
+ cat group2.txt 
+64.103.37.14:8181
+ 
 ```
 # cmds for host1
 ```
-```
-```
-$ cat file_fastxe\:22.cfg
+ cat file_131.226.217.143\:22.cfg 
 sh ip int brief
 config t
 interface loopback74
- description Script_test
+ description script_test_iosxe_dev
  ip address 74.74.74.74 255.255.255.255
  exit
 exit
@@ -83,19 +95,16 @@ config t
 no interface loopback 74
 exit
 exit
-```
-```
+
 ```
 
 # cmds for host2
 ```
-```
-```
-$ cat file_nxos\:8181.cfg         
+cat file_64.103.37.14\:8181.cfg 
 show ip int brief
 config t
 interface loopback 75
- description Script_test
+ description script_test_nxos_dev
  ip address 75.75.75.75/32
 exit
 exit
@@ -104,18 +113,18 @@ config t
  no interface loopback 75
  exit
 exit
-$ 
-````
+```
+
 -------------------
 # Results of the program
 
 ```
-$ go run main.go 
-Connecting to Group1 hosts:
-[fastxe:22]
+ go run main.go 
+Connecting to Group1 hosts
+[131.226.217.143:22]
 
 
-This is the config file named:file_fastxe:22.cfg
+This is the config file named:file_131.226.217.143:22.cfg
 
 
 
@@ -130,26 +139,17 @@ The following programmability features are already enabled:
 Thanks for stopping by.
 
 
-
 csr1000v-1#sh ip int brief
 Interface              IP-Address      OK? Method Status                Protocol
 GigabitEthernet1       10.10.20.48     YES NVRAM  up                    up      
 GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
 GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
-Loopback1              10.10.1.1       YES other  up                    up      
-Loopback2              10.20.1.1       YES other  up                    up      
-Loopback10             100.100.100.10  YES manual up                    up      
-Loopback20             22.22.22.22     YES manual up                    up      
-Loopback30             33.33.33.33     YES manual up                    up      
-Loopback100            172.16.1.101    YES manual up                    up      
-Loopback101            unassigned      YES unset  up                    up      
-Loopback140            10.12.12.14     YES manual up                    up      
-Loopback141            10.12.12.15     YES manual up                    up      
-Loopback200            172.31.1.200    YES manual up                    up      
+Loopback105            192.168.1.1     YES manual up                    up      
+Loopback106            192.168.1.2     YES manual up                    up      
 csr1000v-1#config t
 Enter configuration commands, one per line.  End with CNTL/Z.
 csr1000v-1(config)#interface loopback74
-csr1000v-1(config-if)# description Script_test
+csr1000v-1(config-if)# description script_test_iosxe_dev
 csr1000v-1(config-if)# ip address 74.74.74.74 255.255.255.255
 csr1000v-1(config-if)# exit
 csr1000v-1(config)#exit
@@ -158,27 +158,19 @@ Interface              IP-Address      OK? Method Status                Protocol
 GigabitEthernet1       10.10.20.48     YES NVRAM  up                    up      
 GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
 GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
-Loopback1              10.10.1.1       YES other  up                    up      
-Loopback2              10.20.1.1       YES other  up                    up      
-Loopback10             100.100.100.10  YES manual up                    up      
-Loopback20             22.22.22.22     YES manual up                    up      
-Loopback30             33.33.33.33     YES manual up                    up      
 Loopback74             74.74.74.74     YES manual up                    up      
-Loopback100            172.16.1.101    YES manual up                    up      
-Loopback101            unassigned      YES unset  up                    up      
-Loopback140            10.12.12.14     YES manual up                    up      
-Loopback141            10.12.12.15     YES manual up                    up      
-Loopback200            172.31.1.200    YES manual up                    up      
+Loopback105            192.168.1.1     YES manual up                    up      
+Loopback106            192.168.1.2     YES manual up                    up      
 csr1000v-1#config t
 Enter configuration commands, one per line.  End with CNTL/Z.
 csr1000v-1(config)#no interface loopback 74
 csr1000v-1(config)#exit
 csr1000v-1#exit
-Connecting to Group2 hosts:
-[nxos:8181]
+Connecting to Group2 hosts
+[64.103.37.14:8181]
 
 
-This is the config file named:file_nxos:8181.cfg
+This is the config file named:file_64.103.37.14:8181.cfg
 
 
 
@@ -212,5 +204,5 @@ Lo75                 75.75.75.75     protocol-up/link-up/admin-up
 Lo98                 10.98.98.1      protocol-up/link-up/admin-up       
 Lo99                 10.99.99.1      protocol-up/link-up/admin-up       
 Eth1/5               172.16.1.1      protocol-down/link-down/admin-down 
-$
+ 
 ```
