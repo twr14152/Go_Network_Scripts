@@ -1,6 +1,6 @@
 # Go_Network_Scripts
 
-### Updated 12/15/2020
+### Updated 12/20/2020
 When I started this repository it was to help me learn Go by using it to do things I know are correct in another field. In that regard I feel the scripts were decent in that they progressed into something that would resemble practical. Practical in one space does not mean elegant or correct in another. That being said in my effort to improve my skill with Go I have updated some of the more relevant scripts to make them more polished while also adding go modules to help with dependency management. I'm kinda having a love hate relationship with Go.mod but for the basic stuff like pulling more up-to-date packages from the time the code was orginally written it seems to work pretty well.
 
 That said I'm going to try updating and revising the more relevant scripts as I get time. 
@@ -8,6 +8,9 @@ That said I'm going to try updating and revising the more relevant scripts as I 
 Starting with ssh scripts. I'm moving the original scripts to a folder called ssh_client/pre_go.mod_stuff/.
 I've added the following scripts in their place. I feel these are ready for practical use. However the testbed I'm still using is 95% Cisco Devnet.
 
+This repository will be used to create packages for the go2run repo if the code functionality makes it worthwhile. Otherwise its just a learning / testing and sharing repo.
+
+- ssh_client/runscript/ - You can use this package to make changes and validate your network devices using host and command files.
 - ssh_client/runcli/ - You call this package from your main.go file and you can issue show/config commands on multiple remote devices. 
 - ssh_client/ssh-cli-client - Easy to use script for connecting to multiple devices and issuing (config/show) commands.
 - ssh_client/ssh_client - Configuation / validation script uses a hostfile and seperate configuration files to configure hosts
