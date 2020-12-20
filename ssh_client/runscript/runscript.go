@@ -27,7 +27,7 @@ func loginHosts(hostfile string) {
 	fmt.Println(hostList)
 }
 
-func connect(user, pass, hostfile string) {
+func Connect(user, pass, hostfile string) {
 	loginHosts(hostfile)
 	for _, host := range hostList {
 
