@@ -25,7 +25,7 @@ package main
 
 import (
 	"fmt"
-	runcli "github.com/twr14152/Go_Network_Scripts/ssh_client/runcli"
+	"github.com/twr14152/Go_Network_Scripts/ssh_client/runcli"
 )
 
 func main() {
