@@ -8,27 +8,18 @@ Once you've downloaded package you need to make sure your GOROOT knows where to 
 
 I found installing the file from a third party system (Repl.it) was giving me some grief using go.mods. Go figure. It stated "You declared mod as: x but was required as url/xyz/x". After looking through some google searched I decided to remove the go.mod file from the directory and simply issue a go get to install the package. The old school way, and it worked. 
 
+# To install
+
 ```
  go get github.com/twr14152/Go_Network_Scripts/ssh_client/runcli
- go run main.go 
-Connecting to device
-Number of hosts: 1
-Hostname: 131.226.217.143:22
-
-cmds: show version
 
 ```
-Alternatively you could go copy the directory over to go/src but thats pretty manual and not what I was intending to have happen.
 
-```
-cp -r runcli/ /home/pi/go/src/
-```
- 
 In this example we have 3 devices 2 ios-xe and 1 nx-os. The login parameters for the ios-xe are the same and the nxos is different. The app will then prompt you to enter the commands you want. In your code all you will need to do is import "runcli" and add your login credentials to runcli.RunCli() for each group. The app will then prompt you for the commands to run.
 
 Sample code:
 
-Created file testruncli.go and added the following:
+Created file main.go and added the following:
 ```
 package main
 
@@ -59,7 +50,7 @@ host2:8181
 Remember when you give the host device to add the port your connecting on.
 
 ```
-$ go run testruncli.go 
+$ go run main.go 
 Connecting to ios-xe devices:
 Number of hosts: 2
 Hostname: fastxe:22
@@ -142,10 +133,10 @@ $
 
 # Running code with configuration commands + validation commands.
 
-Using the same testruncli.go file we will add loopback75 to fastxe csr and loopback76 to nxos device.
+Using the same main.go file we will add loopback75 to fastxe csr and loopback76 to nxos device.
 
 ```
-$ go run testruncli.go 
+$ go run main.go 
 Connecting to ios-xe devices:
 Number of hosts: 1
 Hostname: fastxe:22
@@ -232,6 +223,5 @@ interface loopback76
 
 $ 
  
-
 ```
 
