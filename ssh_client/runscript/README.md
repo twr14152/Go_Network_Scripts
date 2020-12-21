@@ -4,11 +4,11 @@ You will simply need to import runscript into your main.go file and call the run
 All you will need is the username password and the name of the hostfile you create with those common login parameters.
 If you have multiple login parameters create multiple hostfiles grouping those with common parameters.
 
-To install you need to go get github.com/twr14152/Go_Network_Scripts/ssh_client/runscript 
-Unfortunately I have had to delete go.mod file from the local repository to make the install work.
-There's either a bug with go.mod or I dont know what the hell I'm doing. Later is probably the case.
+To install:
+``` 
+go get github.com/twr14152/Go_Network_Scripts/ssh_client/runscript
 
-Will update once resolved.
+```
 
 sample code:
 main.go
@@ -64,7 +64,7 @@ By using the "file_" in front of the name your able to use IP address as well ha
 Example provided:
 --------------------
 
-#Package files
+# directory files
 
 ```
  ls -l
