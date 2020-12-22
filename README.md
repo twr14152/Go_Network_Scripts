@@ -1,7 +1,7 @@
 # Go_Network_Scripts
 
 ### Updated 12/20/2020
-When I started this repository it was to help me learn Go by using it to do things I know are correct in another field. In that regard I feel the scripts were decent in that they progressed into something that would resemble practical. Practical in one space does not mean elegant or correct in another. That being said in my effort to improve my skill with Go I have updated some of the more relevant scripts to make them more polished while also adding go modules to help with dependency management. I'm kinda having a love hate relationship with Go.mod but for the basic stuff like pulling more up-to-date packages from the time the code was orginally written it seems to work pretty well.
+When I started this repository it was to help me learn Go by using it to do things I know are correct in another field. In that regard I feel the scripts were decent in that they progressed into something that would resemble practical. Practical in one space does not mean elegant or correct in another. That being said in my effort to improve with Go, I have updated some of the more relevant scripts to make them more polished while also adding go modules to help with dependency management. I'm kinda having a love hate relationship with Go.mod but for the basic stuff like pulling more up-to-date packages from the time the code was orginally written it seems to work pretty well.
 
 That said I'm going to try updating and revising the more relevant scripts as I get time. 
 
