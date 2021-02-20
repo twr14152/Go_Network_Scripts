@@ -8,7 +8,7 @@ That said I'm going to try updating and revising the more relevant scripts as I 
 Starting with ssh scripts. I'm moving the original scripts to a folder called ssh_client/pre_go.mod_stuff/.
 I've added the following scripts in their place. I feel these are ready for practical use. However the testbed I'm still using is 95% Cisco Devnet.
 
-This repository will be used to create packages for the go2run repo if the code functionality makes it worthwhile. Otherwise its just a learning / testing and sharing repo.
+This repository will be used to create packages for the **go2run repo** if the code functionality makes it worthwhile. Otherwise its just a learning / testing and sharing repo.
 
 - ssh_client/runscript/ - You can use this package to make changes and validate your network devices using host and command files.
 - ssh_client/runcli/ - You call this package from your main.go file and you can issue show/config commands on multiple remote devices. 
