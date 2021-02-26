@@ -143,14 +143,10 @@ text2.txt
 success
 text3.txt
 success
-pi@raspberrypi:~/Code_folder/go_folder/netOps/scp_client $ ls -l
-total 3776
--rw-r--r-- 1 pi pi     257 Feb 25 22:40 go.mod
--rw-r--r-- 1 pi pi    1384 Feb 25 22:40 go.sum
--rwxr-xr-x 1 pi pi 3842756 Feb 25 22:55 scp_client
--rw-r--r-- 1 pi pi    2095 Feb 25 23:57 scp_clientv3.go
-drwxr-xr-x 2 pi pi    4096 Feb 25 23:12 test_dir
-pi@raspberrypi:~/Code_folder/go_folder/netOps/scp_client $
+pi@raspberrypi:~/Code_folder/go_folder/netOps/scp_client $ 
+
+
+//remote device//
 
 csr1000v-1#dir
 Directory of bootflash:/
