@@ -1,3 +1,8 @@
+/* 
+This script will copy a directory and its contents over to a remote device. 
+One of the challenges is that the directory needed to be created on the remote device prior to copying files over.
+*/
+
 package main
 
 import (
