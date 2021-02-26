@@ -1,4 +1,8 @@
 # Go_Network_Scripts
+### Updated 02/26/2021
+Had a request to create a script that would copy directory over to remote device. I was not able to find a real elegant way to accomplish it, but it works.
+
+- scp_client/copy_dir/scp_scriptv3.go
 
 ### Updated 12/20/2020
 When I started this repository it was to help me learn Go by using it to do things I know are correct in another field. In that regard I feel the scripts were decent in that they progressed into something that would resemble practical. Practical in one space does not mean elegant or correct in another. That being said in my effort to improve with Go, I have updated some of the more relevant scripts to make them more polished while also adding go modules to help with dependency management. I'm kinda having a love hate relationship with Go.mod but for the basic stuff like pulling more up-to-date packages from the time the code was orginally written it seems to work pretty well.
