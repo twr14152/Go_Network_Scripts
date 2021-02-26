@@ -84,7 +84,7 @@ func createDir(dir string) {
 
 func main() {
 	dir := "test_dir"
-	createDir(dir)
+	createDir(dir) 
 	files, err := os.ReadDir(dir)
 	if err != nil {
 		log.Fatal(err)
@@ -146,4 +146,47 @@ total 3776
 -rw-r--r-- 1 pi pi    2095 Feb 25 23:57 scp_clientv3.go
 drwxr-xr-x 2 pi pi    4096 Feb 25 23:12 test_dir
 pi@raspberrypi:~/Code_folder/go_folder/netOps/scp_client $
+
+csr1000v-1#dir
+Directory of bootflash:/
+
+201601  drwx            20480  Feb 26 2021 05:08:57 +00:00  tracelogs
+153217  drwx             4096  Feb 26 2021 04:58:12 +00:00  test_dir
+241921  drwx             4096  Feb 26 2021 04:47:23 +00:00  exit
+80641   drwx             4096  Feb 25 2021 23:49:45 +00:00  .installer
+22      -rw-              157  Feb 25 2021 23:49:04 +00:00  csrlxc-cfg.log
+137089  drwx             4096  Feb 25 2021 23:49:04 +00:00  license_evlog
+19      -rw-             2288  Feb 25 2021 23:49:02 +00:00  cvac.log
+18      -rw-               30  Feb 25 2021 23:49:00 +00:00  throughput_monitor_params
+15      -rw-             1216  Feb 25 2021 23:48:06 +00:00  mode_event_log
+64513   drwx             4096   Sep 1 2020 14:51:38 +00:00  .dbpersist
+274177  drwx             4096   Sep 1 2020 14:51:34 +00:00  onep
+21      -rw-               16   Sep 1 2020 14:51:32 +00:00  ovf-env.xml.md5
+20      -rw-                1   Sep 1 2020 14:51:32 +00:00  .cvac_version
+104833  drwx             4096   Sep 1 2020 14:51:29 +00:00  pnp-info
+145153  drwx             4096   Sep 1 2020 14:50:48 +00:00  virtual-instance
+17      -rwx             1314   Sep 1 2020 14:50:21 +00:00  trustidrootx3_ca.ca
+16      -rw-            20109   Sep 1 2020 14:50:21 +00:00  ios_core.p7b
+193537  drwx             4096   Sep 1 2020 14:50:18 +00:00  gs_script
+40321   drwx             4096   Sep 1 2020 14:50:16 +00:00  core
+169345  drwx             4096   Sep 1 2020 14:50:12 +00:00  bootlog_history
+161281  drwx             4096   Sep 1 2020 14:50:07 +00:00  .prst_sync
+14      -rw-             1105   Sep 1 2020 14:49:08 +00:00  packages.conf
+13      -rw-         48321761   Sep 1 2020 14:49:08 +00:00  csr1000v-rpboot.17.03.01a.SPA.pkg
+12      -rw-        470611036   Sep 1 2020 14:49:08 +00:00  csr1000v-mono-universalk9.17.03.01a.SPA.pkg
+8065    drwx             4096   Sep 1 2020 14:49:03 +00:00  .rollback_timer
+11      drwx            16384   Sep 1 2020 14:48:15 +00:00  lost+found
+
+6286540800 bytes total (5434560512 bytes free)
+csr1000v-1#cd test
+csr1000v-1#cd test_dir
+csr1000v-1#dir
+Directory of bootflash:/test_dir/
+
+153220  -rw-                7  Feb 26 2021 04:58:12 +00:00  text3.txt
+153219  -rw-                7  Feb 26 2021 04:58:11 +00:00  text2.txt
+153218  -rw-                8  Feb 26 2021 04:58:10 +00:00  text1.txt
+
+6286540800 bytes total (5434560512 bytes free)
+csr1000v-1#
 */
