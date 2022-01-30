@@ -1,4 +1,7 @@
 # Go_Network_Scripts
+### Update 1/30/2022
+Finally got back to look at go2run repo after about a year and found and fixed an issue with my module set up. The modules in that repo were using package name example runcli when it should have been github.com/twr14152/go2run/runcli to allow users to use it remotely. Anyways thats been fixed and tested. So if interested check it out. 
+
 ### Updated 02/26/2021
 Had a request to create a script that would copy directory over to remote device. I was not able to find a real elegant way to accomplish it, but it works.
 
