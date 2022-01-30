@@ -1,6 +1,6 @@
 # Go_Network_Scripts
 ### Update 1/30/2022
-Finally got back to look at go2run repo after about a year and found and fixed an issue with my module set up. The modules in that repo were using package name example runcli when it should have been github.com/twr14152/go2run/runcli to allow users to use it remotely. Anyways thats been fixed and tested. So if interested check it out. 
+Finally got back to look at my go2run repo after about a year and found and fixed an issue with my module/packaging set up. The modules in that repo were using local package names for example runcli (which was local to my machine when I created it) when it should have been changed to github.com/twr14152/go2run/runcli when I posted it to github. It ended up braking the automatic download function of go modules. Anyways thats been fixed and tested. If your wondering why am I posting that here, the answer is I feel its more a of an actual network library ready for individual use than this repo which was a brain dump testing ground for network scripts. So if interested check it out. 
 
 ### Updated 02/26/2021
 Had a request to create a script that would copy directory over to remote device. I was not able to find a real elegant way to accomplish it, but it works.
