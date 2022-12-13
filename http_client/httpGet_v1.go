@@ -7,7 +7,7 @@ package main
 import (
 	"crypto/tls"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 )
 
@@ -16,7 +16,7 @@ func main() {
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 	}
 	client := &http.Client{Transport: certInfo}
-	url := "https://ios-xe-mgmt-latest.cisco.com:9443/restconf/data/Cisco-IOS-XE-native:native?content=config&depth=65535"
+	url := "https://sandbox-iosxe-latest-1.cisco.com/restconf/data/Cisco-IOS-XE-native:native?content=config&depth=65535"
 
 	req, _ := http.NewRequest("GET", url, nil)
 	req.Header.Add("Content-Type", "application/yang-data+json")
@@ -25,8 +25,9 @@ func main() {
 
 	res, _ := client.Do(req)
 	defer res.Body.Close()
-	body, _ := ioutil.ReadAll(res.Body)
+	body, _ := io.ReadAll(res.Body)
 
 	fmt.Println(res)
 	fmt.Println(string(body))
 }
+
