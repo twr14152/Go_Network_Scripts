@@ -1,6 +1,8 @@
 # Go_Network_Scripts
 ### Update 4/19/2024
-PH
+
+This repo is in need of an update. Code examples are dated and some are non functional. Will update / refresh as time permits.
+
 ### Update 1/30/2022
 Finally got back to look at my go2run repo after about a year and found and fixed an issue with my module/packaging set up. The modules in that repo were using local package names for example runcli (which was local to my machine when I created it) when it should have been changed to github.com/twr14152/go2run/runcli when I posted it to github. It ended up breaking the automatic download function of go modules. Anyways thats been fixed and tested. If your wondering why am I posting that here, the answer is I feel its more a of an actual network library ready for individual use than this repo which was a brain dump testing ground for network scripts. So if interested check it out. 
 
