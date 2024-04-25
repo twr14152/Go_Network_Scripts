@@ -1,4 +1,12 @@
 # Go_Network_Scripts
+### Update 4/25/2024
+
+Set up a new ceoslab environment. Had all kinds of issues with my macbook m1. Moved to a windows machine with WSL2. Working like a charm now. Decided that rewritting some of my previous scripts would help me get back into the swing of things. Then I remembered with Arista the default auth is keyboard interactive. So I had to mess around with that. I will give some credit to dgjustice he had a nice example of keyboard interactive on his gist page. That said I incorporated some of his code with mine and now have a useable lab ssh client. The other folders under the arista leave something to be desired. Hopefully will get around to it.
+
+ -arista/ssh_client/main.go
+
+
+
 ### Update 4/19/2024
 
 This repo is in need of an update. Code examples are dated and some are non functional. Will update / refresh as time permits.
