@@ -15,8 +15,8 @@ func commands() map[string][]string {
         fmt.Print("Number of hosts: ")
         fmt.Scanf("%d", &count)
         hostCmds := make(map[string][]string)
+        fmt.Printf("\nEnter host and ssh port being used. (Ex. x.x.x.x:22 or hostname:22)\n\n\n")
         for i := 1; i <= count; i++ {
-                fmt.Printf("\nEnter host and ssh port being used. (Ex. x.x.x.x:22 or hostname:22)\n\n\n")
                 fmt.Print("Enter host: ")
                 fmt.Scanf("%s", &host)
                 fmt.Println()
