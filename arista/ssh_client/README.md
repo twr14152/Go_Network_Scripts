@@ -1,5 +1,5 @@
 Wrote this script for use in my lab. Pretty easy to use. Good for grabbing info and touching a lot of devices without a lot of hassel.
-
+```
 $ go run main.go
 Number of hosts: 2
 
@@ -75,3 +75,4 @@ Loopback69      unassigned         up          up              65535
 Management0     172.17.0.3/16      up          up               1500
 
 $
+```
