@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-var HostList = []string{"ceos1", "ceos2", "ceos3"}
+var HostList = []string{"ceos1", "ceos2", "ceos3", "ceos4", "ceos5", "ceos6"}
 
 func main() {
 	// This will run the commands listed after the filename
