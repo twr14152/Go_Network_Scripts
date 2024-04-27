@@ -1,10 +1,10 @@
 ### Arista 
 
-Using ceoslab for testing. 
+- Using ceoslab for testing. 
 
-Sample code repository.
+- Sample code repository.
 
-Will update as time permits.
+- Will update as time permits.
 
 
 
