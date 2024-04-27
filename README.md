@@ -1,7 +1,7 @@
 # Go_Network_Scripts
 ### Update 4/27/2024
 
-I played around with GoEAPI today. I was able to issue show and exec commands working farely easily. After some reading I was able to get the configuration functionality worked out. I don't know how heavily used this network automation library is but it seems serviceable. Once you figure out how to deploy configurations it doesnt seem there's to much more to it.
+I played around with GoEAPI today. I was able to issue show and exec commands working farely easily. After some reading I was able to get the configuration functionality worked out. I don't know how heavily used this network automation library is but it seems serviceable. Once you figure out how to deploy configurations it doesnt seem there's too much more to it.
 
 - arista/goeapi/show_commands/main.go
 - arista/goeapi/change_config/main.go
