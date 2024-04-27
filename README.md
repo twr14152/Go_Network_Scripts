@@ -1,4 +1,11 @@
 # Go_Network_Scripts
+### Update 4/27/2024
+
+I played around with GoEAPI today. I was able to issue show and exec commands working farely easily. After some reading I was able to get the configuration functionality worked out. I don't know how heavily used this network automation library is but it seems serviceable. Once you figure out how to deploy configurations it doesnt seem there's to0 much more to it.
+
+- arista/goeapi/show_commands/main.go
+- arista/goeapi/change_config/main.go
+
 ### Update 4/25/2024
 
 Set up a new ceoslab environment. Had all kinds of issues with my macbook m1. Moved to a windows machine with WSL2. Working like a charm now. Decided that rewritting some of my previous scripts would help me get back into the swing of things. Then I remembered with Arista the default auth is keyboard interactive. So I had to mess around with that. I will give some credit to dgjustice he had a nice example of keyboard interactive on his gist page. That said I incorporated some of his code with mine and now have a useable lab ssh client. The other folders under the arista leave something to be desired. Hopefully will get around to it.
