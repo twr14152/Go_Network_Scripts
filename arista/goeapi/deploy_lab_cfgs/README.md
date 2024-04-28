@@ -127,7 +127,7 @@ router bgp 100
    router-id 1.1.1.1
    neighbor 2.2.2.2 remote-as 100
    neighbor 2.2.2.2 update-source Loopback0
-   neighbor 157.130.2.2 remote-as 400
+   neighbor 157.130.1.2 remote-as 300
    network 1.1.1.1/32
    redistribute connected
 !
@@ -224,13 +224,13 @@ end]] <nil>
                                 "opaqueLsaSupport": false,
                                 "doNotUseInRouteCalc": false
                             },
-                            "inactivity": 1714313588.1966422,
+                            "inactivity": 1714314588.3374653,
                             "details": {
                                 "areaId": "0.0.0.0",
                                 "designatedRouter": "10.0.0.2",
                                 "backupDesignatedRouter": "10.0.0.1",
                                 "numberOfStateChanges": 7,
-                                "stateTime": 1714311501.1966846,
+                                "stateTime": 1714311501.337507,
                                 "inactivityDefers": 0,
                                 "retransmissionCount": 1,
                                 "bfdState": "adminDown",
@@ -261,23 +261,22 @@ end]] <nil>
                     "asn": "100",
                     "prefixAccepted": 0,
                     "prefixReceived": 0,
-                    "upDownTime": 1714313539.091,
+                    "upDownTime": 1714314539.193897,
                     "underMaintenance": false,
                     "peerState": "Active"
                 },
-                "157.130.2.2": {
-                    "peerStateIdleReason": "NoInterface",
+                "157.130.1.2": {
                     "version": 4,
                     "msgReceived": 0,
                     "msgSent": 0,
                     "inMsgQueue": 0,
                     "outMsgQueue": 0,
-                    "asn": "400",
+                    "asn": "300",
                     "prefixAccepted": 0,
                     "prefixReceived": 0,
-                    "upDownTime": 1714313539.089848,
+                    "upDownTime": 1714314539.192227,
                     "underMaintenance": false,
-                    "peerState": "Idle"
+                    "peerState": "Active"
                 }
             }
         }
@@ -509,13 +508,13 @@ end]] <nil>
                                 "opaqueLsaSupport": false,
                                 "doNotUseInRouteCalc": false
                             },
-                            "inactivity": 1714313604.6443634,
+                            "inactivity": 1714314604.8482008,
                             "details": {
                                 "areaId": "0.0.0.0",
                                 "designatedRouter": "10.0.0.2",
                                 "backupDesignatedRouter": "10.0.0.1",
                                 "numberOfStateChanges": 6,
-                                "stateTime": 1714311501.6444044,
+                                "stateTime": 1714311501.8482406,
                                 "inactivityDefers": 0,
                                 "retransmissionCount": 1,
                                 "bfdState": "adminDown",
@@ -546,7 +545,7 @@ end]] <nil>
                     "asn": "100",
                     "prefixAccepted": 4,
                     "prefixReceived": 4,
-                    "upDownTime": 1714313554.760323,
+                    "upDownTime": 1714314555.991261,
                     "underMaintenance": false,
                     "peerState": "Established"
                 },
@@ -559,7 +558,7 @@ end]] <nil>
                     "asn": "400",
                     "prefixAccepted": 0,
                     "prefixReceived": 0,
-                    "upDownTime": 1714313554.617106,
+                    "upDownTime": 1714314554.778451,
                     "underMaintenance": false,
                     "peerState": "Active"
                 }
@@ -762,16 +761,16 @@ end]] <nil>
             "peers": {
                 "157.130.1.1": {
                     "version": 4,
-                    "msgReceived": 0,
-                    "msgSent": 0,
+                    "msgReceived": 6,
+                    "msgSent": 5,
                     "inMsgQueue": 0,
                     "outMsgQueue": 0,
                     "asn": "100",
-                    "prefixAccepted": 0,
-                    "prefixReceived": 0,
-                    "upDownTime": 1714313570.112087,
+                    "prefixAccepted": 6,
+                    "prefixReceived": 6,
+                    "upDownTime": 1714314571.444802,
                     "underMaintenance": false,
-                    "peerState": "Connect"
+                    "peerState": "Established"
                 }
             }
         }
@@ -972,14 +971,14 @@ end]] <nil>
             "peers": {
                 "157.130.2.1": {
                     "version": 4,
-                    "msgReceived": 6,
+                    "msgReceived": 7,
                     "msgSent": 5,
                     "inMsgQueue": 0,
                     "outMsgQueue": 0,
                     "asn": "100",
-                    "prefixAccepted": 6,
-                    "prefixReceived": 6,
-                    "upDownTime": 1714313586.832548,
+                    "prefixAccepted": 7,
+                    "prefixReceived": 7,
+                    "upDownTime": 1714314587.021549,
                     "underMaintenance": false,
                     "peerState": "Established"
                 }
