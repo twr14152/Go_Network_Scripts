@@ -32,7 +32,7 @@ func deploy_ceos1() {
         c14 := "no shutdown"
         c15 := "ip address 157.130.1.1/30"
         c16 := "router bgp 100"
-        c17 := "neighbor 157.130.2.2 remote-as 400"
+        c17 := "neighbor 157.130.1.2 remote-as 300"
         c18 := "redistribute connected"
 
 
@@ -172,10 +172,10 @@ func deploy_ceos4() {
         fmt.Printf("\n\n\n\n")
 }
 
-
 func main() {
         deploy_ceos1()
         deploy_ceos2()
         deploy_ceos3()
         deploy_ceos4()
 }
+
