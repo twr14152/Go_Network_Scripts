@@ -5,6 +5,7 @@ I played around with GoEAPI today. I was able to issue show and exec commands wo
 
 - arista/goeapi/show_commands/main.go
 - arista/goeapi/change_config/main.go
+- arista/goeapi/deploy_lab_cfgs/main.go
 
 ### Update 4/25/2024
 
