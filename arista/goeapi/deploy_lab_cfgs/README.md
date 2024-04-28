@@ -1,4 +1,4 @@
-### Deployed lab routing using main.go script
+### Deployed lab BGP routing using main.go script
 
 ```
 twr14152@DESKTOP-S55FNN9:~/code_folder/go_folder/misc/goeapi/deploy_lab_cfgs$ go run main.go
