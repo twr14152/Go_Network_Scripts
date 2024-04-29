@@ -1,4 +1,4 @@
-Wrote this script for use in my lab. Pretty easy to use. Good for grabbing info and touching a lot of devices without a lot of hassel.
+Uses may vary. Good for lab environment.
 ```
 twr14152@DESKTOP-S55FNN9:~/code_folder/go_folder/misc/go_net_scripts/ssh_client$ go run main.go
 Number of hosts: 2
