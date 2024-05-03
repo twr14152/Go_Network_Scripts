@@ -1,4 +1,6 @@
-Uses may vary. Good for lab environment.
+This was more of a can i do it script. The default authentication method used for arista is keyboard interactive. This is different from Cisco by default.
+This script is more of a screen scraping cli script that could be used to connect to multiple device and issue various commands (configs or show commands). 
+Good to use in a lab.
 ```
 twr14152@DESKTOP-S55FNN9:~/code_folder/go_folder/misc/go_net_scripts/ssh_client$ go run main.go
 Number of hosts: 2
