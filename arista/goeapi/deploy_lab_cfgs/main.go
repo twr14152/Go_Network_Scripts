@@ -2,19 +2,16 @@ package main
 
 import (
         "fmt"
-        "time"
-        "log"
         "github.com/aristanetworks/goeapi"
+        "log"
+        "time"
 )
-
 
 func deploy_ceos1() {
 
         host := "ceos1"
-
         cmds1 := []string{"show running-config"}
         cmds2 := []string{"show ip interface brief | json", "show ip ospf neighbor | json", "show ip bgp summary | json"}
-
         // Configuration commands
         c1 := "interface eth1"
         c2 := "no switchport"
@@ -34,9 +31,6 @@ func deploy_ceos1() {
         c16 := "router bgp 100"
         c17 := "neighbor 157.130.1.2 remote-as 300"
         c18 := "redistribute connected"
-
-
-
         node, err := goeapi.ConnectTo(host)
         if err != nil {
                 log.Fatal(err)
@@ -46,7 +40,7 @@ func deploy_ceos1() {
         fmt.Println(node.Enable(cmds1))
         fmt.Println(node.ConfigWithErr(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18))
         fmt.Printf("\n\n\nPost-change state: \n\n\n")
-        duration := time.Duration(15)*time.Second
+        duration := time.Duration(15) * time.Second
         time.Sleep(duration)
         fmt.Println(node.Enable(cmds1))
         fmt.Println(node.Enable(cmds2))
@@ -56,10 +50,8 @@ func deploy_ceos1() {
 func deploy_ceos2() {
 
         host := "ceos2"
-
         cmds1 := []string{"show running-config"}
         cmds2 := []string{"show ip interface brief | json", "show ip ospf neighbor | json", "show ip bgp summary | json"}
-
         // Configuration commands
         c1 := "interface ethernet 1"
         c2 := "no switchport"
@@ -79,8 +71,6 @@ func deploy_ceos2() {
         c16 := "router bgp 100"
         c17 := "neighbor 157.130.2.2 remote-as 400"
         c18 := "redistribute connected"
-
-
         node, err := goeapi.ConnectTo(host)
         if err != nil {
                 log.Fatal(err)
@@ -90,7 +80,7 @@ func deploy_ceos2() {
         fmt.Println(node.Enable(cmds1))
         fmt.Println(node.ConfigWithErr(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18))
         fmt.Printf("\n\n\nPost-change state: \n\n\n")
-        duration := time.Duration(15)*time.Second
+        duration := time.Duration(15) * time.Second
         time.Sleep(duration)
         fmt.Println(node.Enable(cmds1))
         fmt.Println(node.Enable(cmds2))
@@ -101,10 +91,8 @@ func deploy_ceos2() {
 func deploy_ceos3() {
 
         host := "ceos3"
-
         cmds1 := []string{"show running-config"}
         cmds2 := []string{"show ip interface brief | json", "show ip ospf neighbor | json", "show ip bgp summary | json"}
-
         // Configuration commands
         c1 := "interface ethernet 1"
         c2 := "no switchport"
@@ -115,9 +103,6 @@ func deploy_ceos3() {
         c7 := "router-id 3.3.3.3"
         c8 := "neighbor 157.130.1.1 remote-as 100"
         c9 := "redistribute connected"
-
-
-
         node, err := goeapi.ConnectTo(host)
         if err != nil {
                 log.Fatal(err)
@@ -127,22 +112,18 @@ func deploy_ceos3() {
         fmt.Println(node.Enable(cmds1))
         fmt.Println(node.ConfigWithErr(c1, c2, c3, c4, c5, c6, c7, c8, c9))
         fmt.Printf("\n\n\nPost-change state: \n\n\n")
-        duration := time.Duration(15)*time.Second
+        duration := time.Duration(15) * time.Second
         time.Sleep(duration)
         fmt.Println(node.Enable(cmds1))
         fmt.Println(node.Enable(cmds2))
         fmt.Printf("\n\n\n\n")
 }
 
-
-
 func deploy_ceos4() {
 
         host := "ceos4"
-
         cmds1 := []string{"show running-config"}
         cmds2 := []string{"show ip interface brief | json", "show ip ospf neighbor | json", "show ip bgp summary | json"}
-
         // Configuration commands
         c1 := "interface ethernet 1"
         c2 := "no switchport"
@@ -153,9 +134,6 @@ func deploy_ceos4() {
         c7 := "router-id 4.4.4.4"
         c8 := "neighbor 157.130.2.1 remote-as 100"
         c9 := "redistribute connected"
-
-
-
         node, err := goeapi.ConnectTo(host)
         if err != nil {
                 log.Fatal(err)
@@ -165,7 +143,7 @@ func deploy_ceos4() {
         fmt.Println(node.Enable(cmds1))
         fmt.Println(node.ConfigWithErr(c1, c2, c3, c4, c5, c6, c7, c8, c9))
         fmt.Printf("\n\n\nPost-change state: \n\n\n")
-        duration := time.Duration(15)*time.Second
+        duration := time.Duration(15) * time.Second
         time.Sleep(duration)
         fmt.Println(node.Enable(cmds1))
         fmt.Println(node.Enable(cmds2))
@@ -178,4 +156,3 @@ func main() {
         deploy_ceos3()
         deploy_ceos4()
 }
-
