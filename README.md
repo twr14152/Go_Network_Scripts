@@ -2,7 +2,7 @@
 ### Update 01-29-2025
 Loaded ceos image cEOSarm-lab-4.33.1-EFT3.tar.xz on my Mac M1. It runs a lot better than any other image I've loaded. I can connect to ceos hosts using "0.0.0.0:ports" from my terminal. I have not been successful in connecting to the native management ip of the hosts. I've tried the --net=host command in docker create. Didn't have success.  I've read that this is an issue with the Mac. I'm not going to spend much more time on it. For now the "localhost:ports" workaround to connect will work.
 - Had to update .eapi.conf to use host=0.0.0.0 and the corresponding ports used in the docker create eg..port = 8443, etc...
-- SSH worked by using localhost:202x command.
+- SSH worked by using localhost:202x command or you can update your hostfile to point localhost ceos1 etc.
 
 ### Update 4/27/2024
 
