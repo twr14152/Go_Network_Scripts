@@ -1,10 +1,13 @@
 # Go_Network_Scripts
-### Update 01-29-2025
+### 07/06/2025 
+Apple Silicon has made virtual labbing almost impossible. Almost, now with orbstack with containerlabs I now have an outlet. So far cEOS, FRR, SR Linux, are the NOS I'm working with. 
+
+### 01-29-2025
 Loaded ceos image cEOSarm-lab-4.33.1-EFT3.tar.xz on my Mac M1. It runs a lot better than any other image I've loaded. I can connect to ceos hosts using "0.0.0.0:ports" from my terminal. I have not been successful in connecting to the native management ip of the hosts. I've tried the --net=host command in docker create. Didn't have success.  I've read that this is an issue with the Mac. I'm not going to spend much more time on it. For now the "localhost:ports" workaround to connect will work.
 - Had to update .eapi.conf to use host=0.0.0.0 and the corresponding ports used in the docker create eg..port = 8443, etc...
 - SSH worked by using localhost:202x command or you can update your hostfile to point localhost to ceos1 etc. Your port assignments will distinguish host
 
-### Update 4/27/2024
+### 4/27/2024
 
 I played around with GoEAPI today. I was able to issue show and exec commands farely easily. After some reading I was able to get the configuration functionality worked out. I don't know how heavily used this network automation library is but it seems serviceable. Once you figure out how to deploy configurations it doesnt seem there's too much more to it.
 
@@ -12,7 +15,7 @@ I played around with GoEAPI today. I was able to issue show and exec commands fa
 - arista/goeapi/change_config/main.go
 - arista/goeapi/deploy_lab_cfgs/main.go
 
-### Update 4/25/2024
+### 4/25/2024
 
 Set up a new ceoslab environment. Had all kinds of issues with my macbook m1. Moved to a windows machine with WSL2. Working like a charm now. Decided that rewritting some of my previous scripts would help me get back into the swing of things. Then I remembered with Arista the default auth is keyboard interactive. So I had to mess around with that. I will give some credit to dgjustice he had a nice example of keyboard interactive on his gist page. That said I incorporated some of his code with mine and now have a useable lab ssh client. The other folders under the arista leave something to be desired. Hopefully will get around to it.
 
@@ -20,19 +23,19 @@ Set up a new ceoslab environment. Had all kinds of issues with my macbook m1. Mo
 
 
 
-### Update 4/19/2024
+### 4/19/2024
 
 This repo is in need of an update. Code examples are dated and some are non functional. Will update / refresh as time permits.
 
-### Update 1/30/2022
+### 1/30/2022
 Finally got back to look at my go2run repo after about a year and found and fixed an issue with my module/packaging set up. The modules in that repo were using local package names for example runcli (which was local to my machine when I created it) when it should have been changed to github.com/twr14152/go2run/runcli when I posted it to github. It ended up breaking the automatic download function of go modules. Anyways thats been fixed and tested. If your wondering why am I posting that here, the answer is I feel its more a of an actual network library ready for individual use than this repo which was a brain dump testing ground for network scripts. So if interested check it out. 
 
-### Updated 02/26/2021
+### 02/26/2021
 Had a request to create a script that would copy directory over to remote device. I was not able to find a real elegant way to accomplish it, but it works.
 
 - scp_client/copy_dir/scp_scriptv3.go
 
-### Updated 12/20/2020
+### 12/20/2020
 When I started this repository it was to help me learn Go by using it to do things I know are correct in another field. In that regard I feel the scripts were decent in that they progressed into something that would resemble practical. Practical in one space does not mean elegant or correct in another. That being said in my effort to improve with Go, I have updated some of the more relevant scripts to make them more polished while also adding go modules to help with dependency management. I'm kinda having a love hate relationship with Go.mod but for the basic stuff like pulling more up-to-date packages from the time the code was orginally written it seems to work pretty well.
 
 That said I'm going to try updating and revising the more relevant scripts as I get time. 
