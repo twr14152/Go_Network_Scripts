@@ -1,6 +1,6 @@
 # Go_Network_Scripts
 ### 07/06/2025 
-Apple Silicon has made virtual labbing almost impossible. Almost, now with orbstack with containerlabs I now have an outlet. So far cEOS, FRR, SR Linux, are the NOS I'm working with. Can actually ssh to host names..
+Apple Silicon has made virtual labbing almost impossible. Almost, now with Orbstack with containerlabs I now have an outlet. So far cEOS, FRR, SR Linux, are the NOS I'm working with. Can actually ssh to host names..
 
 ### 01-29-2025
 Loaded ceos image cEOSarm-lab-4.33.1-EFT3.tar.xz on my Mac M1. It runs a lot better than any other image I've loaded. I can connect to ceos hosts using "0.0.0.0:ports" from my terminal. I have not been successful in connecting to the native management ip of the hosts. I've tried the --net=host command in docker create. Didn't have success.  I've read that this is an issue with the Mac. I'm not going to spend much more time on it. For now the "localhost:ports" workaround to connect will work.
