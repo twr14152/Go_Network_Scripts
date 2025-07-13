@@ -1,4 +1,4 @@
-# Go_Network_Scripts
+# Go-Network-Scripts
 ### 07/06/2025 
 Apple Silicon has made virtual labbing almost impossible. Almost, now with Orbstack with containerlabs I now have an outlet. So far cEOS, FRR, SR Linux, are the NOS I'm working with. Can actually ssh to host names..
 
