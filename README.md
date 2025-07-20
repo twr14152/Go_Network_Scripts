@@ -1,4 +1,14 @@
 # Go-Network-Scripts
+### 07/18/2025
+- 07/20/2025 Finally got ssh using hostfile working on arista devices
+- It was a pain because arista uses a keyboard interactive auth which requires using a shell session
+- Trying to get stdin and stdout working in the same session was a difficult process
+- To say nothing about using expect logic for the prompts
+- To be honest I thought C with libssh was easier to write and understand for this specific problem
+- I think there's something to said about being able to look under the hood with C, and the issues with black box tendencies in go
+- The code can be found here:
+  * arists/ssh_using_hostfile/main.go
+
 ### 07/06/2025 
 Apple Silicon has made virtual labbing almost impossible. Almost, now with Orbstack with containerlabs I now have an outlet. So far cEOS, FRR, SR Linux, are the NOS I'm working with. Can actually ssh to host names..
 
