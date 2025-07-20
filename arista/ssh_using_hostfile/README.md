@@ -1,4 +1,5 @@
 # Script Details
+- This was a major pain in the ass to get working!!!
 - This script will allow you configure multiple devices using a host file and host.cfg files
 - First you need to create your host file in this example we call it group1.txt
 - Just add your "host:port" you are connecting on. You need the port for the script to work 
@@ -182,5 +183,4 @@ ceos2#
 [SENDING] exit
 [OUTPUT]
 exit
-```
 ```
