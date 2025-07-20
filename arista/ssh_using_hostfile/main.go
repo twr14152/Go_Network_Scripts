@@ -14,6 +14,7 @@ import (
 var hostList []string
 
 func loginHosts(hostfile string) {
+	hostList = nil
 	hf, err := os.Open(hostfile)
 	if err != nil {
 		log.Fatal("Failed to open file: ", err)
