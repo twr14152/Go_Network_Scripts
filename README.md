@@ -8,7 +8,7 @@
 - I think there's something to said about being able to look under the hood with C, and the issues with black box tendencies in Go
 - Could be I haven't coded in go in a while but this was a pain in the ass. No likey
 - The code can be found here:
-  * arists/ssh_using_hostfile/main.go
+  * arista/ssh_using_hostfile/main.go
 
 ### 07/06/2025 
 Apple Silicon has made virtual labbing almost impossible. Almost, now with Orbstack with containerlabs I now have an outlet. So far cEOS, FRR, SR Linux, are the NOS I'm working with. Can actually ssh to host names..
