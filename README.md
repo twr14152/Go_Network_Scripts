@@ -4,7 +4,7 @@
 - Arista uses a keyboard interactive auth which requires using a shell session with pty
 - Trying to get stdin/stdout working in the same session was a difficult process
 - To say nothing about using expect logic for the prompts
-- To be honest I thought C with libssh was easier to write and understand for this specific problem, i say that because arista unstands string logic with ";" working as a line break. Trying to do this in Go is frustrating. So I went the shell route.
+- To be honest I thought C with libssh was easier to write and understand for this specific problem, i say that because arista understands string logic with ";" working as a line break. Trying to do this in Go is frustrating. So I went the shell route.
 - I think there's something to said about being able to look under the hood with C, and the issues with black box tendencies in Go
 - Could be I haven't coded in go in a while but this was a pain in the ass. No likey
 - The code can be found here:
